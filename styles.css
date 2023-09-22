@@ -5,9 +5,23 @@ font-family: 'Source Sans 3', sans-serif; */
 :root {
     --dark-blue: #14151B;
     --white: rgba(241, 241, 241, 1);
+    --white-tran02: rgba(241, 241, 241, 0.2);
     --red: rgba(191, 0, 0, 1);
-    --orange: rgba(255, 100, 23, 1);
+    --dark-orange: rgba(255, 100, 23, 1);
+    --light-orange:rgba(242, 146, 32, 1);
     --grey: rgba(53, 53, 53, 1);
+    --grey-tran02: rgba(53, 53, 53, 0.2);
+    --grey-tran05: rgba(53, 53, 53, 0.5);
+    --grey-tran06: rgba(53, 53, 53, 0.6);
 }
 
 
+body {
+    background: var(--dark-blue);
+}
+
+header {
+    height: 300px;
+    max-width: ;
+    background: var(--grey-tran02)
+}
