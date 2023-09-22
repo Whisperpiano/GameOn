@@ -1,10 +1,13 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Source Sans 3', sans-serif; */
 
-h1 {
-    font-family: 'Source Sans 3', sans-serif;
+/* variables */
+:root {
+    --dark-blue: #14151B;
+    --white: rgba(241, 241, 241, 1);
+    --red: rgba(191, 0, 0, 1);
+    --orange: rgba(255, 100, 23, 1);
+    --grey: rgba(53, 53, 53, 1);
 }
 
-h2 {
-    font-family: 'Montserrat', sans-serif;
-}
+
