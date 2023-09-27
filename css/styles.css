@@ -1,0 +1,281 @@
+@import url("framework.css");
+
+/* ----- VARIABLES ----- */
+:root {
+    /* COLORS */
+    --color-1: #14151B;
+    --color-2: #F1F1F1;
+    --color-3: #BF0000;
+    --color-4: #FF6417;
+    --color-5: #353535;
+    --color-6: #F29220;
+   
+    /* TYPOGRAPHY */
+    --font-1: 'Montserrat', sans-serif;
+    --font-2: 'Source Sans 3', sans-serif;
+}
+
+/* ----- DARK MODE ----- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #f0f0f0;
+        --color-secondary: #181818;
+    }
+}
+
+/* ----- MARGINS & PADDINGS ----- */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ----- IMG ----- */
+img, picture, video, iframe, figure {
+    max-width: 100%;
+    width: auto;
+    display: block;
+}
+
+/* ----- LINKS ----- */
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+/* ----- LISTS ----- */
+li {
+    list-style-type: none;
+}
+
+/* ----- SCROLL BEHAVIOR ----- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- TEXT STYLES ----- */
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--font-1);
+    color: var(--color-2);
+    background-color: var(--color-1);
+    line-height: 1.4em;
+
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+/* ----- FORMS ----- */
+form, input, textarea, select, button, label {
+    font-family: inherit;
+    font-size: inherit;
+    display: block;
+    color: inherit;
+}
+
+/* ----- TABLES ----- */
+table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ----- SVG ----- */
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* ----- BUTTONS ----- */
+.btn {
+    border-radius: 2px;
+    border: 1px solid rgba(241, 241, 241, 0.20);
+    background: rgba(53, 53, 53, 0.50);
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+/* ----- SEARCH BAR ----- */
+.search-bar {
+    width: 100%;
+    max-width: 512px;
+    border-radius: 2px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: var(--color-2);
+    color: rgba(53, 53, 53, 0.60);
+    font-size: 16px;
+    transition:all 0.2s ease-out;
+}
+
+.search-bar input {
+    background: transparent;
+    font-size: 14px;
+    flex: 1;
+    border: 0;
+    outline: none;
+    color: var(--color-1);
+}
+
+::placeholder {
+    color: rgba(53, 53, 53, 0.60);
+}
+
+.search-bar button  {
+    background: transparent;
+    cursor: pointer;
+}
+
+.search-bar:focus-within {
+    outline: 2px solid rgba(255, 100, 23, 1);
+    outline-offset:2px;
+}
+
+/* ICONS */
+/* 
+<i class="fa-solid fa-user"></i>  USER  f007
+<i class="fa-solid fa-cart-shopping"></i> CART
+<i class="fa-solid fa-heart"></i> FAV */
+
+
+/* HEADER */
+
+header {
+    background: var(--color-5);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.2);
+}
+
+.menu {
+    font-weight: 700;
+    font-size: 18px;
+}
+.header-right{
+    font-size: 14px; 
+}
+
+.header-right ul {
+    gap: 20px;
+}
+
+.sign-in::after {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    content: "\f007";
+    font-weight: 600;
+    text-rendering: auto;
+    font-style: normal;
+    font-variant: normal;
+    margin-left: 8px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cart::after {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    content: "\f07a";
+    font-weight: 600;
+    text-rendering: auto;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fav::after {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    content: "\f004";
+    font-weight: 600;
+    text-rendering: auto;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- VARIABLES ----- */
+:root {
+    --dark-blue: #14151B;
+    --white: rgba(241, 241, 241, 1);
+    --white-tran02: rgba(241, 241, 241, 0.2);
+    --red: rgba(191, 0, 0, 1);
+    --dark-orange: rgba(255, 100, 23, 1);
+    --light-orange:rgba(242, 146, 32, 1);
+    --grey: rgba(53, 53, 53, 1);
+    --grey-tran02: rgba(53, 53, 53, 0.2);
+    --grey-tran05: rgba(53, 53, 53, 0.5);
+    --grey-tran06: rgba(53, 53, 53, 0.6);
+}
+
+
+body {
+    background: var(--dark-blue);
+}
+
+header {
+    max-width: 100%;
+    margin: auto;
+    background: var(--grey-tran02);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* General styles*/
+
+/* Header */
+
+/* Main */
+
+/* Footer */

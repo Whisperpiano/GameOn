@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to GameOn!</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,41 +15,40 @@
     />
   </head>
   <body>
-    <div class="home">
       <header class="header">
+        <section class="mw-1340 flex justify-sb align-items-center">
         <a href="#" class="logo-a"
-          ><img src="images/logo.png" alt="Logo" class="logo-img"
+          ><img src="images/logo.png" alt="Logo" class="logo-img pd-40-0"
         /></a>
-        <div class="menu">
-          <nav class="menu__nav">
-            <ul class="menu__ul">
-              <li class="menu__li"></li>
-              <li class="menu__li"></li>
-              <li class="menu__li"></li>
-              <li class="menu__li"></li>
+        <div class="menu flex flex-column align-items-center">
+          <nav>
+            <ul class="flex">
+              <li class="pd-30"><a href="#">PC</a></li>
+              <li class="pd-30"><a href="#"> Playstation</a></li>
+              <li class="pd-30"><a href="#">Xbox</a></li>
+              <li class="pd-30"><a href="#">Nintendo</a></li>
             </ul>
           </nav>
-          <form action="" class="menu__form">
-            <input class="menu__input" type="text" /><button
-              class="menu__button"
-            ></button>
+          <form action="#" class="search-bar flex pd-10-20">
+            <input " type="search" placeholder="Minecraft, RPG, multiplayer..."/><button type="submit"
+              ><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
         <div class="header-right">
-          <nav class="header-right__nav">
-            <ul class="header-right__ul">
-              <li class="header-right__li">
-                <a href="#" class="header-right__a"></a>
+          <nav>
+            <ul class="flex">
+              <li class="btn">
+                <a href="#" class="sign-in ">Sign in</i></a>
               </li>
-              <li class="header-right__li">
-                <a href="#" class="header-right__a"></a>
+              <li class="btn">
+                <a href="#" class="cart"></a>
               </li>
-              <li class="header-right__li">
-                <a href="#" class="header-right__a"></a>
+              <li class="btn">
+                <a href="#" class="fav"></a>
               </li>
             </ul>
           </nav>
-        </div>
+        </section>
       </header>
       <main class="main">
         <section class="banner"></section>
