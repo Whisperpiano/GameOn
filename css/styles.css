@@ -189,11 +189,24 @@ svg {
 
 /* ICONS */
 
-.playstation::after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f3df";
-    font-weight: 600;
+.playstation:before {
+    content: url(../images/playstation-icon.svg); 
+}
 
+.xbox:before {
+    content: url(../images/xbox-icon.svg);
+}
+
+.nintendo:before {
+    content: url(../images/nintendo-icon.svg);
+}
+
+.windows:before {
+    content: url(../images/win-icon.svg);
+}
+
+.steam:before {
+    content: url(../images/steam-icon.png);
 }
 
 .stars {
@@ -238,17 +251,81 @@ header {
 
 /* ----- SLIDER ----- */
 
-    .slider {
+    .banner {
     padding: 90px 0px;
-    border-radius: 20%;
+    position: relative;
+    margin: 0 auto;
+    }
 
+    .slider {
+        display: flex;
+        aspect-ratio: 16 / 9;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        overflow: hidden;
+    }
+
+    .slider article {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        
+    }
+    
+    .slider-nav {
+        display: flex;
+        column-gap: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .slider-nav a {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: var(--color-2);
+        opacity: 0.5;
+        transition: opacity ease 250ms;
+    }
+
+    .slider-nav a:hover {
+        opacity: 1;
+    }
+
+    #slide-1, #slide-2, #slide-3, #slide-4, #slide-5 {
+        min-width: 1340px;
     }
 
     .slide-img {
     flex:2;
-    background-image: url("../images/slider-img-1.png");
     border-radius: 2px 0px 0px 2px;
-    
+    background-position-x: center;
+    background-position-y: 10% ;
+    background-size: cover;
+    cursor: pointer;
+    }
+
+    .slide-img-1 {
+        background-image: url("../images/slider-img-1.png");
+    }
+
+    .slide-img-2 {
+        background-image: url("../images/slider-img-2.png");
+    }
+    .slide-img-3 {
+        background-image: url("../images/slider-img-3.png");
+    }
+    .slide-img-4 {
+        background-image: url("../images/slider-img-4.png");
+    }
+    .slide-img-5 {
+        background-image: url("../images/slider-img-5.png");
+    }
+
+    .platforms {
+        gap: 15px;
     }
 
     .slide-info {    
