@@ -445,10 +445,9 @@ header {
 }
 
 .subs-form {
-    outline:3px solid #BF0000;
-    justify-content: center;
     max-width: 450px;
-    align-sel: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .subs-form input {
