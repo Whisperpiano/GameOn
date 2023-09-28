@@ -88,7 +88,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
 form, input, textarea, select, button, label {
     font-family: inherit;
     font-size: inherit;
-    display: block;
     color: inherit;
 }
 
@@ -442,10 +441,24 @@ header {
 .subs-panel {
     text-align: center;
     gap: 20px;
+    
 }
 
 .subs-form {
-    margin: auto;
+    outline:3px solid #BF0000;
+    justify-content: center;
+    max-width: 450px;
+    align-sel: center;
+}
+
+.subs-form input {
+    width: 70%;
+    flex: 1;
+}
+
+
+.subs-form button {
+    width: 30%;
 }
 
 
@@ -600,3 +613,72 @@ header, .grey-space, footer {
 /* Main */
 
 /* Footer */
+
+
+/* REVIEWS SLIDER */
+
+.reviews__slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.reviews__slider article {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+.rev-slider-nav {
+    display: flex;
+    column-gap: 1.2rem;
+    z-index: 1;
+}
+
+.rev-slider-nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-2);
+    opacity: 0.5;
+    transition: opacity ease 250ms;
+}
+
+.rev-slider-nav a:hover {
+    opacity: 1;
+}
+
+.reviews__slider-wrapper {
+    position: relative;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.review-img {  /* <---------------- */
+    width: 100%;
+    max-width: 560px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    background-position-x: center;
+    background-position-y: 10% ;
+    border-radius: 2px 0px 0px 2px;
+}
+
+.rev-slide-info {
+    flex: 2;
+    background: rgba(53, 53, 53, 0.20);
+    border-radius: 0px 2px 2px 0px;
+}
+
+.rev-slide-info > h3 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.text-orange {
+    color: var(--color-4);
+    text-decoration: underline;
+}
