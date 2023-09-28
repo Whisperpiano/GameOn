@@ -19,6 +19,7 @@
 .flex.justify-sa{justify-content: space-around; width: 100%;}
 .flex.justify-se{justify-content: space-evenly; width: 100%;}
 .align-items-center{align-items: center;}
+.align-content-center{align-content: center;}
 .center{justify-content: center;}
 .right{justify-content: flex-end;}
 .row{flex-direction: row;}
@@ -80,3 +81,10 @@
 .pd-50-20{padding: 50px 20px;}
 .pd-50-15{padding: 50px 15px;}
 .pd-50-10{padding: 50px 10px;}
+
+.pd-90-0{padding: 90px 0px;}
+
+
+
+
+.grid-3-col{display: grid; grid-template-columns: repeat(3, minmax(430px, 1fr));grid-gap: 20px;}

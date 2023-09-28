@@ -65,11 +65,10 @@ html {
 body {
     min-height: 100vh;
     font-size: 100%;
-    font-family: var(--font-1);
+    font-family: var(--font-2);
     color: var(--color-2);
     background-color: var(--color-1);
     line-height: 1.4em;
-
 }
 
 h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
@@ -141,6 +140,17 @@ svg {
 .btn-2::before{
     content: "\f004";
     padding-right: 15px;
+}
+
+
+.btn-2-sm {
+    border: 1px solid rgba(241, 241, 241, 0.20);
+    background: transparent;
+    text-align: center;  
+    font-weight: 500;
+    padding: 8px 20px;
+    display: inline-block;
+    
 }
 
 .btn-sale {
@@ -252,14 +262,12 @@ header {
 /* ----- SLIDER ----- */
 
     .banner {
-    padding: 90px 0px;
-    position: relative;
-    margin: 0 auto;
+        position: relative;
+        margin: 0 auto;
     }
 
     .slider {
         display: flex;
-        aspect-ratio: 16 / 9;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
@@ -269,15 +277,11 @@ header {
     .slider article {
         flex: 1 0 100%;
         scroll-snap-align: start;
-        
     }
     
     .slider-nav {
         display: flex;
-        column-gap: 2rem;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        column-gap: 1.2rem;
         z-index: 1;
     }
 
@@ -292,10 +296,6 @@ header {
 
     .slider-nav a:hover {
         opacity: 1;
-    }
-
-    #slide-1, #slide-2, #slide-3, #slide-4, #slide-5 {
-        min-width: 1340px;
     }
 
     .slide-img {
@@ -345,7 +345,7 @@ header {
 
 
     .slider div .name {
-    font-style: var(--font-2);
+    font-style: var(--font-1);
     font-size: 32px;
     }
 
@@ -359,24 +359,182 @@ header {
     }
 
 
+/* BESTSELLER & NEW RELEASES*/
+.headline {
+    font-size: 40px;
+}
+
+.list-items {
+    padding-top: 50px;
+    row-gap: 50px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 430px;
+}
+
+.item-img-container {
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.item-img {
+    width: 430px;
+    height: 220px;
+    object-fit: cover;   
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.item-price {
+    font-size: 24px;
+    
+}
+
+.item-platforms {
+    gap: 15px;
+    padding: 8px 8px 0px 8px;
+    background: rgba(23, 24, 28, 0.70);
+    align-items: flex-start; 
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 2px 0px 8px 0px;
+}
+
+.item-discount {
+    background: var(--color-3);
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 8px 0px 2px 0px;
+}
+
+/* FEATURES & SUBSCRIBE */
+
+.fast-img::before {
+    content: url("../images/feature-fast.svg");
+}
+
+.safe-img:before {
+    content: url("../images/feature-safe.svg");
+}
+
+.support-img:before {
+    content: url("../images/feature-support.svg");
+}
+
+.grey-space {
+    border-top: 2px solid rgba(241, 241, 241, 0.2);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.2);
+}
+
+.subs-panel {
+    text-align: center;
+    gap: 20px;
+}
+
+.subs-form {
+    margin: auto;
+}
 
 
+/* PAYMENT METHODS */
+
+.payment-methods-panel {
+    gap: 30px;
+}
+
+.pay-visa {
+    content: url("../images/pay-visa.svg");
+}
+.pay-mastercard {
+    content: url("../images/pay-mastercard.svg");
+}
+.pay-maestro {
+    content: url("../images/pay-maestro.svg");
+}
+.pay-bitcoin {
+    content: url("../images/pay-bitcoin.svg");
+}
+.pay-apple {
+    content: url("../images/pay-apple.svg");
+}
+.pay-google {
+    content: url("../images/pay-google.svg");
+}
+.pay-paypal {
+    content: url("../images/pay-paypal.svg");
+}
+.pay-paysafecard {
+    content: url("../images/pay-paysafecard.svg");
+}
+.pay-klarna {
+    content: url("../images/pay-klarna.svg");
+}
+.pay-alipay {
+    content: url("../images/pay-alipay.svg");
+}
 
 
+/* FOOTER */ 
 
+footer {
+    background: var(--color-5);
+    border-top: 2px solid rgba(241, 241, 241, 0.2);
+}
 
+footer h4 {
+    font-weight: 900;
+}
 
+.trust-panel-mid {
+    gap: 30px;
+    
+}
 
+.social-media{
+    gap: 30px;
+}
 
+.copyright {
+    text-align: center;
+}
 
+.icon-instagram {
+    content: url("../images/icon-instagram.svg");
+}
+.icon-twitter {
+    content: url("../images/icon-twitter.svg");
+}
+.icon-youtube {
+    content: url("../images/icon-youtube.svg");
+}
+.icon-discord {
+    content: url("../images/icon-discord.svg");
+}
 
+.icon-appstore {
+    content: url("../images/appstore.svg");
+}
 
+.icon-googleplay {
+    content: url("../images/googleplay.png");
+}
 
-
-
-
-
-
+.icon-trustpilot {
+    content: url("../images/Trustpilot.png");
+}
 
 
 
@@ -405,7 +563,7 @@ body {
     background: var(--dark-blue);
 }
 
-header {
+header, .grey-space, footer {
     max-width: 100%;
     margin: auto;
     background: var(--grey-tran02);
