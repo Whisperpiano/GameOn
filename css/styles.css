@@ -161,6 +161,14 @@ svg {
     padding: 0.3em 2.5em; 
 }
 
+.btn-subs {
+    background: var(--color-4);
+    text-align: center;
+    font-weight: 600;
+    padding: 8px 0px;
+    width: 100%;
+}
+
 /* ----- SEARCH BAR ----- */
 .search-bar {
     width: 100%;
@@ -426,8 +434,7 @@ header {
     content: url("../images/feature-support.svg");
 }
 
-.grey-space {
-    border-top: 2px solid rgba(241, 241, 241, 0.2);
+.border-bottom {
     border-bottom: 2px solid rgba(241, 241, 241, 0.2);
 }
 
@@ -438,13 +445,12 @@ header {
 }
 
 .subs-form {
-    max-width: 450px;
+    max-width: 400px;
     width: 100%;
     margin: 0 auto;
 }
 
 .subs-form input {
-    width: 70%;
     flex: 1;
 }
 
@@ -453,6 +459,10 @@ header {
     width: 30%;
 }
 
+.border-top-bottom {
+    border-top: 1px solid rgba(241, 241, 241, 0.20);
+    border-bottom: 1px solid rgba(241, 241, 241, 0.20);
+}
 
 /* PAYMENT METHODS */
 
@@ -568,7 +578,7 @@ body {
     background: var(--dark-blue);
 }
 
-header, .grey-space, footer {
+header, .grey-section, footer {
     max-width: 100%;
     margin: auto;
     background: var(--grey-tran02);
