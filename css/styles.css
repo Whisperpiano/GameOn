@@ -368,13 +368,6 @@ header {
     row-gap: 50px;
 }
 
-.item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 430px;
-}
 
 .item-img-container {
     border-radius: 2px;
@@ -382,8 +375,8 @@ header {
 }
 
 .item-img {
-    width: 430px;
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;   
 }
 
