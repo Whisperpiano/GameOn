@@ -85,6 +85,11 @@
 .pd-90-0{padding: 90px 0px;}
 
 
+.gap-15{gap: 15px;}
+.gap-20{gap: 20px;}
+.gap-30{gap: 30px;}
+
+.row-gap-50{row-gap: 50px;}
 
 
 .grid-3-col{display: grid; grid-template-columns: repeat(3, 1fr);grid-gap: 20px;}

@@ -1,5 +1,30 @@
 @import url("framework.css");
 @import url("sliders.css");
+
+/* General styles*/
+
+::before {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-weight: 600;
+    text-rendering: auto;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+::after {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-weight: 600;
+    text-rendering: auto;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+
 /* ----- VARIABLES ----- */
 :root {
     /* COLORS */
@@ -97,6 +122,11 @@ svg {
     fill: currentColor;
 }
 
+
+
+
+
+
 /* ----- BUTTONS ----- */
 .btn {
     border-radius: 2px;
@@ -162,6 +192,8 @@ svg {
     width: 100%;
 }
 
+
+
 /* ----- SEARCH BAR ----- */
 .search-bar {
     border-radius: 2px;
@@ -195,8 +227,9 @@ svg {
     outline-offset:2px;
 }
 
-/* ICONS */
 
+
+/* ICONS */
 .playstation:before {
     content: url(../images/playstation-icon.svg); 
 }
@@ -214,26 +247,32 @@ svg {
 }
 
 .steam:before {
-    content: url(../images/steam-icon.png);
+    content: url(../images/steam-icon.svg);
 }
 
-.stars {
-    color: rgba(255, 203, 69, 1);
-    
+.icon-instagram {
+    content: url("../images/icon-instagram.svg");
+}
+.icon-twitter {
+    content: url("../images/icon-twitter.svg");
+}
+.icon-youtube {
+    content: url("../images/icon-youtube.svg");
+}
+.icon-discord {
+    content: url("../images/icon-discord.svg");
 }
 
-/* HEADER */
-
-.menu {
-    font-weight: 700;
-    font-size: 18px;
-}
-.header-right{
-    font-size: 14px; 
+.icon-appstore {
+    content: url("../images/appstore.svg");
 }
 
-.header-right ul {
-    gap: 1.5rem;
+.icon-googleplay {
+    content: url("../images/googleplay.png");
+}
+
+.icon-trustpilot {
+    content: url("../images/Trustpilot.png");
 }
 
 .sign-in::after {
@@ -249,111 +288,9 @@ svg {
     content: "\f004";
 }
 
-/* MAIN */
-
-
-/* BESTSELLER & NEW RELEASES*/
-.headline {
-    font-size: 40px;
-}
-
-.list-items {
-    padding-top: 50px;
-    row-gap: 50px;
-}
-
-
-.item-img-container {
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.item-img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;   
-}
-
-.item-name {
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.item-price {
-    font-size: 24px;
+.stars {
+    color: rgba(255, 203, 69, 1);
     
-}
-
-.item-platforms {
-    gap: 15px;
-    padding: 8px 8px 0px 8px;
-    background: rgba(23, 24, 28, 0.70);
-    align-items: flex-start; 
-    position: absolute;
-    top: 0px;
-    left: 0;
-    border-radius: 2px 0px 8px 0px;
-}
-
-.item-discount {
-    background: var(--color-3);
-    padding: 2px 8px;
-    font-size: 14px;
-    font-weight: 700;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-radius: 8px 0px 2px 0px;
-}
-
-/* FEATURES & SUBSCRIBE */
-
-.fast-img::before {
-    content: url("../images/feature-fast.svg");
-}
-
-.safe-img:before {
-    content: url("../images/feature-safe.svg");
-}
-
-.support-img:before {
-    content: url("../images/feature-support.svg");
-}
-
-.border-bottom {
-    border-bottom: 2px solid rgba(241, 241, 241, 0.2);
-}
-
-.subs-panel {
-    text-align: center;
-    gap: 20px;
-    
-}
-
-.subs-form {
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.subs-form input {
-    flex: 1;
-}
-
-
-.subs-form button {
-    width: 30%;
-}
-
-.border-top-bottom {
-    border-top: 1px solid rgba(241, 241, 241, 0.20);
-    border-bottom: 1px solid rgba(241, 241, 241, 0.20);
-}
-
-/* PAYMENT METHODS */
-
-.payment-methods-panel {
-    gap: 30px;
 }
 
 .pay-visa {
@@ -388,6 +325,111 @@ svg {
 }
 
 
+
+/* HEADER */
+.menu {
+    font-weight: 700;
+    font-size: 18px;
+}
+.header-right{
+    font-size: 14px; 
+}
+
+.header-right ul {
+    gap: 1.5rem;
+}
+
+
+
+/* BESTSELLER & NEW RELEASES*/
+.headline {
+    font-size: 40px;
+}
+
+.item-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; 
+    border-radius: 2px;  
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.item-price {
+    font-size: 24px;  
+}
+
+.item-platforms {
+    gap: 15px;
+    padding: 8px 8px 0px 8px;
+    background: rgba(23, 24, 28, 0.70);
+    align-items: flex-start; 
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 2px 0px 8px 0px;
+}
+
+.item-discount {
+    background: var(--color-3);
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    border-radius: 8px 0px 2px 0px;
+}
+
+
+
+/* FEATURES & SUBSCRIBE */
+
+.fast-img::before {
+    content: url("../images/feature-fast.svg");
+}
+
+.safe-img:before {
+    content: url("../images/feature-safe.svg");
+}
+
+.support-img:before {
+    content: url("../images/feature-support.svg");
+}
+
+.border-bottom {
+    border-bottom: 2px solid rgba(241, 241, 241, 0.2);
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.subscribe-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    flex: 1;
+}
+
+
+.subscribe-form button {
+    width: 30%;
+}
+
+.border-top-bottom {
+    border-top: 1px solid rgba(241, 241, 241, 0.20);
+    border-bottom: 1px solid rgba(241, 241, 241, 0.20);
+}
+
+
+
 /* FOOTER */ 
 
 footer {
@@ -397,44 +439,6 @@ footer {
 
 footer h4 {
     font-weight: 900;
-}
-
-.trust-panel-mid {
-    gap: 30px;
-    
-}
-
-.social-media{
-    gap: 30px;
-}
-
-.copyright {
-    text-align: center;
-}
-
-.icon-instagram {
-    content: url("../images/icon-instagram.svg");
-}
-.icon-twitter {
-    content: url("../images/icon-twitter.svg");
-}
-.icon-youtube {
-    content: url("../images/icon-youtube.svg");
-}
-.icon-discord {
-    content: url("../images/icon-discord.svg");
-}
-
-.icon-appstore {
-    content: url("../images/appstore.svg");
-}
-
-.icon-googleplay {
-    content: url("../images/googleplay.png");
-}
-
-.icon-trustpilot {
-    content: url("../images/Trustpilot.png");
 }
 
 
@@ -467,30 +471,6 @@ body {
 .grey-section {
     background: var(--grey-tran02);
 }
-
-/* General styles*/
-
-::before {
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-weight: 600;
-    text-rendering: auto;
-    font-style: normal;
-    font-variant: normal;
-    -webkit-font-smoothing: antialiased;
-}
-
-
-::after {
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-weight: 600;
-    text-rendering: auto;
-    font-style: normal;
-    font-variant: normal;
-    -webkit-font-smoothing: antialiased;
-}
-
 
 /* Header */
 

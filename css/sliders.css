@@ -45,16 +45,9 @@
     background: rgba(53, 53, 53, 0.20);
     border-radius: 0px 2px 2px 0px;
     }
-    
-.platforms {
-    gap: 15px;
-}
 
 /* ----->  Slider top design <----- */
 
-.slide-info__mid {
-    gap: 20px;
-}
 
 .slide-info__buttons {
     gap: 30px;
