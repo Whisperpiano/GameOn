@@ -1,10 +1,4 @@
 /* ----- SLIDER ----- */
-
-.banner {
-    position: relative;
-    margin: 0 auto;
-}
-
 .slider {
     display: flex;
     overflow-x: auto;
@@ -21,7 +15,6 @@
 .slider-nav {
     display: flex;
     column-gap: 1.2rem;
-    z-index: 1;
 }
 
 .slider-nav a {
@@ -38,12 +31,48 @@
 }
 
 .slide-img {
-flex:2;
-border-radius: 2px 0px 0px 2px;
-background-position-x: center;
-background-position-y: 10% ;
-background-size: cover;
-cursor: pointer;
+    flex:2;
+    border-radius: 2px 0px 0px 2px;
+    background-position-x: center;
+    background-position-y: 10% ;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.slide-info {    
+    flex:1;
+    gap: 60px;
+    background: rgba(53, 53, 53, 0.20);
+    border-radius: 0px 2px 2px 0px;
+    }
+    
+.platforms {
+    gap: 15px;
+}
+
+/* ----->  Slider top design <----- */
+
+.slide-info__mid {
+    gap: 20px;
+}
+
+.slide-info__buttons {
+    gap: 30px;
+}
+
+
+.slider div .name {
+    font-style: var(--font-1);
+    font-size: 32px;
+}
+
+.slider div .price {
+    font-size: 28px;
+}
+
+.slider div .subprice {
+    font-size: 16px;
+    color: #F29220;
 }
 
 .slide-img-1 {
@@ -63,43 +92,9 @@ cursor: pointer;
     background-image: url("../images/slider-img-5.png");
 }
 
-.platforms {
-    gap: 15px;
-}
+/* -----> Slider reviews design <----- */
 
-.slide-info {    
-flex:1;
-gap: 60px;
-background: rgba(53, 53, 53, 0.20);
-border-radius: 0px 2px 2px 0px;
-}
-
-.slide-info__mid {
-    gap: 20px;
-}
-
-.slide-info__buttons {
-    gap: 30px;
-}
-
-
-.slider div .name {
-font-style: var(--font-1);
-font-size: 32px;
-}
-
-.slider div .price {
-font-size: 28px;
-}
-
-.slider div .subprice {
-font-size: 16px;
-color: #F29220;
-}
-
-/* REVIEWS SLIDER */
-
-.review-img {  /* <---------------- */
+.review-img {  /* <---------------- IF NEED TO CHANGE */
     width: 100%;
     max-width: 560px;
     height: 300px;
