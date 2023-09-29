@@ -1,0 +1,127 @@
+/* ----- SLIDER ----- */
+
+.banner {
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.slider article {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1.2rem;
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-2);
+    opacity: 0.5;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+.slide-img {
+flex:2;
+border-radius: 2px 0px 0px 2px;
+background-position-x: center;
+background-position-y: 10% ;
+background-size: cover;
+cursor: pointer;
+}
+
+.slide-img-1 {
+    background-image: url("../images/slider-img-1.png");
+}
+
+.slide-img-2 {
+    background-image: url("../images/slider-img-2.png");
+}
+.slide-img-3 {
+    background-image: url("../images/slider-img-3.png");
+}
+.slide-img-4 {
+    background-image: url("../images/slider-img-4.png");
+}
+.slide-img-5 {
+    background-image: url("../images/slider-img-5.png");
+}
+
+.platforms {
+    gap: 15px;
+}
+
+.slide-info {    
+flex:1;
+gap: 60px;
+background: rgba(53, 53, 53, 0.20);
+border-radius: 0px 2px 2px 0px;
+}
+
+.slide-info__mid {
+    gap: 20px;
+}
+
+.slide-info__buttons {
+    gap: 30px;
+}
+
+
+.slider div .name {
+font-style: var(--font-1);
+font-size: 32px;
+}
+
+.slider div .price {
+font-size: 28px;
+}
+
+.slider div .subprice {
+font-size: 16px;
+color: #F29220;
+}
+
+/* REVIEWS SLIDER */
+
+.review-img {  /* <---------------- */
+    width: 100%;
+    max-width: 560px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    background-position-x: center;
+    background-position-y: 10% ;
+    border-radius: 2px 0px 0px 2px;
+}
+
+.rev-slide-info {
+    flex: 1;
+    background: rgba(53, 53, 53, 0.20);
+    border-radius: 0px 2px 2px 0px;
+}
+
+.rev-slide-info > h3 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.text-orange {
+    color: var(--color-4);
+    text-decoration: underline;
+}
