@@ -18,12 +18,17 @@
 .flex.justify-sb{justify-content: space-between; width: 100%;}
 .flex.justify-sa{justify-content: space-around; width: 100%;}
 .flex.justify-se{justify-content: space-evenly; width: 100%;}
+
 .align-items-center{align-items: center;}
 .align-content-center{align-content: center;}
 .center{justify-content: center;}
 .right{justify-content: flex-end;}
 .row{flex-direction: row;}
 .column{flex-direction: column;}
+
+.flex > .c6{width: 60%;}
+.flex > .c5{width: 50%;}
+.flex > .c4{width: 40%;}
 
 .order-1{order: 1;}
 .order-2{order: 2;}
@@ -104,8 +109,6 @@
 .pd-top-90{padding-top: 90px;}
 .pd-top-100{padding-top: 100px;}
 
-
-
 .gap-5{gap: 5px;}
 .gap-10{gap: 10px;}
 .gap-15{gap: 15px;}
@@ -123,4 +126,8 @@
 .row-gap-50{row-gap: 50px;}
 
 
+.grid-1-col{display: grid; grid-template-columns: repeat(1, 1fr);grid-gap: 20px;}
+.grid-2-col{display: grid; grid-template-columns: repeat(2, 1fr);grid-gap: 20px;}
 .grid-3-col{display: grid; grid-template-columns: repeat(3, 1fr);grid-gap: 20px;}
+
+.grid-4-col{display: grid; grid-template-columns: repeat(4, 1fr);grid-gap: 20px;}

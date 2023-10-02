@@ -344,6 +344,18 @@ svg {
     content: "\f105";
 }
 
+.type::before {
+    content: url("/images/key-icon.svg");
+}
+
+.version::before {
+    content: url("/images/global-icon.svg");
+}
+.activate::before {
+    content: url("/images/verified-icon.svg");
+}
+
+
 
 
 /* HEADER */
@@ -647,8 +659,130 @@ body {
     
 }
 
+/*----- PRODUCT PAGE -----*/
+
+.product-name {
+    color: #F1F1F1;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.price-before {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: line-through;
+}
+
+.price-discount {
+    color: var(--color-4);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.price-after {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}  
+
+.product-panel select {
+    max-width: 200px;
+    width: 100%;
+}
+
+.main-picture{
+    height: 50%;
+}
+
+.main-picture-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-panel { /*<-----------------------*/
+    max-height: 800px;
+    overflow: hidden;
+}
+
+/* ACCORDION */
+
+.info-container {
+   background: linear-gradient(180deg, #F1F1F1 0%, rgba(241, 241, 241, 0.00) 100%);
+   background-clip: text;
+
+   
+    
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .info-content {
+    display: block;
+}
+
+#check:checked ~ label {
+    visibility: hidden;
+}
+
+#check:checked ~ label::before {
+    content: "Show less";
+    display: inline-block;
+    visibility: visible;
+    font-family: var(--font-2);
+    font-weight: 400;
+    justify-content: center;
+
+    
+    
+}
+
+.info-content {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    margin-top: 50px;
+    cursor: pointer;
+    font-family: var(--font-2);
+    font-weight: 400;
+    
+}
 
 
 
+.requirements h6 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.requirements th {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 30%;
+    text-align: left;
+    padding: 20px;
+}
+
+.requirements td {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
 
 
