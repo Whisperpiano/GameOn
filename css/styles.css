@@ -604,7 +604,48 @@ body {
     font-weight: 400;
     
 }
+
+/*----- CONTACT PAGE -----*/ 
+
+.request h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 200%;
+}
+
+.request p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.request input {
+    text-align: left;
+}
+.request input[type=submit] {
+    margin: auto;
+    font-weight: 600;
+    border: 1px solid rgba(241, 241, 241, 0.20);
+    background: transparent;
+    cursor: pointer;
+    margin-bottom: 60px; 
+}
+
+.form-box {
+    width: 100%;
+}
+
+.form-box textarea{
+    resize: none;
+    width: 100%;
+    max-height: 125px;
+    text-align: left;
+}
+
+.form-box span {
+    color: rgba(241, 241, 241, 0.70);
+    font-size: 14px;
     
+}
 
 
 
