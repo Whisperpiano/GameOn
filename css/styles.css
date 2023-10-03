@@ -86,7 +86,7 @@ body {
     font-family: var(--font-2);
     color: var(--color-2);
     background-color: var(--color-1);
-    line-height: 1.4em;
+    line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
@@ -96,6 +96,13 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
     text-decoration: none;
     color: inherit;
 }
+
+h1, .h1{font-size: 80px;}
+h2, .h2{font-size: 60px;}
+h3, .h3{font-size: 50px;}
+h4, .h4{font-size: 30px;}
+h5, .h5{font-size: 20px;}
+h6, .h6{font-size: 17px;}
 
 ::selection {
     background-color: var(--color-2);
@@ -714,13 +721,8 @@ body {
 
 /* ACCORDION */
 
-.info-container {
-   background: linear-gradient(180deg, #F1F1F1 0%, rgba(241, 241, 241, 0.00) 100%);
-   background-clip: text;
 
-   
-    
-}
+
 
 #check {
     display: none;
@@ -785,4 +787,39 @@ label {
     line-height: normal;
 }
 
+
+.user-review__mid p {
+    padding: 20px 0px;
+}
+
+.user-verify p {
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+
+.user-review {
+    border: 1px solid rgba(241, 241, 241, 0.20);
+}
+
+
+/* SUCCESS PAGE */
+
+.success {
+    padding: 250px 0px;
+}
+
+.success span {
+    font-weight: 700;
+}
+
+.btn-orange {
+    border-radius: 2px;
+    background: var(--color-4);
+    display: inline-block;
+    padding: 10px 90px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
 
