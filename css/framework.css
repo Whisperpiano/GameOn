@@ -26,9 +26,16 @@
 .row{flex-direction: row;}
 .column{flex-direction: column;}
 
+.flex > .c10{width: 100%;}
+.flex > .c9{width: 90%;}
+.flex > .c8{width: 80%;}
+.flex > .c7{width: 70%;}
 .flex > .c6{width: 60%;}
 .flex > .c5{width: 50%;}
 .flex > .c4{width: 40%;}
+.flex > .c3{width: 30%;}
+.flex > .c2{width: 20%;}
+.flex > .c1{width: 10%;}
 
 .order-1{order: 1;}
 .order-2{order: 2;}
