@@ -61,6 +61,7 @@
       </header>
 
       <main class="mw-1340">
+
         <section class="flex">
 
             <article class="billing-address c7">
@@ -106,21 +107,154 @@
 
             </article>
 
-            <article class="payment-method">
+            <article class="payment-method c7">
 
-                <div class="card-payment"></div>
+                <h2 class="headline">Payment method</h2>
 
-                <div class="paypal-payment"></div>
+                <div class="flex column gap-30">
 
-                <div class="googlepay-payment"></div>
+                  <div class="card-payment accordion grey-section flex justify-sb">
+
+                    <input type="checkbox" id="payment-check1">
+
+                    <label class="btn-on-icon flex margin-auto-0 pd-30" for="payment-check1">Card payment </label>
+
+                    <img class="pd-30" src="images/pay-visa.svg" alt="">         
+
+                    <div class="accordion-content">
+
+                      <form class="flex column gap-30 pd-0-30" action="">
+
+                        <div class="flex column">
+                          <label for="">Card number</label>
+                          <input type="text">
+                        </div>
+
+                        <div>
+                          <label for="">Cardholder name</label>
+                          <input type="text">
+                        </div>
+
+                        <div class="grid-3-col">
+
+                            <div>
+                              <label for="">Expiry month</label>
+                              <input type="text">
+                            </div>
+                            
+                            <div>
+                              <label for="">Expiry year</label>
+                              <input type="text">
+                            </div>
+                            
+                            <div>
+                              <label for="">CVC/CVV</label>
+                              <input type="text">
+                            </div>
+                          
+                        </div>
+
+                        <div class="payment-bottom flex justify-sb align-items-center">
+
+                          <div>
+                            <input type="checkbox">
+                            <label for="">Remember card details</label>
+                          </div>
+
+                          <div>
+                            <p class="btn-payment">Pay with card payment</p>
+                          </div>
+                        </div>
+                        
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="paypal-payment accordion grey-section flex justify-sb">
+
+                    <input type="checkbox" id="payment-check2">
+
+                    <label class="btn-on-icon flex margin-auto-0 pd-30" for="payment-check2">PayPal</label>
+
+                    <img class="pd-30" src="images/pay-paypal.svg" alt="">         
+
+                    <div class="accordion-content">
+
+                      <p>Click the button to be redirected to PayPal and complete your payment securely.</p>
+
+                      <div>
+                        <p class="btn-payment-2">Pay with <span class="paypal-letters"></span></p>
+                      </div>
+
+        
+                    </div>
+
+                  </div>
+
+                  <div class="googlepay-payment accordion grey-section flex justify-sb">
+
+                    <input type="checkbox" id="payment-check3">
+
+                    <label class="btn-on-icon flex margin-auto-0 pd-30" for="payment-check3">Google Pay</label>
+
+                    <img class="pd-30" src="images/pay-google.svg" alt="">         
+
+                    <div class="accordion-content">
+
+                      <form class="flex column gap-30 pd-0-30" action="">
+
+                        <div class="flex column">
+                          <label for="">Card number</label>
+                          <input type="text">
+                        </div>
+
+                        <div>
+                          <label for="">Cardholder name</label>
+                          <input type="text">
+                        </div>
+
+                        <div class="grid-3-col">
+
+                            <div>
+                              <label for="">Expiry month</label>
+                              <input type="text">
+                            </div>
+                            
+                            <div>
+                              <label for="">Expiry year</label>
+                              <input type="text">
+                            </div>
+                            
+                            <div>
+                              <label for="">CVC/CVV</label>
+                              <input type="text">
+                            </div>
+                          
+                        </div>
+
+                        <div class="payment-bottom flex justify-sb align-items-center">
+
+                          <div>
+                            <input type="checkbox">
+                            <label for="">Remember card details</label>
+                          </div>
+
+                          <div>
+                            <p class="btn-payment">Pay with card payment</p>
+                          </div>
+                        </div>
+                        
+                      </form>
+                    </div>
+
+                  </div>
+
+                </div>
 
 
 
             </article>
-
-
-
-       
 
             <aside class="c3">
 
@@ -155,9 +289,9 @@
 
                     <div class="accordion">
 
-                        <input type="checkbox" id="check1">
+                        <input type="checkbox" id="coupon-check1">
 
-                        <label class="h5 flex justify-sb pd-20" for="check1">Coupons<span><i class="fa-solid fa-angle-down"></i></span></label>
+                        <label class="h5 flex justify-sb pd-20" for="coupon-check1">Coupons<span><i class="fa-solid fa-angle-down"></i></span></label>
 
                         <div class="accordion-content">
                             <div class="pd-0-20">
@@ -176,10 +310,34 @@
             
                     
                 </div>
+
+                <div class="gift grey-section border">
+
+                    <div class="accordion">
+
+                        <input type="checkbox" id="gift-check1">
+
+                        <label class="h5 flex justify-sb pd-20" for="gift-check1">Give as gift<span><i class="fa-solid fa-angle-down"></i></span></label>
+
+                        <div class="accordion-content">
+
+                            <div class="pd-0-20">
+
+                                <p>Buy a product and get a ready-to-download gift PDF for your friends. <a href="#" class="color-4 underline">Check how it works</a></p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+            
+                    
+                </div>
             
             </aside>
 
         </section>
+
       </main>
 
       <footer class="grey-section">
