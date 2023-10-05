@@ -399,8 +399,12 @@ svg {
     content: "\f059";
 }
 
-.paypal-letters::before {
+.paypal-letters::after {
     content: url("/images/paypal-letters.svg");
+}
+
+.googlepay-letters::after {
+    content: url("/images/googlepay-letters.svg");
 }
 
 
@@ -961,7 +965,10 @@ body {
     overflow: hidden;
 }
 
-.accordion input[type="checkbox"] {
+.no-display {
+    display: none;
+}
+.coupon-no-display {
     display: none;
 }
 
@@ -994,8 +1001,16 @@ label {
     transition: max-height .35s;
 }
   
-input:checked ~ .accordion-content{
+.no-display:checked ~ .accordion-content{
     max-height: 100vh; 
+}
+.coupon-no-display:checked ~ .accordion-content{
+    max-height: 100vh; 
+}
+
+.no-display:checked ~ label::before {
+    content: url("/images/btn-on.svg");
+    transition: content 0.35s;
 }
 
 input:checked ~ label i {
@@ -1027,6 +1042,7 @@ input:checked ~ label i {
     background: var(--color-4);
     border-radius: 2px;
     text-align: center;
+
     font-weight: 600;
     padding: 8px 80px;
     margin-bottom: 30px;
@@ -1038,7 +1054,11 @@ input:checked ~ label i {
     text-align: center;
     font-weight: 600;
     padding: 8px 80px;
-    margin-bottom: 30px;
+ }
+
+ .remember-card ~ input[type="checkbox"] {
+    display: inline-block;
+    
     
  }
 
