@@ -1,0 +1,196 @@
+/* ICONS */
+
+.shopping-icon::before {
+    content: "\f07a";
+    padding-right: 15px;
+}
+.heart-icon::before {
+    content: "\f004";
+    padding-right: 15px;
+}
+
+
+.dislike::before {
+    content: url("/images/dislike.svg");
+    margin-right: 20px;
+}
+.like::before {
+    content: url("/images/like.svg");
+    margin-right: 20px;
+}
+
+
+.google-icon::before {
+    content: url("/images/google-icon.svg");
+    margin-right: 20px;
+}
+.facebook-icon::before {
+    content: url("/images/facebook-icon.svg");
+    margin-right: 20px;
+}
+.apple-icon::before {
+    content: url("/images/apple-icon.svg");
+    margin-right: 20px;
+}
+
+
+.x-mark::before {
+    content: "\f00d";
+}
+
+.playstation:before {
+    content: url(../images/playstation-icon.svg); 
+}
+
+.xbox:before {
+    content: url(../images/xbox-icon.svg);
+}
+
+.nintendo:before {
+    content: url(../images/nintendo-icon.svg);
+}
+
+.windows:before {
+    content: url(../images/win-icon.svg);
+}
+
+.steam:before {
+    content: url(../images/steam-icon.svg);
+}
+
+.icon-instagram {
+    content: url("../images/icon-instagram.svg");
+}
+.icon-twitter {
+    content: url("../images/icon-twitter.svg");
+}
+.icon-youtube {
+    content: url("../images/icon-youtube.svg");
+}
+.icon-discord {
+    content: url("../images/icon-discord.svg");
+}
+
+.icon-appstore {
+    content: url("../images/appstore.svg");
+}
+
+.icon-googleplay {
+    content: url("../images/googleplay.png");
+}
+
+.icon-trustpilot {
+    content: url("../images/Trustpilot.png");
+}
+
+.sign-in::after {
+    content: "\f007";
+    padding-left: 10px;
+}
+
+.cart::after {
+    content: "\f07a";
+}
+
+.fav::after {
+    content: "\f004";
+}
+
+.stars {
+    color: rgba(255, 203, 69, 1);
+    
+}
+
+.pay-visa {
+    content: url("../images/pay-visa.svg");
+}
+.pay-mastercard {
+    content: url("../images/pay-mastercard.svg");
+}
+.pay-maestro {
+    content: url("../images/pay-maestro.svg");
+}
+.pay-bitcoin {
+    content: url("../images/pay-bitcoin.svg");
+}
+.pay-apple {
+    content: url("../images/pay-apple.svg");
+}
+.pay-google {
+    content: url("../images/pay-google.svg");
+}
+.pay-paypal {
+    content: url("../images/pay-paypal.svg");
+}
+.pay-paysafecard {
+    content: url("../images/pay-paysafecard.svg");
+}
+.pay-klarna {
+    content: url("../images/pay-klarna.svg");
+}
+.pay-alipay {
+    content: url("../images/pay-alipay.svg");
+}
+
+.icon-previous::after {
+    content: "\f104";
+}
+.icon-next::after {
+    content: "\f105";
+}
+.icon-up::after {
+    content: "\f106";
+}
+.icon-down::after {
+    content: "\f107";
+}
+
+.type::before {
+    content: url("/images/key-icon.svg");
+}
+
+.version::before {
+    content: url("/images/global-icon.svg");
+}
+.activate::before {
+    content: url("/images/verified-icon.svg");
+}
+
+.less::after {
+    content: "\f068";
+}
+.more::after {
+    content: "\2b";
+}
+
+
+.trash::after {
+    content: "\f1f8";
+    color: var(--color-5);
+}
+
+.shield::before {
+    content: "\f3ed";
+    padding-right: 15px;
+}
+
+.btn-off-icon::before {
+    content: url("../images/btn-off.svg");
+    margin-right: 20px;
+}
+.btn-on-icon::before {
+    content: url("../images/btn-on.svg");
+    margin-right: 20px;
+}
+
+.circle-question {
+    content: "\f059";
+}
+
+.paypal-letters::after {
+    content: url("/images/paypal-letters.svg");
+}
+
+.googlepay-letters::after {
+    content: url("/images/googlepay-letters.svg");
+}

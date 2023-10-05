@@ -132,6 +132,7 @@
 
 .row-gap-50{row-gap: 50px;}
 
+.uppercase{text-transform: uppercase;}
 
 .grid-1-col{display: grid; grid-template-columns: repeat(1, 1fr);grid-gap: 20px;}
 .grid-2-col{display: grid; grid-template-columns: repeat(2, 1fr);grid-gap: 20px;}

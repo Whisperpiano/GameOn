@@ -1,430 +1,269 @@
 @import url("framework.css");
 @import url("sliders.css");
-
-/* General styles*/
-
-::before {
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-weight: 600;
-    text-rendering: auto;
-    font-style: normal;
-    font-variant: normal;
-    -webkit-font-smoothing: antialiased;
-}
+@import url("icons.css");
 
 
-::after {
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-weight: 600;
-    text-rendering: auto;
-    font-style: normal;
-    font-variant: normal;
-    -webkit-font-smoothing: antialiased;
-}
+/* ------------------ RESET ------------------ */
+
+    /* ----- BEFORE & AFTER ------ */
+
+    ::before {
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        font-weight: 600;
+        text-rendering: auto;
+        font-style: normal;
+        font-variant: normal;
+        -webkit-font-smoothing: antialiased;
+    }
 
 
-/* ----- VARIABLES ----- */
-:root {
-    /* COLORS */
-    --color-1: #14151B;
-    --color-2: #F1F1F1;
-    --color-3: #BF0000;
-    --color-4: #FF6417;
-    --color-5: #353535;
-    --color-6: #F29220;
-   
-    /* TYPOGRAPHY */
-    --font-1: 'Montserrat', sans-serif;
-    --font-2: 'Source Sans 3', sans-serif;
-}
+    ::after {
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        font-weight: 600;
+        text-rendering: auto;
+        font-style: normal;
+        font-variant: normal;
+        -webkit-font-smoothing: antialiased;
+    }
 
-/* ----- MARGINS & PADDINGS ----- */
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
+    /* ----- MARGINS & PADDINGS ----- */
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
 
-/* ----- IMG ----- */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
 
-img, picture, video, iframe, figure {
-    max-width: 100%;
-    width: auto;
-    display: block;
-}
+    /* ----- IMG ----- */
 
-/* ----- LINKS ----- */
-a {
-    display: block;
-}
+    img, picture, video, iframe, figure {
+        max-width: 100%;
+        width: auto;
+        display: block;
+    }
 
-p a {
-    display: inline;
-}
+    /* ----- LINKS ----- */
+    a {
+        display: block;
+    }
 
-/* ----- LISTS ----- */
-li {
-    list-style-type: none;
-}
+    p a {
+        display: inline;
+    }
 
-/* ----- SCROLL BEHAVIOR ----- */
-html {
-    scroll-behavior: smooth;
-}
+    /* ----- LISTS ----- */
 
-/* ----- TEXT STYLES ----- */
-body {
-    min-height: 100vh;
-    font-size: 100%;
-    font-family: var(--font-2);
-    color: var(--color-2);
-    background-color: var(--color-1);
-    line-height: 1.4;
-}
+    li {
+        list-style-type: none;
+    }
 
-h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
-    font-size: 1em;
-    font-weight: inherit;
-    font-style: inherit;
-    text-decoration: none;
-    color: inherit;
-}
+    /* ----- SCROLL BEHAVIOR ----- */
 
-h1, .h1{font-size: 80px;}
-h2, .h2{font-size: 60px;}
-h3, .h3{font-size: 50px;}
-h4, .h4{font-size: 30px;}
-h5, .h5{font-size: 20px;}
-h6, .h6{font-size: 17px;}
+    html {
+        scroll-behavior: smooth;
+    }
 
-::selection {
-    background-color: var(--color-2);
-    color: var(--color-1);
-}
+    /* ----- TEXT STYLES ----- */
 
-/* ----- FORMS ----- */
-form, input, textarea, select, button, label {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-}
+    body {
+        min-height: 100vh;
+        font-size: 100%;
+        font-family: var(--font-2);
+        color: var(--color-2);
+        background-color: var(--color-1);
+        line-height: 1.4;
+    }
 
-/* ----- TABLES ----- */
-table, tr, td {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+    h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+        font-size: 1em;
+        font-weight: inherit;
+        font-style: inherit;
+        text-decoration: none;
+        color: inherit;
+    }
 
-/* ----- SVG ----- */
-svg {
-    width: 100%;
-    display: block;
-    fill: currentColor;
-}
+    h1, .h1{font-size: 80px;}
+    h2, .h2{font-size: 60px;}
+    h3, .h3{font-size: 50px;}
+    h4, .h4{font-size: 30px;}
+    h5, .h5{font-size: 20px;}
+    h6, .h6{font-size: 17px;}
 
+    ::selection {
+        background-color: var(--color-2);
+        color: var(--color-1);
+    }
 
+    /* ----- FORMS ----- */
 
+    form, input, textarea, select, button, label {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+    }
+
+    /* ----- TABLES ----- */
+
+    table, tr, td {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* ----- SVG ----- */
+    svg {
+        width: 100%;
+        display: block;
+        fill: currentColor;
+    }
 
 
-
-/* ----- BUTTONS ----- */
-.btn {
-    border-radius: 2px;
-    border: 1px solid rgba(241, 241, 241, 0.20);
-    background: rgba(53, 53, 53, 0.50);
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.btn-1 {
-   text-transform: uppercase;
-   background: var(--color-4);
-   text-align: center;
-   font-weight: 600;
-   padding: 8px 0px;
-   width: 100%;
-}
-
-.btn-1::before {
-    content: "\f07a";
-    padding-right: 15px;
- }
-
-.btn-2 {
-    border: 1px solid rgba(241, 241, 241, 0.20);
-    background: rgba(53, 53, 53, 0.20);
-    text-align: center;  
-    font-weight: 500;
-    padding: 8px 0px;
-    width: 100%;  
-}
-
-.btn-2::before{
-    content: "\f004";
-    padding-right: 15px;
-}
+/* ------------------ GENERAL ------------------*/
 
 
-.btn-2-sm {
-    border: 1px solid rgba(241, 241, 241, 0.20);
-    background: transparent;
-    text-align: center;  
-    font-weight: 500;
-    padding: 8px 20px;
-    display: inline-block;
+    /* ----- VARIABLES ----- */
+
+    :root {
+
+        /* COLORS */
+
+        --color-1: #14151B;
+        --color-2: #F1F1F1;
+        --color-3: #BF0000;
+        --color-4: #FF6417;
+        --color-5: #353535;
+        --color-6: #F29220;
     
-}
+        /* TYPOGRAPHY */
 
-.btn-sale {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 12px;
-    background: var(--color-3);
-    border-radius: 0px 0px 15px 0px; 
-    padding: 0.3em 2.5em; 
-}
-
-.btn-subs {
-    background: var(--color-4);
-    text-align: center;
-    font-weight: 600;
-    padding: 0px 0px;
-    width: 100%;
-}
-
-.btn-page {
-    border-radius: 2px;
-    border: 2px solid rgba(241, 241, 241, 0.20);
-    background: rgba(53, 53, 53, 0.20);
-}
-
-.btn-3 {
-    border-radius: 2px;
-    background: var(--color-6);       
-}
+        --font-1: 'Montserrat', sans-serif;
+        --font-2: 'Source Sans 3', sans-serif;
+    }
 
 
+    /* ----- BUTTONS ----- */
 
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 600;
+        text-align: center;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: all 0.5s;
+    }
 
+    .btn-1 {
+        background: var(--color-4);
+        color: var(--color-2);
+    }
 
-/* ----- SEARCH BAR ----- */
-.search-bar {
-    border-radius: 2px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background: var(--color-2);
-    color: rgba(53, 53, 53, 0.60);
-    font-size: 16px;
-    transition:all 0.2s ease-out;
-}
+    .btn-2 {
+        background: var(--color-1);
+        border: 1px solid rgba(241, 241, 241, 0.20);
+    }
 
-.search-bar input {
-    background: transparent;
-    font-size: 14px;
-    flex: 1;
-    border: 0;
-    outline: none;
-    color: var(--color-1);
-}
+    .btn-3 {
+        background: var(--color-3);
+    }
 
-::placeholder {
-    color: rgba(53, 53, 53, 0.60);
-}
+    .btn-4 {
+        background: var(--color-6);
+    }
 
-.search-bar button  {
-    background: transparent;
-    cursor: pointer;
-}
-
-.search-bar:focus-within {
-    outline: 2px solid rgba(255, 100, 23, 1);
-    outline-offset:2px;
-}
-
-
-
-/* ICONS */
-
-.google-icon::before {
-    content: url("/images/google-icon.svg");
-    margin-right: 20px;
-}
-.facebook-icon::before {
-    content: url("/images/facebook-icon.svg");
-    margin-right: 20px;
-}
-.apple-icon::before {
-    content: url("/images/apple-icon.svg");
-    margin-right: 20px;
-}
-
-
-.x-mark::before {
-    content: "\f00d";
-}
-
-.playstation:before {
-    content: url(../images/playstation-icon.svg); 
-}
-
-.xbox:before {
-    content: url(../images/xbox-icon.svg);
-}
-
-.nintendo:before {
-    content: url(../images/nintendo-icon.svg);
-}
-
-.windows:before {
-    content: url(../images/win-icon.svg);
-}
-
-.steam:before {
-    content: url(../images/steam-icon.svg);
-}
-
-.icon-instagram {
-    content: url("../images/icon-instagram.svg");
-}
-.icon-twitter {
-    content: url("../images/icon-twitter.svg");
-}
-.icon-youtube {
-    content: url("../images/icon-youtube.svg");
-}
-.icon-discord {
-    content: url("../images/icon-discord.svg");
-}
-
-.icon-appstore {
-    content: url("../images/appstore.svg");
-}
-
-.icon-googleplay {
-    content: url("../images/googleplay.png");
-}
-
-.icon-trustpilot {
-    content: url("../images/Trustpilot.png");
-}
-
-.sign-in::after {
-    content: "\f007";
-    padding-left: 10px;
-}
-
-.cart::after {
-    content: "\f07a";
-}
-
-.fav::after {
-    content: "\f004";
-}
-
-.stars {
-    color: rgba(255, 203, 69, 1);
     
-}
-
-.pay-visa {
-    content: url("../images/pay-visa.svg");
-}
-.pay-mastercard {
-    content: url("../images/pay-mastercard.svg");
-}
-.pay-maestro {
-    content: url("../images/pay-maestro.svg");
-}
-.pay-bitcoin {
-    content: url("../images/pay-bitcoin.svg");
-}
-.pay-apple {
-    content: url("../images/pay-apple.svg");
-}
-.pay-google {
-    content: url("../images/pay-google.svg");
-}
-.pay-paypal {
-    content: url("../images/pay-paypal.svg");
-}
-.pay-paysafecard {
-    content: url("../images/pay-paysafecard.svg");
-}
-.pay-klarna {
-    content: url("../images/pay-klarna.svg");
-}
-.pay-alipay {
-    content: url("../images/pay-alipay.svg");
-}
-
-.icon-previous::after {
-    content: "\f104";
-}
-.icon-next::after {
-    content: "\f105";
-}
-.icon-up::after {
-    content: "\f106";
-}
-.icon-down::after {
-    content: "\f107";
-}
-
-.type::before {
-    content: url("/images/key-icon.svg");
-}
-
-.version::before {
-    content: url("/images/global-icon.svg");
-}
-.activate::before {
-    content: url("/images/verified-icon.svg");
-}
-
-.less::after {
-    content: "\f068";
-}
-.more::after {
-    content: "\2b";
-}
 
 
-.trash::after {
-    content: "\f1f8";
-    color: var(--color-5);
-}
+    .btn:hover,
+    .btn:focus,
+    .btn:active{
+        
+    }
 
-.shield::before {
-    content: "\f3ed";
-    padding-right: 15px;
-}
+    .btn-1:hover,
+    .btn-1:focus,
+    .btn-1:active{
+        
+    }
 
-.btn-off-icon::before {
-    content: url("../images/btn-off.svg");
-    margin-right: 20px;
-}
-.btn-on-icon::before {
-    content: url("../images/btn-on.svg");
-    margin-right: 20px;
-}
+    .btn-2:hover,
+    .btn-2:focus,
+    .btn-2:active{
+        border: 1px solid var(--color-2);
 
-.circle-question {
-    content: "\f059";
-}
+    }
 
-.paypal-letters::after {
-    content: url("/images/paypal-letters.svg");
-}
+    .btn-3:hover,
+    .btn-3:focus,
+    .btn-3:active{
 
-.googlepay-letters::after {
-    content: url("/images/googlepay-letters.svg");
-}
+    }
+
+    .btn-4:hover,
+    .btn-4:focus,
+    .btn-4:active{
+
+    }
+    
+
+  
+
+
+    /* ----- SEARCH BAR ----- */
+
+    .search-bar {
+        border-radius: 2px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background: var(--color-2);
+        color: rgba(53, 53, 53, 0.60);
+        font-size: 16px;
+        transition:all 0.2s ease-out;
+    }
+
+    .search-bar input {
+        background: transparent;
+        font-size: 14px;
+        flex: 1;
+        border: 0;
+        outline: none;
+        color: var(--color-1);
+    }
+
+    ::placeholder {
+        color: rgba(53, 53, 53, 0.60);
+    }
+
+    .search-bar button  {
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .search-bar:focus-within {
+        outline: 2px solid rgba(255, 100, 23, 1);
+        outline-offset:2px;
+    }
+
+    /* ----- HOVERS ----- */
+
+    .logo img:hover {
+        -webkit-filter: drop-shadow(5px 5px 5px rgba(241, 241, 241, 0.1));
+        filter: drop-shadow(5px 5px 5px rgba(241, 241, 241, 0.1));
+    }
+
+    li a:hover {
+        
+        color: var(--color-4);
+        transition: color 0.5s;
+    }
+
+
 
 
 /* HEADER */
@@ -438,6 +277,15 @@ svg {
 
 .header-right ul {
     gap: 1.5rem;
+}
+
+
+/* SLIDER DESIGN */
+
+.onsale {
+    font-size: 12px;
+    border-radius: 0px 0px 15px 0px; 
+    padding: 5px 25px; 
 }
 
 
@@ -475,12 +323,10 @@ svg {
 }
 
 .item-discount {
-    background: var(--color-3);
     padding: 2px 8px;
     font-size: 14px;
-    font-weight: 700;
     position: absolute;
-    bottom: 6px;
+    bottom: 0px;
     right: 0;
     border-radius: 8px 0px 2px 0px;
 }
@@ -874,15 +720,6 @@ body {
     font-weight: 700;
 }
 
-.btn-orange {
-    border-radius: 2px;
-    background: var(--color-4);
-    display: inline-block;
-    padding: 10px 90px;
-    font-weight: 600;
-    cursor: pointer;
-
-}
 
 /* CART PAGE */
 
@@ -929,7 +766,9 @@ body {
     padding: 6px 20px;
 }
 
-.btn-remove {
+
+
+.btn-remove {/* <----------- check here */ 
     background: var(--color-2);
 }
 
@@ -951,23 +790,7 @@ body {
 
 
 
-.btn-checkout {
-    background: var(--color-4);
-    border-radius: 2px;
-    text-align: center;
-    font-weight: 600;
-    padding: 8px 0px;
-    width: 100%;
- }
 
- .btn-continue {
-    border: 1px solid rgba(241, 241, 241, 0.20);
-    background: rgba(53, 53, 53, 0.20);
-    text-align: center;  
-    font-weight: 500;
-    padding: 8px 0px;
-    width: 100%; 
- }
 
 
  /* COUPON ACCORDION */
