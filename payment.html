@@ -45,7 +45,7 @@
               <nav>
                 <ul class="flex">
                   <li class="btn">
-                    <a href="#" class="sign-in">Sign in</i></a>
+                    <a href="#" class="sign-in">Sign in</a>
                   </li>
                   <li class="btn">
                     <a href="#" class="cart"></a>
@@ -62,172 +62,195 @@
 
       <main class="mw-1340">
 
-        <section class="flex">
+        <h2 class="headline">Billing address</h2>
 
-            <article class="billing-address c7">
+        <section class="payment-page">
 
-                <h2 class="headline">Billing address</h2>
+            <div>
 
-                <div class="flex grey-section pd-30">
+              <article class="billing-address">
 
-                   <form class="flex" action="">
+                 
 
-                        <div class="form-box">
-                            <label for="">Full name</label>
-                            <input class="btn-2" type="text">
-                        </div>
+                  <div class="flex grey-section pd-30">
 
-                        <div class="form-box">
-                            <label for="">Address</label>
-                            <input class="btn-2" type="text">
-                        </div>
+                    <form class="flex gap-30" action="">
 
-                        <div class="c5 form-box">
+                          <div class="form-box">
+                              <label for="">Full name</label>
+                              <input class="btn-2" type="text">
+                          </div>
 
-                            <label for="">Country</label>
-                            <input class="btn-2" type="text">
+                          <div class="form-box">
+                              <label for="">Address</label>
+                              <input class="btn-2" type="text">
+                          </div>
 
-                            <label for="">State/Province</label>
-                            <input class="btn-2" type="text">
+                          <div class="grid-2-col width-100">
 
-                        </div>
+                              <div>
 
-                        <div class="c5 form-box">
+                                <label for="">Country</label>
+                                <input class="btn-2" type="text">
+                                
+                              </div>
 
-                            <label for="">ZIP/Postal code</label>
-                            <input class="btn-2" type="text">
+                              <div>
 
-                            <label for="">Phone number</label>
-                            <input class="btn-2" type="text">
-                        </div>
+                                <label for="">State / Privince</label>
+                                <input class="btn-2" type="text">
+                                
+                              </div>
 
-                   </form>
+                              <div>
 
-                </div>
+                                <label for="">ZIP / Postal code</label>
+                                <input class="btn-2" type="text">
+                                
+                              </div>
 
-            </article>
+                              <div>
 
-            <article class="payment-method c7">
+                                <label for="">Phone number</label>
+                                <input class="btn-2" type="text">
+                                
+                              </div>
 
-                <h2 class="headline">Payment method</h2>
-
-                <div class="flex column gap-30">
-
-                  <div class="card-payment accordion grey-section flex justify-sb">
-
-                    <input class="no-display check-no-display" type="checkbox" id="payment-check1" checked>
-
-                    <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check1">Card payment </label>
-
-                    <img class="pd-30" src="images/pay-visa.svg" alt="">         
-
-                    <div class="accordion-content">
-
-                      <form class="flex column gap-30 pd-0-30" action="">
-
-                        <div class="flex column">
-                          <label for="">Card number</label>
-                          <input type="text">
-                        </div>
-
-                        <div>
-                          <label for="">Cardholder name</label>
-                          <input type="text">
-                        </div>
-
-                        <div class="grid-3-col">
-
-                            <div>
-                              <label for="">Expiry month</label>
-                              <input type="text">
-                            </div>
-                            
-                            <div>
-                              <label for="">Expiry year</label>
-                              <input type="text">
-                            </div>
-                            
-                            <div>
-                              <label for="">CVC/CVV</label>
-                              <input type="text">
-                            </div>
                           
-                        </div>
 
-                        <div class="payment-bottom flex justify-sb align-items-center">
+                          </div>
 
-                          <div class="remember-card">
-                            <input class="" type="checkbox">
-                            <label for="">Remember card details</label>
+                        
+
+                    </form>
+
+                  </div>
+
+              </article>
+
+              <article class="payment-method">
+
+                  <h2 class="headline">Payment method</h2>
+
+                  <div class="flex column gap-30">
+
+                    <div class="card-payment accordion grey-section flex justify-sb">
+
+                      <input class="no-display check-no-display" type="checkbox" id="payment-check1" checked>
+
+                      <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check1">Card payment </label>
+
+                      <img class="pd-30" src="images/pay-visa.svg" alt="">         
+
+                      <div class="accordion-content">
+
+                        <form class="flex column gap-30 pd-0-30" action="">
+
+                          <div class="flex column">
+                            <label for="">Card number</label>
+                            <input type="text">
                           </div>
 
                           <div>
-                            <p class="btn-payment">Pay with card payment</p>
+                            <label for="">Cardholder name</label>
+                            <input type="text">
                           </div>
-                        </div>
-                        
-                      </form>
-                    </div>
 
-                  </div>
+                          <div class="grid-3-col">
 
-                  <div class="paypal-payment accordion grey-section flex justify-sb">
+                              <div>
+                                <label for="">Expiry month</label>
+                                <input type="text">
+                              </div>
+                              
+                              <div>
+                                <label for="">Expiry year</label>
+                                <input type="text">
+                              </div>
+                              
+                              <div>
+                                <label for="">CVC/CVV</label>
+                                <input type="text">
+                              </div>
+                            
+                          </div>
 
-                    <input class="no-display" type="checkbox" id="payment-check2">
+                          <div class="payment-bottom flex justify-sb align-items-center">
 
-                    <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check2">PayPal</label>
+                            <div class="remember-card">
+                              <input class="" type="checkbox">
+                              <label for="">Remember card details</label>
+                            </div>
 
-                    <img class="pd-30" src="images/pay-paypal.svg" alt="">         
-
-                    <div class="accordion-content">
-
-                      <div class="pd-0-30">
-
-                        <p>Click the button to be redirected to PayPal and complete your payment securely.</p>
-
-                        <div class="pd-30 flex right">
-                          <a href=""><span class="btn-payment-2 paypal-letters">Pay with </span></a>
-                        </div>
-
+                            <div>
+                              <p class="btn-payment">Pay with card payment</p>
+                            </div>
+                          </div>
+                          
+                        </form>
                       </div>
-                     
 
-        
                     </div>
 
-                  </div>
+                    <div class="paypal-payment accordion grey-section flex justify-sb">
 
-                  <div class="googlepay-payment accordion grey-section flex justify-sb">
+                      <input class="no-display" type="checkbox" id="payment-check2">
 
-                    <input class="no-display" type="checkbox" id="payment-check3">
+                      <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check2">PayPal</label>
 
-                    <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check3">Google Pay</label>
+                      <img class="pd-30" src="images/pay-paypal.svg" alt="">         
 
-                    <img class="pd-30" src="images/pay-google.svg" alt="">         
+                      <div class="accordion-content">
 
-                    <div class="accordion-content">
+                        <div class="pd-0-30">
 
-                      <div class="pd-0-30">
+                          <p>Click the button to be redirected to PayPal and complete your payment securely.</p>
 
-                        <p>Click the button to be redirected to Google Pay and complete your payment securely.</p>
+                          <div class="pd-30 flex right">
+                            <a href=""><span class="btn-payment-2 paypal-letters">Pay with </span></a>
+                          </div>
 
-                        <div class="pd-30 flex right">
-                          <a href=""><span class="btn-payment-2 googlepay-letters">Pay with </span></a>
                         </div>
+                      
 
+          
                       </div>
-                     
 
-        
+                    </div>
+
+                    <div class="googlepay-payment accordion grey-section flex justify-sb">
+
+                      <input class="no-display" type="checkbox" id="payment-check3">
+
+                      <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check3">Google Pay</label>
+
+                      <img class="pd-30" src="images/pay-google.svg" alt="">         
+
+                      <div class="accordion-content">
+
+                        <div class="pd-0-30">
+
+                          <p>Click the button to be redirected to Google Pay and complete your payment securely.</p>
+
+                          <div class="pd-30 flex right">
+                            <a href=""><span class="btn-payment-2 googlepay-letters">Pay with </span></a>
+                          </div>
+
+                        </div>
+                      
+
+          
+                      </div>
+
                     </div>
 
                   </div>
 
-                </div>
 
 
+              </article>
 
-            </article>
+            </div>
 
             <aside class="c3">
 

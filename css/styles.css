@@ -1034,6 +1034,13 @@ input:checked ~ label i {
     margin-bottom: 20px;
 }
 
+.payment-page {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 50px;
+    
+}
+
 
 /* PAYMENT ACCORDION */ 
 
@@ -1058,9 +1065,13 @@ input:checked ~ label i {
 
  .remember-card ~ input[type="checkbox"] {
     display: inline-block;
-    
-    
  }
+
+
+ /*LOGIN PAGE*/
+
+
+
 
 
 
