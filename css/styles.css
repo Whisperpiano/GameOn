@@ -250,6 +250,25 @@ svg {
 
 
 /* ICONS */
+
+.google-icon::before {
+    content: url("/images/google-icon.svg");
+    margin-right: 20px;
+}
+.facebook-icon::before {
+    content: url("/images/facebook-icon.svg");
+    margin-right: 20px;
+}
+.apple-icon::before {
+    content: url("/images/apple-icon.svg");
+    margin-right: 20px;
+}
+
+
+.x-mark::before {
+    content: "\f00d";
+}
+
 .playstation:before {
     content: url(../images/playstation-icon.svg); 
 }
@@ -1069,6 +1088,49 @@ input:checked ~ label i {
 
 
  /*LOGIN PAGE*/
+
+ .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:rgba(20, 21, 27, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s;
+    visibility: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .overlay:target {
+    visibility: visible;
+    opacity: 1;
+ }
+
+ .dialog-body {
+    max-width: 500px;
+    width: 100%;
+    margin: 50px 50px;
+    background: var(--color-5); 
+    border-radius: 4px;
+    
+ }
+
+.close {
+    position: absolute;
+    top: auto;
+    right: 40px;
+    font-size: 30px;
+ }
+
+ .dialog-body input {
+    padding: 8px 0px;
+    width: 100%;
+ }
+
 
 
 
