@@ -16,49 +16,205 @@
     />
   </head>
   <body>
-      <header class="grey-section border-bottom">
+          
+    <header class="grey-section border-bottom">
         
-        <section class="mw-1340 flex justify-sb align-items-center">
+      <section class="mw-1340 flex justify-sb align-items-center">
 
-            <a href="#"><img src="images/logo.png" alt="Logo - Game On" class="pd-40-0"/></a>
+          <a class="logo" href="index.html"><img src="images/logo.png" alt="Logo - Game On" class="pd-40-0"/></a>
 
-            <div class="menu">
-              <nav>
-                <ul class="flex">
-                  <li class="pd-30"><a href="search.html">PC</a></li>
-                  <li class="pd-30"><a href="search.html"> Playstation</a></li>
-                  <li class="pd-30"><a href="search.html">Xbox</a></li>
-                  <li class="pd-30"><a href="search.html">Nintendo</a></li>
-                </ul>
-              </nav>
+          <div class="menu h5">
 
-              <form action="#" class="search-bar flex pd-10-20">
+            <nav>
+
+              <ul class="flex">
+
+                <li class="pd-30"><a href="search.html">PC</a></li>
+
+                <li class="pd-30"><a href="search.html"> Playstation</a></li>
+
+                <li class="pd-30"><a href="search.html">Xbox</a></li>
+
+                <li class="pd-30"><a href="search.html">Nintendo</a></li>
+                
+              </ul>
+
+            </nav>
+
+            <search>
+
+              <form action="#" class="search-bar">
+
                 <input type="search" placeholder="Minecraft, RPG, multiplayer..."/>
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass" title="User icon"></i>
-                </button>
+                <button class="search-icon" type="submit"></button>
+
               </form>
 
+            </search>
+
+           
+
+          </div>
+
+          <div class="header-right">
+
+            <nav>
+
+              <ul class="flex gap-20">
+
+                <li class="btn btn-2">
+                  <a href="#dialog" class="sign-in">Sign in</i></a>
+                </li>
+
+                <li class="btn btn-2 relative">
+                  <a href="#" class="cart"></a>
+                  <span class="cantidad">0</span>
+                </li>
+
+                <li class="btn btn-2 relative">
+                  <a href="#" class="fav"></a>
+                  <span class="cantidad">0</span>
+                </li>
+
+              </ul>
+
+            </nav>
+
+          </div>
+
+          <div id="dialog" class="log-in-container overlay">
+
+            <div class="dialog-body pd-30">
+
+              <div class="flex align-items-center center relative">
+
+                <h3>Log in</h3>
+                <a class="close x-mark right" href="#"></a>
+
+              </div>
+
+              <form class="flex column gap-15 pd-top-30" action="">
+
+                <input class="" type="email" placeholder="Email" required>
+                
+                <input class="" type="password" placeholder="Password" required>
+
+                <button class="btn btn-1 width-100" type="submit">Log in</button>
+
+              </form>
+
+              <div class="border-bottom pd-10-0"></div>
+
+              <div class="flex column gap-15 pd-20-0">
+
+                <div class="google-login width-100">
+                  <a class="btn btn-2 width-100 google-icon"  href="#">Log in with Google</a>
+                </div>
+
+                <div class="facebook-login width-100">
+                  <a class="btn btn-2 width-100 facebook-icon"  href="#">Log in with Facebook</a>
+                </div>
+
+                <div class="apple-login width-100">
+                  <a class="btn btn-2 width-100 apple-icon"  href="#">Log in with Apple</a>
+                </div>
+
+              </div>
+
+              
+
+              <div class="flex column align-content-center text-center gap-15">
+                <a href="#forgot-password"><span class="text-orange">Forgot your password?</span></a>
+                <span>Don't have account? <a href="#sign-in"><span class="text-orange">Sign in</span></a></span>
+              </div>
+
+             
+              
+              
+             
             </div>
 
-            <div class="header-right">
-              <nav>
-                <ul class="flex">
-                  <li class="btn">
-                    <a href="#" class="sign-in">Sign in</i></a>
-                  </li>
-                  <li class="btn">
-                    <a href="#" class="cart"></a>
-                  </li>
-                  <li class="btn">
-                    <a href="#" class="fav"></a>
-                  </li>
-                </ul>
-              </nav>
+          </div>
+
+          <div id="sign-in" class="sign-in-container overlay">
+
+            <div class="dialog-body pd-30">
+
+              <div class="flex align-items-center center relative">
+
+                <h3>Sign in</h3>
+                <a class="close x-mark right" href="#"></a>
+
+              </div>
+
+              <form class="flex column gap-15 pd-top-30" action="">
+
+                <input class="" type="email" placeholder="Email" required>
+                
+                <input class="" type="password" placeholder="Password" required>
+
+                <button class="btn btn-1 width-100" type="submit">Sign in</button>
+
+              </form>
+
+              <div class="border-bottom pd-10-0"></div>
+
+              <div class="flex column gap-15 pd-20-0">
+
+                <div class="google-login width-100">
+                  <a class="btn btn-2 width-100 google-icon"  href="#">Sign in with Google</a>
+                </div>
+
+                <div class="facebook-login width-100">
+                  <a class="btn btn-2 width-100 facebook-icon"  href="#">Sign in with Facebook</a>
+                </div>
+
+                <div class="apple-login width-100">
+                  <a class="btn btn-2 width-100 apple-icon"  href="#">Sign in with Apple</a>
+                </div>
+
+              </div>
+
+              
+
+              <div class="flex column align-content-center text-center gap-15">
+                <a href="#forgot-password"><span class="text-orange">Forgot your password?</span></a>
+                <span>Don't have account? <a href="#dialog"><span class="text-orange">Log in</span></a></span>
+              </div>
+
+             
+              
+              
+             
             </div>
 
-        </section>
-      </header>
+          </div>
+
+          <div id="forgot-password" class="forgot-password-container overlay">
+
+            <div class="dialog-body pd-30">
+
+              <div class="flex align-items-center center relative">
+
+                <h3>Reset password</h3>
+                <a class="close x-mark right" href="#"></a>
+
+              </div>
+
+              <p>Please enter the address which you used to register. We will send you an email with your new password. Check your spam box if you do not receive it. In case of any complications, please contact us at this address: support@gameon.com</p>
+
+              <form class="flex column gap-15 pd-top-30" action="">
+
+                <input class="" type="email" placeholder="Your email" required>
+
+                <button class="btn btn-1 width-100" type="submit">Submit</button>
+             
+            </div>
+
+          </div>
+
+      </section>
+    </header>
 
       <main class="success text-center">
 
