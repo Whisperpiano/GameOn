@@ -1,0 +1,111 @@
+/* Accordion show more */ 
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .info-content {
+    display: block;
+}
+
+#check:checked ~ label {
+    visibility: hidden;
+}
+
+#check:checked ~ label::before {
+    content: "Show less";
+    display: inline-block;
+    visibility: visible;
+    font-family: var(--font-2);
+    font-weight: 400;
+    justify-content: center;
+
+    
+    
+}
+
+.info-content {
+    display: none;
+}
+
+.product-accordion__label {
+    display: inline-block;
+    margin-top: 50px;
+    cursor: pointer;
+    font-family: var(--font-2);
+    font-weight: 400;
+    
+}
+
+/* Coupon accordion */ 
+
+.coupons {
+    margin-top: 50px;
+}
+.gift {
+    margin-top: 50px;
+}
+
+.accordion {
+    width: 100%;
+    overflow: hidden;
+}
+
+.no-display {
+    display: none;
+}
+.coupon-no-display {
+    display: none;
+}
+
+.accordion input[type="text"] {
+    background: transparent;
+    width:100%;
+    border: 1px solid rgba(241, 241, 241, 0.20);
+    background: rgba(53, 53, 53, 0.20);
+    text-align: left;  
+    font-weight: 500;
+    padding: 8px 0px;
+    width: 100%;  
+}
+
+.accordion input[type="text"]::placeholder {
+    color: rgba(241, 241, 241, 0.70);
+    font-weight: 400;
+    font-size: 16px;   
+}
+
+label {
+   
+    font-weight: 600;
+    cursor: pointer;
+}
+    
+.accordion-content {
+    width: 100%;
+    max-height: 0;
+    transition: max-height .35s;
+}
+  
+.no-display:checked ~ .accordion-content{
+    max-height: 100vh; 
+}
+.coupon-no-display:checked ~ .accordion-content{
+    max-height: 100vh; 
+}
+
+.no-display:checked ~ label::before {
+    content: url("/images/btn-on.svg");
+    transition: content 0.35s;
+}
+
+input:checked ~ label i {
+    rotate: 180deg; 
+    transition: rotate 0.35s;
+}
+
+/* Payment accordion */
+
+.remember-card ~ input[type="checkbox"] {
+    display: inline-block;
+ }

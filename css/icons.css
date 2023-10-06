@@ -20,6 +20,10 @@
 }
 
 
+.search-icon::before {
+    content: "\f002";
+}
+
 .google-icon::before {
     content: url("/images/google-icon.svg");
     margin-right: 20px;
@@ -193,4 +197,16 @@
 
 .googlepay-letters::after {
     content: url("/images/googlepay-letters.svg");
+}
+
+.fast-img::before {
+    content: url("../images/feature-fast.svg");
+}
+
+.safe-img:before {
+    content: url("../images/feature-safe.svg");
+}
+
+.support-img:before {
+    content: url("../images/feature-support.svg");
 }
