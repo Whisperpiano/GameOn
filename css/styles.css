@@ -449,12 +449,9 @@
     .card {
         scroll-snap-align: start;
         border-radius: 10px;
-        overflow: hidden;
+        overflow: hidden; 
         min-width: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
+    
     }
 
 
