@@ -37,9 +37,16 @@
 		padding: 50px 0px;
 	}
 
-	.slider-nav,
+	.slider-nav {
+		display: none;
+	}
+
 	.slider {
-		display: flex;
+		display:flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+	
 	}
 	
 	.show-all {

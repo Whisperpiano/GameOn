@@ -1,10 +1,5 @@
 /* ----- SLIDER ----- */
-.slider {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    overflow: hidden;
-}
+
 
 .slider article {
     flex: 1 0 100%;
