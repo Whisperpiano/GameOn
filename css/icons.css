@@ -210,3 +210,21 @@
 .support-img:before {
     content: url("../images/feature-support.svg");
 }
+
+
+.app-menu-home::before {
+    content: url("../images/mobile-menu-home.svg");
+}
+.app-menu-search::before {
+    content: url("../images/mobile-menu-search.svg");
+}
+.app-menu-cart::before {
+    content: url("../images/mobile-menu-cart.svg");
+}
+.app-menu-user::before {
+    content: url("../images/mobile-menu-user.svg");
+}
+
+.alert-icon {
+    content: url("../images/alert-icon.svg");
+}

@@ -1,7 +1,9 @@
 @import url("framework.css");
+@import url("responsive.css");
 @import url("sliders.css");
 @import url("icons.css");
 @import url("accordions.css");
+
 
 
 /* ------------------ RESET ------------------ */
@@ -167,7 +169,7 @@
     }
 
     .btn-2 {
-        background: var(--color-1);
+        background: transparent;
         border: 1px solid rgba(241, 241, 241, 0.20);
     }
 
@@ -229,7 +231,7 @@
         border-radius: 4px;
         text-decoration: none;
         width: 100%;
-        padding: 5px 10px;
+        padding: 8px 10px;
         transition: all 0.5s;
     }
 
@@ -350,7 +352,7 @@
     }
 
     .border-top {
-        border-top: 2px solid rgba(241, 241, 241, 0.2);
+        border-top: 2px solid rgba(241, 241, 241, 0.20);
     }
     
     .border-top-bottom {
@@ -359,18 +361,40 @@
     }
 
 
+/* ------------- TO MAINTAIN ------------- */
 
 /* Home page */
 
 
     /*Header*/
 
+    .logo, 
+    .header-right {
+        max-width: 220px;
+        width: 100%;
+    }
+
    .menu {
          font-weight: 700;
-         margin-left: -52px;
     }
+
+    .menu-responsive {
+        border-radius: 20px 20px 0px 0px;
+        border-top: 1px solid rgba(241, 241, 241, 0.20);
+        background: #1D1F24;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
     .header-right{
             font-size: 14px; 
+    }
+
+    .header-right-responsive a {
+        width: 30px;
     }
 
     .cantidad {
@@ -396,10 +420,60 @@
         padding: 5px 25px; 
     }
 
+
+    /* Carousel responsive */
+
+    .responsive-slider {
+        width: 100%;
+        max-height: 350px;
+        overflow: hidden;
+        background: linear-gradient(0deg, transparent 20%, rgba(255, 255, 255, 0.1));
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+
+    .carousel {
+        display: grid;
+        grid-auto-flow: column;
+        scroll-behavior: auto;
+        gap: 30px;
+        overflow-y: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+       
+    }
+
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        scroll-snap-align: start;
+        border-radius: 10px;
+        overflow: hidden;
+        min-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
     /* Bestseller & new releases */
 
     .headline {
         font-size: 40px;
+    }
+
+    .show-all {
+        color: rgba(255, 255, 255, 0.70);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+        padding-right: 30px;
     }
     
     .item-img {
@@ -437,6 +511,13 @@
         right: 0;
         border-radius: 8px 0px 2px 0px;
     }
+
+    /* Bestseller carousel */ 
+
+   
+    
+
+
 
     /* Info panel */
 
@@ -658,7 +739,7 @@
 /* Cart page */
 
     .headline > span {
-        color: rgba(241, 241, 241, 0.70);  
+        color: rgba(241, 241, 241, 1);  
     }
 
     /* Left - Item */
@@ -794,7 +875,7 @@
     }
 
     .dialog-body {
-        max-width: 500px;
+        max-width: 550px;
         width: 100%;
         margin: 50px 50px;
         background: var(--color-5); 
@@ -805,14 +886,20 @@
     .close {
         position: absolute;
         top: auto;
-        right: 40px;
+        right: 0px;
         font-size: 30px;
     }
 
     .dialog-body input {
-        padding: 8px 0px;
-        width: 100%;
+        color: var(--color-5);
+        padding: 15px;
     }
+
+    .dialog-body .btn {
+        padding: 15px;
+    }
+
+
 
 
 
@@ -846,6 +933,10 @@
         font-size: 16px;
     }
 
+    .text-orange {
+        color: var(--color-4);
+        text-decoration: underline;
+    }
 
 
 

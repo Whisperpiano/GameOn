@@ -1,0 +1,217 @@
+/*--------------------------------------------------------------*/
+/*-------------------------Comprobar a 1701---------------------*/
+/*--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------*/
+/*---------------Resoluciones desde 1321 hasta 1700-------------*/
+/*--------------------------------------------------------------*/
+@media screen and (max-width: 1700px)
+{
+	.search-bar-responsive {
+        display: none;
+    }
+
+	.menu-responsive {
+		display: none;
+	}
+
+	.header-right-responsive {
+		display: none;
+	}
+
+	.responsive-slider {
+		display: none;
+	}
+
+	.platforms-responsive {
+        display: none;
+    }
+
+	.bestseller__container,
+	.newreleases__container {
+		display: grid; 
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 30px;
+		row-gap: 50px;
+		padding: 50px 0px;
+	}
+	
+	.show-all {
+		display: none;
+	}
+
+	.show-more {
+		display: flex;
+	}
+
+	.info-panel {
+		display: block;
+	}
+
+	.subscribe {
+		display: block;
+	}
+
+	.subscribe-responsive {
+		display:none;
+	}
+
+	.reviews-headline {
+		display: none;
+	}
+
+}
+
+/*--------------------------------------------------------------*/
+/*---------------Resoluciones desde 1001 hasta 1320-------------*/
+/*--------------------------------------------------------------*/
+@media screen and (max-width: 1320px)
+{	
+	.logo img {
+		max-width: 200px;
+	}
+	.responsive-slider {
+		display: none;
+	}
+
+	.bestseller__container,
+	.newreleases__container {
+		display: grid; 
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px;
+		row-gap: 50px;
+		padding: 50px 0px;
+	}
+
+
+
+}
+
+/*--------------------------------------------------------------*/
+/*---------------Resoluciones desde 700 hasta 1000--------------*/
+/*--------------------------------------------------------------*/
+@media screen and (max-width: 1000px)
+{
+	.menu {
+		display: none;
+	}
+
+	.search-bar-responsive {
+		display: block;
+		max-width: 550px;
+		margin: auto;
+		
+	}
+
+	.menu-responsive {
+		display: block;
+		
+	}
+
+	.header-right {
+		display:none;
+	}
+
+	.header-right-responsive {
+		display:block;
+	}
+
+	.main-slider {
+		display: none;
+	}
+
+	.responsive-slider {
+		display: flex;
+	}
+
+	.platforms-responsive {
+        display: block;
+    }
+
+	.platforms-responsive__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+	.headline { 
+		font-size: 20px !important;
+	}
+
+	.bestseller__container,
+	.newreleases__container {
+		display: grid;
+        grid-auto-flow: column;
+        scroll-behavior: auto;
+        gap: 30px;
+        overflow-y: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+	}
+
+	.bestseller,
+	.new-releases,
+	.reviews {
+		padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+	}
+
+	.item {
+		min-width: 350px;
+	}
+
+	.show-all {
+		display: block;
+	}
+
+	.show-more {
+		display: none;
+	}
+
+	.info-panel {
+		display: none;
+	}
+
+	.subscribe {
+		display: none;
+	}
+
+	.subscribe-responsive {
+		display: block;
+	}
+
+	.reviews-headline {
+		display: flex;
+	}
+
+
+
+
+
+
+
+	
+
+	
+}
+
+/*--------------------------------------------------------------*/
+/*---------------Resoluciones desde 421 hasta 700 --------------*/
+/*--------------------------------------------------------------*/
+
+@media screen and (max-width: 700px)
+{
+	.platforms-responsive__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+}
+
+/*--------------------------------------------------------------*/
+/*---------------Resoluciones desde 320 hasta 420---------------*/
+/*--------------------------------------------------------------*/

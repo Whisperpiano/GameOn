@@ -16,8 +16,8 @@
     />
   </head>
   <body>
-    
-      <header class="grey-section border-bottom">
+
+      <header class="grey-section border-bottom pd-20">
         
         <section class="mw-1340 flex justify-sb align-items-center">
 
@@ -56,7 +56,7 @@
 
             </div>
 
-            <div class="header-right">
+            <div class="header-right flex right">
 
               <nav>
 
@@ -82,9 +82,18 @@
 
             </div>
 
+            <div class="header-right-responsive">
+
+              <nav>
+                <li><a href="#" class="alert-icon"></a></li>
+              </nav>
+
+
+            </div>
+
             <div id="dialog" class="log-in-container overlay">
 
-              <div class="dialog-body pd-30">
+              <div class="dialog-body pd-40">
 
                 <div class="flex align-items-center center relative">
 
@@ -93,7 +102,7 @@
 
                 </div>
 
-                <form class="flex column gap-15 pd-top-30" action="">
+                <form class="flex column gap-20 pd-top-30" action="">
   
                   <input class="" type="email" placeholder="Email" required>
                   
@@ -103,9 +112,9 @@
 
                 </form>
 
-                <div class="border-bottom pd-10-0"></div>
+                <div class="border-bottom pd-20-0"></div>
 
-                <div class="flex column gap-15 pd-20-0">
+                <div class="flex column gap-20 pd-40-0">
 
                   <div class="google-login width-100">
                     <a class="btn btn-2 width-100 google-icon"  href="#">Log in with Google</a>
@@ -124,8 +133,16 @@
                 
 
                 <div class="flex column align-content-center text-center gap-15">
+
                   <a href="#forgot-password"><span class="text-orange">Forgot your password?</span></a>
-                  <span>Don't have account? <a href="#sign-in"><span class="text-orange">Sign in</span></a></span>
+
+                  <div class="flex gap-10">
+                    <span>Don't have an account?</span>
+                  <a href="#sign-in"><span class="text-orange">Sign in</span></a>   
+
+                  </div>
+                   
+
                 </div>
 
                
@@ -218,9 +235,114 @@
 
       <main>
 
-     
+        <section class="search-bar-responsive pd-30">
 
-        <section class="mw-1340 pd-90-0">
+          <search>
+
+            <div action="#" class="search-bar">
+
+              <input type="search" placeholder="Minecraft, RPG, multiplayer..."/>
+              <button class="search-icon" type="submit"></button>
+
+            </div>
+
+          </search>
+
+
+
+        </section>
+
+        <section class="menu-responsive pd-30">
+
+          <nav>
+
+            <ul class="flex justify-sa">
+              
+              <li><a href="#" class="app-menu-home"></a></li>
+              
+              <li><a href="#" class="app-menu-search"></a></li>
+              
+              <li><a href="#" class="app-menu-cart"></a></li>
+              
+              <li><a href="#" class="app-menu-user"></a></li>
+
+            </ul>
+
+          </nav>
+
+        </section>
+
+        <section class="responsive-slider border-top">
+
+          <div class="carousel">
+
+            <article class="card">
+              <figure>
+                <span></span>
+                <a href="#"><img src="/images/slider-img-1.png" alt=""></a>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure>
+                <span></span>
+                <a href="#"><img src="/images/slider-img-2.png" alt=""></a>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure>
+                <span></span>
+                <a href="#"><img src="/images/slider-img-3.png" alt=""></a>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure>
+                <span></span>
+                <a href="#"><img src="/images/slider-img-4.png" alt=""></a>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure>
+                <span></span>
+                <a href="#"><img src="/images/slider-img-8.png" alt=""></a>
+              </figure>
+            </article>
+
+          </div>
+
+        </section>
+
+        <section class="platforms-responsive pd-30">
+
+            <h2 class="headline">Platforms</h2>
+
+          <article class="platforms-responsive__container pd-top-10">
+
+            <div class=" btn btn-2">
+              <span class="xbox flex gap-10 center"> Xbox</span>
+            </div>
+
+            <div class=" btn btn-2">
+              <span class="steam flex gap-10 center"> Steam</span>
+            </div>
+
+            <div class=" btn btn-2">
+              <span class="playstation flex gap-10 center"> Playstation</span>
+            </div>
+
+            <div class=" btn btn-2">
+              <span class="nintendo flex gap-10 center"> Nintendo</span>
+            </div>
+
+           
+          </article>
+
+        </section>
+
+        <section class="main-slider mw-1340 pd-90-0">
           <div class="slider">
 
             <article id="slide-1" class="flex">
@@ -418,9 +540,14 @@
 
         <section class="bestseller mw-1340">
 
-          <h2 class="headline">Bestseller</h2>
+          <div class="flex justify-sb align-items-center">
 
-          <div class="grid-3-col row-gap-50 pd-50-0">
+            <h2 class="headline">Bestseller</h2>
+            <a href="#" class="show-all">Show all</a>
+
+          </div>
+
+          <div class="bestseller__container">
 
             <div class="item">
 
@@ -562,7 +689,7 @@
 
           </div>
 
-          <div class="flex center pd-50-0">
+          <div class="show-more flex center pd-50-0">
             <a  class="btn btn-2" href="#">Show more</a>
           </div>
 
@@ -570,9 +697,15 @@
        
         <section class="new-releases mw-1340">
 
-          <h2 class="headline">New releases</h2>
+          <div class="flex justify-sb align-items-center">
+            <h2 class="headline">New releases</h2>
+            <a href="#" class="show-all">Show all</a>
 
-          <div class="grid-3-col row-gap-50 pd-50-0">
+          </div>
+
+          
+
+          <div class="newreleases__container">
 
             <div class="item">
 
@@ -714,8 +847,26 @@
 
           </div>
 
-          <div class="flex center pd-50-0">
+          <div class="show-more flex center pd-50-0">
             <a  class="btn btn-2 " href="#">Show more</a>
+          </div>
+
+        </section>
+
+        <section class="subscribe-responsive grey-section border-top-bottom">
+
+          <div class="flex column align-content-center pd-60-0 gap-20 text-center">
+
+            <h6>Recieve the best price and discount for gamers!</h6>
+
+            <div>
+
+              <button class="btn btn-1" type="submit">Subscribe</button>
+
+             </div>
+
+       
+
           </div>
 
         </section>
@@ -745,6 +896,13 @@
         </div>
 
         <section class="reviews">
+
+          <div class="reviews-headline flex justify-sb align-items-center">
+
+            <h2 class="headline">Reviews</h2>
+            <a href="#" class="show-all">Show all</a>
+
+          </div>
 
           <div class="mw-1340 pd-90-0">
             
@@ -901,7 +1059,7 @@
 
         </section>
 
-        <section class="grey-section border-top-bottom">
+        <section class="subscribe grey-section border-top-bottom">
 
           <div class="mw-1340 flex column align-content-center pd-60-0 gap-20 text-center">
 
@@ -917,6 +1075,7 @@
             <p>You can unsubscribe at any time. By subscribing to our newsletter you agree to our Privacy Policy</p> 
 
           </div>
+
         </section>
 
         <div class="mw-1340 flex center align-items-center pd-70-0 gap-30">
