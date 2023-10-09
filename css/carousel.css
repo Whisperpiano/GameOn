@@ -1,0 +1,22 @@
+.carousel-container {
+    width: 100%;
+}
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.carousel-card {
+    scroll-snap-align: start;
+    min-height: 200px;
+    min-width: 500px;
+    border-radius: 20px;
+}
