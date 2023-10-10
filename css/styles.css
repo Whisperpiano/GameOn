@@ -471,8 +471,6 @@
         opacity: 1;
       }
 
-
-
     /* Bestseller & new releases */
 
     .headline {
@@ -526,14 +524,46 @@
 
     /* Bestseller carousel */ 
 
-   
-    
-
-
-
     /* Info panel */
 
     /* Reviews */
+
+    /* Reviews responsive */
+
+    .res-reviews__container {
+        display: grid;
+        grid-auto-flow: column;
+        scroll-behavior: auto;
+        gap: 30px;
+        overflow-y: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .res-reviews__card {
+        max-width: 280px;
+        min-width: 280px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .res-reviews__card img {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
+    }
+
+    .res-reviews__card p,
+    .res-reviews__card span {
+        font-size: 12px;
+    }
+
+    .res-reviews__card span {
+        color: rgba(241, 241, 241, 0.50);
+    }
 
     /* Subscribe */
 

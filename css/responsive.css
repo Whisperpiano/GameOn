@@ -18,6 +18,14 @@
 	.platforms-responsive {
         display: none;
     }
+
+	.subscribe-responsive {
+		display: none;
+	}
+
+	.show-all {
+		display: none;
+	}
 	
 	.bestseller__container,
 	.newreleases__container {
@@ -29,6 +37,14 @@
 	}
 
 	.res-slider {
+		display: none;
+	}
+
+	.reviews {
+		display: block;
+	}
+
+	.responsive-reviews {
 		display: none;
 	}
 
@@ -85,17 +101,10 @@
 		display:none;
 	}
 
-	.reviews-headline {
+	.res-slider {
 		display: none;
 	}
-
-	.rev-slide-info h3,
-	.rev-slide-info .user-name,
-	.rev-slide-info .read-review {
-		display: block;
-	}
-
-	.res-slider {
+	.responsive-reviews {
 		display: none;
 	}
 
@@ -230,6 +239,14 @@
 	}
 
 	.res-slider {
+		display: block;
+	}
+
+	.reviews {
+		display: none;
+	}
+
+	.responsive-reviews {
 		display: block;
 	}
 	
