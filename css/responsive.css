@@ -269,6 +269,28 @@
 		display: none;
 	}
 
+	.footer-trust,
+	.footer-logo {
+		display: none;
+	} 
+
+	.media-center {
+		margin: auto;
+	}
+
+	.media-center .icon-appstore,
+	.media-center .icon-googleplay {
+		width: 150px;
+	}
+
+	.media-center .icon-twitter,
+	.media-center .icon-instagram, 
+	.media-center .icon-youtube, 
+	.media-center .icon-discord {
+		width: 30px;
+	}
+
+
 	
 	
 
