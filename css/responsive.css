@@ -15,10 +15,6 @@
 		display: none;
 	}
 
-	.responsive-slider {
-		display: none;
-	}
-
 	.platforms-responsive {
         display: none;
     }
@@ -49,10 +45,6 @@
 	}
 
 	.header-right-responsive {
-		display: none;
-	}
-
-	.responsive-slider {
 		display: none;
 	}
 
@@ -146,10 +138,6 @@
 		display: none;
 	}
 
-	.responsive-slider {
-		display: flex;
-	}
-
 	.platforms-responsive {
         display: block;
     }
@@ -165,8 +153,7 @@
 	}
 
 	.bestseller__container,
-	.newreleases__container,
-	.responsive-slider-container {
+	.newreleases__container {
 		display: grid;
         grid-auto-flow: column;
         scroll-behavior: auto;
