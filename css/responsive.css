@@ -235,6 +235,10 @@
 		display: none;
 	}
 
+	.subscribe-responsive h6 {
+		font-size: 14px;
+	}
+
 	.subscribe-responsive {
 		display: block;
 	}
