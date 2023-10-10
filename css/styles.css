@@ -557,11 +557,13 @@
     }
 
     .res-reviews__card p,
-    .res-reviews__card span {
+    .res-reviews__card span,
+    .res-payment-methods span {
         font-size: 12px;
     }
 
-    .res-reviews__card span {
+    .res-reviews__card span,
+    .res-payment-methods span {
         color: rgba(241, 241, 241, 0.50);
     }
 
