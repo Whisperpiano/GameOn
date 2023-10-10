@@ -422,7 +422,54 @@
     }
 
 
-    /* Carousel responsive */
+    /* Slider responsive */
+    .res-slider {
+        width: 100%;
+        overflow: hidden;
+        background: linear-gradient(0deg, transparent 20%, rgba(255, 255, 255, 0.1));
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+
+    .res-slider__container {
+        display: grid;
+        grid-auto-flow: column;
+        scroll-behavior: auto;
+        gap: 30px;
+        overflow-y: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+     
+    }
+
+    .res-slider__card div {
+        position: relative;
+        scroll-snap-align: start;
+        min-width: 280px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .res-slider__card h5 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        font-style: var(--font-1);
+    }
+
+
+    .res-slider__card img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       border-radius: 20px;
+       opacity: 0.9;
+     }
+
+     .res-slider__card img:hover {
+        opacity: 1;
+      }
 
 
 

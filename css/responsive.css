@@ -28,6 +28,10 @@
 		padding: 50px 0px;
 	}
 
+	.res-slider {
+		display: none;
+	}
+
 
 }
 
@@ -91,9 +95,10 @@
 		display: block;
 	}
 
-	.prueba-1 {
+	.res-slider {
 		display: none;
 	}
+
 
 }
 
@@ -224,9 +229,10 @@
 		display: none;
 	}
 
-	.prueba-1 {
+	.res-slider {
 		display: block;
 	}
+	
 
 
 
