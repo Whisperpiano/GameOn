@@ -573,6 +573,40 @@
 
     /* Footer */
 
+    /* Footer-links responsive */
+
+    #footer-accordion label {
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    #footer-accordion ul {
+        padding-bottom: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        
+        
+    }
+
+    #footer-accordion label + input[type="radio"] {
+        display: none;
+    }
+    #footer-accordion label + input[type="radio"]:checked + .footer-accordion__content {
+        max-height: 200px;
+    }
+
+    .footer-accordion__content {
+        padding: 0px 30px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+   
 
 /* About page */
 

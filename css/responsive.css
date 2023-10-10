@@ -52,6 +52,13 @@
 		display: none;
 	}
 
+	.links {
+		display: block;
+	}
+
+	.responsive-links {
+		display: none;
+	}
 
 }
 
@@ -116,6 +123,14 @@
 		display: none;
 	}
 
+	.links {
+		display: block;
+	}
+
+	.responsive-links {
+		display: none;
+	}
+
 }
 
 /*--------------------------------------------------------------*/
@@ -125,6 +140,10 @@
 {	
 	.logo img {
 		max-width: 200px;
+	}
+	
+	.responsive-links {
+		display: none;
 	}
 	
 
@@ -288,6 +307,14 @@
 	.media-center .icon-youtube, 
 	.media-center .icon-discord {
 		width: 30px;
+	}
+
+	.links {
+		display: none;
+	}
+
+	.responsive-links {
+		display: block;
 	}
 
 
