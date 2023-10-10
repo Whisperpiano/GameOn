@@ -1,7 +1,39 @@
 /*--------------------------------------------------------------*/
 /*-------------------------Comprobar a 1701---------------------*/
 /*--------------------------------------------------------------*/
+@media screen and (min-width: 1701px){
 
+	.search-bar-responsive {
+        display: none;
+    }
+
+	.menu-responsive {
+		display: none;
+	}
+
+	.header-right-responsive {
+		display: none;
+	}
+
+	.responsive-slider {
+		display: none;
+	}
+
+	.platforms-responsive {
+        display: none;
+    }
+	
+	.bestseller__container,
+	.newreleases__container {
+		display: grid; 
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 30px;
+		row-gap: 50px;
+		padding: 50px 0px;
+	}
+
+
+}
 
 /*--------------------------------------------------------------*/
 /*---------------Resoluciones desde 1321 hasta 1700-------------*/
@@ -27,7 +59,7 @@
 	.platforms-responsive {
         display: none;
     }
-
+	
 	.bestseller__container,
 	.newreleases__container {
 		display: grid; 
@@ -37,18 +69,6 @@
 		padding: 50px 0px;
 	}
 
-	.slider-nav {
-		display: none;
-	}
-
-	.slider {
-		display:flex;
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
-		scroll-behavior: smooth;
-	
-	}
-	
 	.show-all {
 		display: none;
 	}
@@ -89,20 +109,7 @@
 	.logo img {
 		max-width: 200px;
 	}
-	.responsive-slider {
-		display: none;
-	}
-
-	.bestseller__container,
-	.newreleases__container {
-		display: grid; 
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 30px;
-		row-gap: 50px;
-		padding: 50px 0px;
-	}
-
-
+	
 
 }
 
@@ -159,7 +166,7 @@
 
 	.bestseller__container,
 	.newreleases__container,
-	.slider {
+	.responsive-slider-container {
 		display: grid;
         grid-auto-flow: column;
         scroll-behavior: auto;

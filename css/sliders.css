@@ -1,5 +1,14 @@
 /* ----- SLIDER ----- */
 
+.slider {
+    display:flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x:hidden
+
+}
+
 
 .slider article {
     flex: 1 0 100%;
@@ -7,7 +16,7 @@
 }
 
 .slider-nav {
-   
+    display: flex;
     column-gap: 1.2rem;
 }
 
