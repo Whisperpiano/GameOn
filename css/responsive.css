@@ -447,7 +447,7 @@
 		display: none;
 	}
 
-	.item {
+	.main__search-page .item {
 		min-width: 160px;
 	}
 
