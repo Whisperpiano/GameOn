@@ -291,6 +291,9 @@
 		padding-bottom: 60px !important;
 	}
 
+	/* CART PAGE */
+
+	
 
 }
 
@@ -573,9 +576,96 @@
 	}
 
 	.values {
-		padding-top: 0px !important;
+		padding-top: 40px !important;
 		padding-bottom: 40px !important;
 	}
+
+	/* CART PAGE */
+
+	.main-cart {
+		padding: 0px 20px;
+	}
+
+	.main-cart .headline {
+		font-size: 39px !important;
+		
+	}
+
+	.main-cart .cart-page {
+		grid-template-columns: 1fr;
+	}
+
+	.main-cart .coupons {
+		display: none;
+	}
+
+	.main-cart .cart-summary {
+		border: none;
+	}
+
+	.main-cart .cart-summary__bottom  {
+		padding-top: 80px;
+		gap: 30px;
+		max-width: 50%;
+		margin: auto;
+		background-color: transparent;
+	}
+
+	.main-cart .item-cart__info h6 {
+        font-size: 8px;
+        font-weight: 600;
+    }
+
+	.main-cart .item-cart__info span{
+        font-size: 8px;
+        font-weight: 600;
+    }
+	.main-cart .item-cart__price .price-before{
+        font-size: 8px;
+        font-weight: 600;
+    }
+	.main-cart .item-cart__price .discount{
+        font-size: 8px;
+        font-weight: 600;
+    }
+	.main-cart .item-cart__price .actual-price{
+        font-size: 8px;
+        font-weight: 600;
+    }
+	
+	.main-cart .qty-number {
+        background: transparent;
+        font-weight: 700;
+        padding: 6px 10px;
+    }
+
+	.main-cart .item-cart__quantity {
+		margin-right: 40px;
+    }
+
+	.main-cart .item-cart__price {
+		margin-right: 60px;
+    }
+
+	.main-cart .circle::before {
+		display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid rgba(241, 241, 241, 0.20);
+        font-size: 10px;
+        color: var(--color-2);
+        transition: border 0.3s;
+	}
+
+
+	
+
+
+	
+
 
 
 	
@@ -762,6 +852,11 @@
 
 	.about-us .value h3 {
 		font-size: 16px;
+	}
+
+	.values {
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
 	}
 
 }
