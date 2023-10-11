@@ -75,10 +75,13 @@
 	.page-change span{
 		padding: 10px 30px;
 	}
+
+	
+
 }
 
 /*--------------------------------------------------------------*/
-/*---------------Resoluciones desde 1321 hasta 1700-------------*/
+/*--------------- Extra-large devices - Resoluciones desde 1321 hasta 1700-------------*/
 /*--------------------------------------------------------------*/
 @media screen and (max-width: 1700px)
 {
@@ -162,10 +165,17 @@
 		padding: 10px 30px;
 	}
 
+	/* ABOUT US PAGE */
+
+	.about-us .value {
+		max-width: 390px;
+		
+	}
+
 }
 
 /*--------------------------------------------------------------*/
-/*---------------Resoluciones desde 1001 hasta 1320-------------*/
+/*--------------- Desktop - Resoluciones desde 1001 hasta 1320-------------*/
 /*--------------------------------------------------------------*/
 @media screen and (max-width: 1320px)
 {	
@@ -198,10 +208,94 @@
 		padding: 10px 25px;
 	}
 
+	/* ABOUT US PAGE */
+
+	.about-us .pageheader h1 {
+		margin: auto;
+		padding: 8px 20px;
+		font-size: 40px;
+		margin-top: 120px;
+	}
+	.about-us .pageheader h3 {
+		font-size: 20px;
+		margin: auto;
+		margin-bottom: 80px;
+	}
+	
+	.about-us__text {
+		gap: 20px;
+	}
+
+	.about-us .pd-90-0 {
+		padding: 60px 0px;
+	}
+
+	.about-us .pd-30-0 {
+		padding: 20px 0px;
+	}
+
+	.about h3,
+	.our-team h3,
+	.about-us .values h2 {
+		font-size: 38px;
+	}
+
+	.about p {
+		padding: 50px;
+		font-size: 18px;
+	}
+
+
+	.our-team .col-4 h3 {
+		margin-bottom: 0px;
+	}
+
+	.our-team .person h4 {
+		font-size: 18px;
+	}
+
+	.person p, 
+	.about-us .values p{
+		font-size: 16px;	
+	}
+
+	.about-us .pd-50 {
+		padding: 30px 0px;
+	}
+
+	.about-us .values {
+		padding: 20px;
+	}
+
+	.about-us .value {
+		max-width: 250px;
+		padding: 20px;
+		gap: 20px;	
+	}
+
+	.about-us .value img {
+		width: 60px;
+		margin: auto;
+	}
+	.about-us .value h3 {
+		font-size: 18px;
+	}
+	.about-us .value p {
+		color: rgba(241, 241, 241, 0.70);
+		font-weight: 300;
+		font-size: 16px;	
+	}
+
+	.values {
+		padding-top: 60px !important;
+		padding-bottom: 60px !important;
+	}
+
+
 }
 
 /*--------------------------------------------------------------*/
-/*---------------Resoluciones desde 700 hasta 1000--------------*/
+/*--------------- Laptop small-size screen -Resoluciones desde 700 hasta 1000--------------*/
 /*--------------------------------------------------------------*/
 @media screen and (max-width: 1000px)
 {	
@@ -381,11 +475,106 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 30px;
 		row-gap: 50px;
-		padding: 50px 0px;
+		padding: 30px 0px;
 	}
 
 	.main__search-page {
 		padding: 0px 20px;
+	}
+
+	/* ABOUT US PAGE */
+
+	.logo img {
+		max-width: 140px;
+		margin-left: 20px;
+	}
+
+	.about-us .pageheader h1 {
+		margin: auto;
+		padding: 8px 20px;
+		font-size: 30px;
+		margin-top: 80px;
+	}
+	.about-us .pageheader h3 {
+		font-size: 18px;
+		margin: auto;
+		margin-bottom: 40px;
+	}
+	
+	.about-us__text {
+		gap: 15px;
+	}
+
+	.about-us .pd-90-0 {
+		padding: 40px 0px;
+	}
+
+	.about-us .pd-30-0 {
+		padding: 20px 0px;
+	}
+
+	.about h3,
+	.our-team h3,
+	.about-us .values h2 {
+		font-size: 28px;
+	}
+
+	.about p {
+		padding: 20px;
+		font-size: 16px;
+	}
+
+	.our-team .col-6 {
+	}
+	.our-team .col-4 {
+		width: 100%;
+		background: linear-gradient(0deg, rgba(20, 21, 27, 0.70) 0%, rgba(20, 21, 27, 0.70) 100%), url("../images/our-team-responsive.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.our-team .col-4 h3 {
+		margin-bottom: 0px;
+	}
+
+	.our-team .person h4 {
+		font-size: 16px;
+	}
+
+	.person p, 
+	.about-us .values p{
+		font-size: 16px;	
+	}
+
+	.about-us .pd-50 {
+		padding: 30px 0px;
+	}
+
+	.about-us .values {
+		padding: 20px;
+	}
+
+	.about-us .value {
+		max-width: 1000px;
+		padding: 20px;
+		gap: 20px;
+		border: 1px solid rgba(241, 241, 241, 0.20);	
+	}
+
+	.about-us .value img {
+		width: 50px;
+		margin: auto;
+	}
+	.about-us .value h3 {
+		font-size: 16px;
+	}
+	.about-us .value p {
+		color: rgba(241, 241, 241, 0.70);
+	}
+
+	.values {
+		padding-top: 0px !important;
+		padding-bottom: 40px !important;
 	}
 
 
@@ -404,7 +593,7 @@
 }
 
 /*--------------------------------------------------------------*/
-/*---------------Resoluciones desde 421 hasta 700 --------------*/
+/*--------------- Tablets - Resoluciones desde 421 hasta 700 --------------*/
 /*--------------------------------------------------------------*/
 
 @media screen and (max-width: 700px)
@@ -475,15 +664,104 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 30px;
 		row-gap: 50px;
-		padding: 50px 0px;
+		padding: 30px 0px;
 	}
 
 	.page-change {
 		display: none;
 	}
 
+	/* ABOUT US PAGE */
+
+	.logo img {
+		max-width: 120px;
+		margin-left: 20px;
+	}
+
+	.about-us .pageheader h1 {
+		font-size: 24px;
+	}
+
+	.about-us .pageheader h3 {
+		font-size: 16px;
+	}
+
+	.about h3,
+	.our-team h3,
+	.about-us .values h2 {
+		font-size: 24px;
+	}
+
+	.about p {
+		padding: 20px;
+		font-size: 14px;
+	}
+
+	.our-team .person h4 {
+		font-size: 16px;
+	}
+
+	.person p {
+		font-size: 14px;	
+	}
+
+	.about-us .values p {
+		font-size: 14px;	
+	}
+
+	.about-us .value img {
+		width: 40px;
+	}
+
+	.about-us .value h3 {
+		font-size: 16px;
+	}
 }
 
 /*--------------------------------------------------------------*/
-/*---------------Resoluciones desde 320 hasta 420---------------*/
+/*--------------- Mobile devices - Resoluciones desde 320 hasta 420---------------*/
 /*--------------------------------------------------------------*/
+
+@media screen and (max-width: 420px) {
+
+	/* ABOUT US PAGE */
+
+	.logo img {
+		max-width: 90px;
+	}
+
+	.about-us .pageheader h1 {
+		font-size: 20px;
+	}
+	.about-us .pageheader h3 {
+		font-size: 14px;
+	}
+
+	.about h3,
+	.our-team h3,
+	.about-us .values h2 {
+		font-size: 20px;
+	}
+
+	.about p {
+		font-size: 12px;
+	}
+
+	.our-team .person h4 {
+		font-size: 14px;
+	}
+
+	.person p,
+	.about-us .values p {
+		font-size: 12px;	
+	}
+
+	.about-us .value img {
+		width: 40px;
+	}
+
+	.about-us .value h3 {
+		font-size: 16px;
+	}
+
+}
