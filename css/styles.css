@@ -836,10 +836,6 @@
         grid-gap: 50px; 
     }
 
-    .cart-items {
-        padding-top:
-    }
-
     .item-cart {
         border: 1px solid rgba(241, 241, 241, 0.20);
         border-radius: 2px;
@@ -920,7 +916,6 @@
     .item-cart__price {
         margin-right: 60px;
     }
-
 
     .item-cart__price .price-before {
         text-decoration-line: strikethrough;
