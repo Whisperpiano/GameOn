@@ -1079,6 +1079,14 @@
         grid-gap: 50px; 
     }
 
+    .coupons-responsive input {
+        background: rgba(53, 53, 53, 0.20);
+        border-radius: 2px 0px 0px 2px;
+    }
+    .coupons-responsive input::placeholder {
+        color: rgba(241, 241, 241, 0.70);
+    }
+
 /* Login popup */
 
     .overlay {

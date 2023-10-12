@@ -284,6 +284,25 @@
 
               </article>
 
+              <div class="coupons-responsive">
+
+                <h2 class="headline">Coupons</h2>
+                
+                <p> Do you have any coupon code?</p>
+
+                <div class="flex pd-20-0">
+
+                  <input type="text" placeholder="Enter your coupon code" class="coupon-input pd-5-10 border">
+                  <button class="btn btn-1 coupon-btn" type="submit">Apply</button>
+                  
+                </div>
+
+          
+                
+              </div>
+
+              
+
               <article class="payment-method">
 
                   <h2 class="headline">Payment method</h2>
@@ -296,7 +315,7 @@
 
                       <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check1">Card payment </label>
 
-                      <img class="pd-30" src="images/pay-visa.svg" alt="">         
+                      <img class="pay-visa-icon pd-30" src="images/pay-visa.svg" alt="">         
 
                       <div class="accordion-content">
 
@@ -354,7 +373,7 @@
 
                       <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check2">PayPal</label>
 
-                      <img class="pd-30" src="images/pay-paypal.svg" alt="">         
+                      <img class="pay-paypal-icon pd-30" src="images/pay-paypal.svg" alt="">         
 
                       <div class="accordion-content">
 
@@ -380,7 +399,7 @@
 
                       <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check3">Google Pay</label>
 
-                      <img class="pd-30" src="images/pay-google.svg" alt="">         
+                      <img class="pay-googlepay-icon pd-30" src="images/pay-google.svg" alt="">         
 
                       <div class="accordion-content">
 
@@ -410,17 +429,19 @@
 
             <aside class="c3">
 
-                <div class="cart-summary grey-section border pd-20">
+              <div class="cart-summary border ">
 
-                    <h5>Cart summary</h5>
+                <div class="cart-summary__top grey-section pd-20">
 
-                    <div class="price-data pd-20-0">
+                  <h5>Cart summary</h5>
+
+                    <div class="price-data flex gap-10 pd-20-0">
 
                         <div class="full-price flex justify-sb">
                             <span>Full price:</span>
                             <span class="text-line-through">€111.95</span>
                         </div>
-
+    
                         <div class="flex justify-sb">
                             <span>Your saving:</span>
                             <span class="color-6">-€42.95</span>
@@ -430,12 +451,20 @@
 
                     <div class="border-bottom"></div>
 
-                    <div class="total-price flex justify-sb pd-20-0">
+                    <div class="total-price flex justify-sb pd-top-30">
                         <h6>Total price:</h6>
                         <span class="h4 color-6">€69.95</span>
                     </div>
 
                 </div>
+                    
+
+                    <div class="cart-summary__bottom flex column gap-20 grey-section pd-20">
+                        <a href="payment.html" class="btn btn-1 width-100">Pay</a>
+                        
+                    </div>
+
+            </div>
 
                 <div class="coupons grey-section border">
 
