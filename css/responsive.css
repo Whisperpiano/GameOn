@@ -669,7 +669,8 @@
 		
 	}
 
-	.main-cart .cart-page {
+	.main-cart .cart-page,
+	.main-payment .payment-page {
 		grid-template-columns: 1fr;
 	}
 
@@ -1189,8 +1190,6 @@
 
 
 	/* CART PAGE */
-
-
 
 	.main-cart {
 		padding-top: 30px !important;

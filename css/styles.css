@@ -1007,6 +1007,51 @@
 
 /* Payment page */
 
+    .main-payment .headline {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    } 
+
+    .billing-address__container {
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .billing-address__container,
+    .card-payment,
+    .paypal-payment,
+    .googlepay-payment {
+        border-radius: 2px;
+    }
+
+    .pay-with-card {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .paypal-payment a,
+    .googlepay-payment a{
+        max-width: 300px;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: all 0.5s;
+    }
+
+    .paypal-payment img,
+    .googlepay-payment img {
+        margin-left: 10px;
+    }
+
+    .payment-method {
+        padding-bottom: 60px;
+    }
+
+    .form-box input {
+        margin-top: 8px;
+    }
+
+
     .billing-address label {
         font-weight: 400;
     }
@@ -1017,6 +1062,15 @@
 
     .gift p {
         margin-bottom: 20px;
+    }
+    .payment-bottom {
+        padding-bottom: 30px;
+    }
+    .pay-with-card,
+    .pay-with-paypal,
+    .pay-with-googlepay {
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     .payment-page {

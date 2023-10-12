@@ -216,7 +216,7 @@
       </section>
     </header>
 
-      <main class="mw-1340">
+      <main class="main-payment mw-1340">
 
         <h2 class="headline">Billing address</h2>
 
@@ -228,44 +228,44 @@
 
                  
 
-                  <div class="flex grey-section pd-30">
+                  <div class="billing-address__container flex grey-section">
 
                     <form class="flex gap-30" action="">
 
-                          <div class="form-box">
+                          <div class="form-box width-100">
                               <label for="">Full name</label>
                               <input class="btn-2" type="text">
                           </div>
 
-                          <div class="form-box">
+                          <div class="form-box width-100">
                               <label for="">Address</label>
                               <input class="btn-2" type="text">
                           </div>
 
                           <div class="grid-2-col width-100">
 
-                              <div>
+                              <div class="form-box">
 
                                 <label for="">Country</label>
                                 <input class="btn-2" type="text">
                                 
                               </div>
 
-                              <div>
+                              <div class="form-box">
 
                                 <label for="">State / Privince</label>
                                 <input class="btn-2" type="text">
                                 
                               </div>
 
-                              <div>
+                              <div class="form-box">
 
                                 <label for="">ZIP / Postal code</label>
                                 <input class="btn-2" type="text">
                                 
                               </div>
 
-                              <div>
+                              <div class="form-box">
 
                                 <label for="">Phone number</label>
                                 <input class="btn-2" type="text">
@@ -292,7 +292,7 @@
 
                     <div class="card-payment accordion grey-section flex justify-sb">
 
-                      <input class="no-display check-no-display" type="checkbox" id="payment-check1" checked>
+                      <input class="no-display check-no-display" name="payment" type="radio" id="payment-check1" checked>
 
                       <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check1">Card payment </label>
 
@@ -302,31 +302,31 @@
 
                         <form class="flex column gap-30 pd-0-30" action="">
 
-                          <div class="flex column">
+                          <div class="form-box">
                             <label for="">Card number</label>
-                            <input type="text">
+                            <input class="btn-2" type="text">
                           </div>
 
-                          <div>
+                          <div class="form-box">
                             <label for="">Cardholder name</label>
-                            <input type="text">
+                            <input class="btn-2" type="text">
                           </div>
 
                           <div class="grid-3-col">
 
-                              <div>
+                              <div class="form-box">
                                 <label for="">Expiry month</label>
-                                <input type="text">
+                                <input class="btn-2" type="text">
                               </div>
                               
-                              <div>
+                              <div class="form-box">
                                 <label for="">Expiry year</label>
-                                <input type="text">
+                                <input class="btn-2" type="text">
                               </div>
                               
-                              <div>
+                              <div class="form-box">
                                 <label for="">CVC/CVV</label>
-                                <input type="text">
+                                <input class="btn-2" type="text">
                               </div>
                             
                           </div>
@@ -338,8 +338,8 @@
                               <label for="">Remember card details</label>
                             </div>
 
-                            <div>
-                              <p class="btn btn-1">Pay with card payment</p>
+                            <div class="pay-with-card">
+                              <a href="#" class="btn btn-1 width-100">Pay with card payment</a>
                             </div>
                           </div>
                           
@@ -350,7 +350,7 @@
 
                     <div class="paypal-payment accordion grey-section flex justify-sb">
 
-                      <input class="no-display" type="checkbox" id="payment-check2">
+                      <input class="no-display" name="payment" type="radio" id="payment-check2">
 
                       <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check2">PayPal</label>
 
@@ -362,8 +362,8 @@
 
                           <p>Click the button to be redirected to PayPal and complete your payment securely.</p>
 
-                          <div class="pd-30 flex right">
-                            <a href=""><span class="btn btn-4 paypal-letters">Pay with </span></a>
+                          <div class="pay-with-paypal flex right">
+                            <a class="flex center btn-4 width-100" href="#">Pay with <img src="images/paypal-letters.svg" alt=""></a>
                           </div>
 
                         </div>
@@ -376,7 +376,7 @@
 
                     <div class="googlepay-payment accordion grey-section flex justify-sb">
 
-                      <input class="no-display" type="checkbox" id="payment-check3">
+                      <input class="no-display" name="payment" type="radio" id="payment-check3">
 
                       <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check3">Google Pay</label>
 
@@ -388,8 +388,8 @@
 
                           <p>Click the button to be redirected to Google Pay and complete your payment securely.</p>
 
-                          <div class="pd-30 flex right">
-                            <a href=""><span class="btn btn-4 googlepay-letters">Pay with </span></a>
+                          <div class="pay-with-googlepay flex right">
+                            <a class="flex center btn-4 width-100" href="#">Pay with <img src="images/googlepay-letters.svg" alt=""></a>
                           </div>
 
                         </div>
@@ -449,10 +449,12 @@
                           <div class="pd-0-20">
                               <p>Do you have any coupon?</p>
                           
-                          <form class="subscribe-form flex pd pd-20-0">
-                              <input type="text" placeholder="Enter your coupon code" class="pd-5-10 border">
-                              <button class="btn btn-1" type="submit">Apply</button>
-                          </form>
+                              <div class="subscribe-form flex pd pd-20-0">
+
+                                  <input type="text" placeholder="Enter your coupon code" class="coupon-input pd-5-10 border">
+                                  <button class="btn btn-1 coupon-btn" type="submit">Apply</button>
+                                  
+                              </div>
 
                           </div>
 
