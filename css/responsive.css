@@ -388,6 +388,12 @@
 	.main-cart .btn-remove {
 		padding: 0px 5px;
 	}
+
+	/* CONTACT PAGE */
+
+	.main-contact {
+		padding: 0px 20px;
+	}
 	
 
 }
@@ -799,6 +805,29 @@
 		width: 50px;
 	}
 
+	/* CONTACT PAGE */
+
+	.main-contact {
+		padding: 0px 20px;
+	}
+
+	.main-contact h1 {
+		font-size: 28px !important;
+	}
+	.main-contact p {
+		font-size: 16px !important;
+	}
+
+	.main-contact label,
+	.main-contact input,
+	.main-contact p,
+	.main-contact span,
+	.main-contact button {
+		font-size: 16px;
+	}
+
+	
+
 
 
 	
@@ -1152,6 +1181,23 @@
 		width: 120px;
 	}
 
+	/* CONTACT PAGE */
+
+	.main-contact h1 {
+		font-size: 24px !important;
+	}
+	.main-contact p {
+		font-size: 14px !important;
+	}
+
+	.main-contact label,
+	.main-contact input,
+	.main-contact p,
+	.main-contact span,
+	.main-contact button {
+		font-size: 14px;
+	}
+
 	
 
 	
@@ -1457,6 +1503,24 @@
 	.pay-visa-icon,
 	.pay-googlepay-icon {
 		width: 100px;
+	}
+
+	/* CONTACT PAGE */
+
+	.main-contact h1 {
+		font-size: 20px !important;
+	}
+	.main-contact p {
+		margin-top: 20px;
+		font-size: 12px !important;
+	}
+
+	.main-contact label,
+	.main-contact input,
+	.main-contact p,
+	.main-contact span,
+	.main-contact button {
+		font-size: 10px;
 	}
 
 	
