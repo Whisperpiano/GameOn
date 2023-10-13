@@ -7,6 +7,10 @@
 #check:checked ~ .info-content {
     display: block;
 }
+#check:checked ~ .bkn{
+    display: none;
+    
+}
 
 #check:checked ~ label {
     visibility: hidden;
@@ -18,10 +22,7 @@
     visibility: visible;
     font-family: var(--font-2);
     font-weight: 400;
-    justify-content: center;
-
-    
-    
+    justify-content: center; 
 }
 
 .info-content {
@@ -30,7 +31,6 @@
 
 .product-accordion__label {
     display: inline-block;
-    margin-top: 50px;
     cursor: pointer;
     font-family: var(--font-2);
     font-weight: 400;

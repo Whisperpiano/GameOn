@@ -1,5 +1,12 @@
 /* ICONS */
 
+/* .dot::before {
+    content: "\f111";
+    font-size: 6px;
+    position: absolute;
+    
+} */
+
 .shopping-icon::before {
     content: "\f07a";
     padding-right: 15px;

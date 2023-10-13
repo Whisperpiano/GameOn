@@ -93,6 +93,13 @@
 		padding: 0px 20px;
 	}
 
+	/* PRODUCT PAGE */ 
+
+	.product-panel-responsive,
+	.pp-responsive-bottom {
+		display: none;
+	}
+
 
 	
 
@@ -205,6 +212,13 @@
 
 	.main-payment {
 		padding: 0px 20px;
+	}
+
+	/* PRODUCT PAGE */ 
+
+	.product-panel-responsive,
+	.pp-responsive-bottom {
+		display: none;
 	}
 
 }
@@ -400,6 +414,123 @@
 	.main-success.success {
 		padding: 200px 20px;
 	}
+
+	/* PRODUCT PAGE */
+
+	main.main-product {
+		padding: 20px;
+	}
+
+	.main-product .image-grid {
+		grid-auto-rows: 110px;
+	}
+
+	.main-product .product-name {
+		font-size: 30px;
+	}
+
+	.main-product .product-panel select {
+		max-width: 48%;
+		font-size: 14px;
+	}
+
+	.main-product .price-before,
+	.main-product .price-discount {
+		font-size: 16px;
+	}
+	.main-product .price-after {
+		font-size: 30px;
+	}
+
+	.main-product .btn {
+		font-size: 16px;
+	}
+
+	.main-product .product-metadata {
+		font-size: 12px;
+	}
+	.main-product .product-metadata .gap-10 {
+		gap: 5px;
+	}
+
+	.main-product .product-metadata img {
+		width: 16px;
+	}
+
+	.main-product .stars-section {
+		font-size: 14px;
+	}
+
+	.main-product .headline {
+		font-size: 32px;
+	}
+	.main-product h4 {
+		font-size: 24px;
+	}
+
+	.main-product p {
+		font-size: 16px;
+	}
+
+	.main-product .requirements h6 {
+		font-size: 20px;
+	}
+
+	.main-product .requirements th,
+	.main-product .requirements td {
+		font-size: 16px;
+	}
+
+	.main-product .product-reviews img {
+		width: 70px;
+	}
+
+	.main-product .product-reviews .user-top-left p{
+		font-size: 14px;
+	}
+
+	.main-product .product-reviews .user-top-left p:first-child {
+		font-size: 16px;
+	}
+
+	.main-product .product-reviews .user-verify p,
+	.main-product .user-stars {
+		font-size: 14px;
+	}
+
+	.main-product .product-reviews .user-verify img {
+		width: 20px;
+	}
+	.main-product .user-review__mid h4 {
+		font-size: 20px;
+	}
+	.main-product .user-review__mid p {
+		font-size: 14px;
+	}
+	.main-product .user-review__bottom span {
+		font-size: 14px;
+	}
+	.main-product .user-review__bottom img {
+		width: 20px;
+	}
+
+	.main-product .user-review__bottom a {
+        padding: 8px 20px;  
+    }
+
+	.main-product .slider-nav a {
+		width: 15px;
+		height: 15px;
+	}
+	
+	.product-panel-responsive,
+	.pp-responsive-bottom {
+		display: none;
+	}
+
+
+
+
 	
 
 }
@@ -851,6 +982,111 @@
 	.main-success a {
 		font-size: 14px;
 		width:40%;
+	}
+
+	/* PRODUCT PAGE */
+
+	.main-product .product-panel {
+		display: none;
+	}
+
+	.product-panel-responsive {
+		display: block;
+	}
+
+	main.main-product {
+		padding: 0px;
+	}
+
+	.main-product .btn {
+		font-size: 14px;
+	}
+
+	.main-product .product-metadata {
+		font-size: 14px;
+	}
+
+	.main-product .product-metadata .gap-10 {
+		gap: 10px;
+	}
+
+	.main-product .product-metadata img {
+		width: 16px;
+	}
+
+	.main-product .product-information {
+		padding: 90px 30px;
+	}
+
+	.main-product .requirements,
+	.main-product .product-reviews {
+		padding: 0px 30px;
+	}
+
+	.main-product .product-reviews article {
+		grid-template-columns: 1fr;
+	}
+
+	.main-product .headline {
+		font-size: 24px !important;
+	}
+	.main-product h4 {
+		font-size: 24px;
+	}
+
+	.main-product p {
+		font-size: 16px;
+	}
+
+	.main-product .requirements h6 {
+		font-size: 20px;
+	}
+
+	.main-product .requirements th,
+	.main-product .requirements td {
+		font-size: 16px;
+	}
+
+	.main-product .product-reviews img {
+		width: 70px;
+	}
+
+	.main-product .product-reviews .user-top-left p{
+		font-size: 14px;
+	}
+
+	.main-product .product-reviews .user-top-left p:first-child {
+		font-size: 16px;
+	}
+
+	.main-product .product-reviews .user-verify p,
+	.main-product .user-stars {
+		font-size: 14px;
+	}
+
+	.main-product .product-reviews .user-verify img {
+		width: 20px;
+	}
+	.main-product .user-review__mid h4 {
+		font-size: 20px;
+	}
+	.main-product .user-review__mid p {
+		font-size: 14px;
+	}
+	.main-product .user-review__bottom span {
+		font-size: 14px;
+	}
+	.main-product .user-review__bottom img {
+		width: 20px;
+	}
+
+	.main-product .user-review__bottom a {
+        padding: 8px 20px;  
+    }
+
+	.main-product .slider-nav a {
+		width: 15px;
+		height: 15px;
 	}
 
 	
