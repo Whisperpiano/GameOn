@@ -545,6 +545,49 @@
 /*--------------------------------------------------------------*/
 @media screen and (max-width: 1000px)
 {	
+
+	/* HEADER */
+	header .logo img.pd-40-0 {
+	padding: 0px;
+	}
+	header .logo img {
+	margin-left: 0px;
+	}
+	header.pd-20 {
+	padding: 15px;
+	}
+	header .header-right-responsive a {
+	width: 20px;
+	}
+
+		/* Header popup */
+
+		header .dialog-body {
+			background-color: transparent;
+			
+		}
+
+		header .overlay {
+			background-color: var(--color-1);
+		}
+
+		header .dialog-body h3 {
+			font-size: 40px;
+		}
+		header .dialog-body .x-mark {
+			font-size: 30px;
+		}
+		header .dialog-body input,
+		header .dialog-body .btn {
+			padding: 10px;
+			font-size: 16px;
+		}
+		header .dialog-body input::placeholder {
+			font-size: 16px;
+		}
+
+
+
 	/*HOME PAGE*/
 
 	.menu {
@@ -1206,7 +1249,31 @@
 /*--------------------------------------------------------------*/
 
 @media screen and (max-width: 700px)
-{
+{	
+	/* HEADER */
+
+			/* Header popup */
+
+			header .dialog-body {
+				padding: 0px;
+				margin-top: 0px;
+			}
+
+			header .dialog-body h3 {
+				font-size: 30px;
+			}
+			header .dialog-body .x-mark {
+				font-size: 20px;
+			}
+			header .dialog-body input,
+			header .dialog-body .btn {
+				padding: 8px;
+				font-size: 14px;
+			}
+			header .dialog-body input::placeholder {
+				font-size: 14px;
+			}
+
 	/*HOME PAGE*/
 
 	.platforms-responsive__container {
@@ -1873,6 +1940,16 @@
 /*--------------------------------------------------------------*/
 
 @media screen and (max-width: 420px) {
+
+	/* HEADER */
+
+	header .logo img {
+		width: 90px;
+	}
+		
+	header .header-right-responsive a {
+		width: 16px;
+	}
 
 	/* HOME PAGE */
 
