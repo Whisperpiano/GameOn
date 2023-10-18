@@ -701,6 +701,10 @@
 		display: block;
 	}
 
+	.main-home .item-overlay button{
+		font-size: 11px;
+	}
+
 	
 	/* HOME PAGE */
 

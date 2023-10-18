@@ -71,6 +71,7 @@
 .slider div .subprice {
     font-size: 16px;
     color: #F29220;
+    text-decoration-line: line-through;
 }
 
 .slide-img-1 {

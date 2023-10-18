@@ -194,7 +194,7 @@
     .btn-1:hover,
     .btn-1:focus,
     .btn-1:active{
-        
+        opacity: 0.8;
     }
 
     .btn-2:hover,
@@ -337,6 +337,10 @@
         outline-offset:2px;
     }
 
+    .name-hover:hover {
+        opacity: 0.9;
+    }
+
     /* ----- BORDERS ----- */
 
     
@@ -417,6 +421,7 @@
 
     .onsale {
         font-size: 12px;
+        font-weight: 700;
         border-radius: 0px 0px 15px 0px; 
         padding: 5px 25px; 
     }
@@ -467,6 +472,10 @@
        opacity: 0.9;
      }
 
+     .res-slider__card a {
+        height: 100%;
+     }
+
      .res-slider__card img:hover {
         opacity: 1;
       }
@@ -475,6 +484,7 @@
 
     .headline {
         font-size: 40px;
+        margin-bottom: 30px;
     }
 
     .show-all {
@@ -524,8 +534,54 @@
 
     /* Bestseller carousel */ 
 
+    .item-overlay {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background:rgba(20, 21, 27, 0.8);
+        transition: opacity 0.5s;
+    }
+    .item-platforms {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    .item:hover .item-overlay {
+       opacity: 1;
+    }
+    .item:hover .item-platforms,
+    .item:hover .item-discount {
+       opacity: 0;
+    }
+
+    .btn-overlay {
+        padding: 5px 30px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
     /* Info panel */
 
+    .feature-fast picture,
+    .feature-safe picture,
+    .feature-support picture{
+        margin-bottom: 20px;
+    }
+    .feature-fast,
+    .feature-safe,
+    .feature-support{
+        gap: 10px;
+    }
+    
     /* Reviews */
 
     /* Reviews responsive */
@@ -566,10 +622,28 @@
     }
 
     /* Subscribe */
+    .subscribe h6 {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .subscribe p {
+        font-weight: 300;
+    }
+    .subscribe p a {
+        font-weight: 500;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 
     /* Payment methods */
 
     /* Footer */
+
+    footer h4 {
+        font-size: 20px;
+        font-weight: 700;
+    }
 
     /* Footer-links responsive */
 
