@@ -415,6 +415,10 @@
         transform: translate(160%, -160%);
     }
 
+    header .header-right-responsive a:hover {
+        opacity: 0.8;
+    }
+
   
 
     /* Slider */
@@ -482,7 +486,8 @@
 
     /* Bestseller & new releases */
 
-    .headline {
+    .headline,
+    .show-all {
         font-size: 40px;
         margin-bottom: 30px;
     }
@@ -539,7 +544,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 15px;
         width: 100%;
         height: 100%;
         top: 0;
@@ -548,6 +552,13 @@
         background:rgba(20, 21, 27, 0.8);
         transition: opacity 0.5s;
     }
+
+    .item-overlay__buttons {
+        display: flex;
+        gap: 15px;
+        margin-left: -15px;
+    }
+
     .item-platforms {
         opacity: 1;
         transition: opacity 0.5s;
