@@ -35,7 +35,6 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 30px;
 		row-gap: 50px;
-		padding: 50px 0px;
 	}
 
 	.res-slider {
@@ -134,7 +133,6 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 30px;
 		row-gap: 50px;
-		padding: 50px 0px;
 	}
 
 	.show-all {
@@ -237,6 +235,13 @@
 	
 	.responsive-links {
 		display: none;
+	}
+
+	.main-home .item-name {
+		font-size: 16px;
+	}
+	.main-home .item-price{
+		font-size: 20px;
 	}
 	
 	/* SEARCH PAGE */
@@ -550,12 +555,10 @@
 		display: block;
 		max-width: 580px;
 		margin: auto;
-		
 	}
 
 	.menu-responsive {
 		display: block;
-		
 	}
 
 	.header-right {
@@ -600,14 +603,6 @@
 
 	.slider-nav {
 		display: none;
-	}
-
-	.bestseller,
-	.new-releases,
-	.reviews {
-		padding-top: 30px;
-        padding-left: 30px;
-        padding-bottom: 30px;
 	}
 
 	.bestseller .item-name,
@@ -705,6 +700,78 @@
 	.responsive-links {
 		display: block;
 	}
+
+	
+	/* HOME PAGE */
+
+	.main-home .res-slider {
+		padding-left: 15px;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+
+	.main-home .res-slider__card div {
+		min-width: 280px;
+	}
+
+	.main-home .platforms-responsive__container,
+	.main-home .bestseller__container,
+	.main-home .newreleases__container, 
+	.main-home .res-reviews__container {
+		gap: 20px;
+	}
+
+	.main-home .headline,
+	.main-home .show-all {
+		padding-bottom: 20px;
+	}
+
+	.main-home .item,
+	.main-home .res-reviews__card {
+		min-width: 280px;
+	}
+
+	.main-home .pd-30,
+	.main-home .res-payment-methods {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 25px;
+		padding-top: 25px;
+	}
+
+	.main-home .bestseller,
+	.main-home .new-releases,
+	.main-home .responsive-reviews {
+		padding-left: 20px;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+	.main-home .show-all {
+		padding-right: 20px;
+	}
+
+	.main-home .subscribe-responsive {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	.main-home .res-reviews__container{
+		padding-left: 0px;
+	}
+
+	.main-home .res-reviews__container h2.pd-0-30 {
+		padding: 0px;
+	}
+
+	.main-home .pay-visa,
+	.main-home .pay-mastercard,
+	.main-home .pay-maestro,
+	.main-home .pay-bitcoin,
+	.main-home .pay-apple {
+		width: 70px;
+	}
+
+	
 
 	/* SEARCH PAGE */
 
@@ -1151,6 +1218,38 @@
 	.res-payment-methods {
 		display: flex;
 	}
+
+	/* HOME PAGE */
+
+	.main-home .res-slider {
+		padding-left: 15px;
+	}
+
+	.main-home .res-slider__card div {
+		min-width: 280px;
+	}
+
+	.main-home .headline,
+	.main-home .show-all {
+		padding-bottom: 15px;
+	}
+
+	.main-home .pd-30,
+	.main-home .res-payment-methods {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.main-home .bestseller,
+	.main-home .new-releases,
+	.main-home .responsive-reviews {
+		padding-left: 15px;
+	}
+
+	.main-home .show-all {
+		padding-right: 15px;
+	}
+
 
 	/* SEARCH PAGE */
 
@@ -1770,6 +1869,27 @@
 /*--------------------------------------------------------------*/
 
 @media screen and (max-width: 420px) {
+
+	/* HOME PAGE */
+
+	.main-home .res-slider__card div {
+		min-width: 230px;
+	}
+
+	.main-home .item,
+	.main-home .res-reviews__card {
+		min-width: 250px;
+	}
+
+	.main-home .pay-visa,
+	.main-home .pay-mastercard,
+	.main-home .pay-maestro,
+	.main-home .pay-bitcoin,
+	.main-home .pay-apple {
+		width: 50px;
+	}
+	
+	
 
 	/* ABOUT US PAGE */
 
