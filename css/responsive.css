@@ -466,6 +466,11 @@
 	width: 20px;
 	}
 
+	/* FOOTER */
+	footer .copyright {
+		padding-bottom: 110px;
+	}
+
 		/* Header popup */
 
 		header .dialog-body {
@@ -1044,6 +1049,11 @@
 {	
 	/* HEADER */
 
+	/* FOOTER */
+	footer .copyright {
+		font-size: 14px;
+	}
+
 			/* Header popup */
 
 			header .dialog-body {
@@ -1520,6 +1530,12 @@
 		width: 16px;
 	}
 
+	/* FOOTER */
+
+	footer .copyright {
+		font-size: 12px;
+	}
+
 	/* HOME PAGE */
 
 	.main-home .res-slider__card div {
@@ -1621,7 +1637,6 @@
 	/* CONTACT PAGE*/
 
 	
-
 	.main-contact h1 {
 		font-size: 20px !important;
 	}

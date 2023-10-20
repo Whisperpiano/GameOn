@@ -18,11 +18,11 @@
 
 
 .dislike::before {
-    content: url("/images/dislike.svg");
+    content: url("../images/dislike.svg");
     margin-right: 20px;
 }
 .like::before {
-    content: url("/images/like.svg");
+    content: url("../images/like.svg");
     margin-right: 20px;
 }
 
@@ -32,15 +32,15 @@
 }
 
 .google-icon::before {
-    content: url("/images/google-icon.svg");
+    content: url("../images/google-icon.svg");
     margin-right: 20px;
 }
 .facebook-icon::before {
-    content: url("/images/facebook-icon.svg");
+    content: url("../images/facebook-icon.svg");
     margin-right: 20px;
 }
 .apple-icon::before {
-    content: url("/images/apple-icon.svg");
+    content: url("../images/apple-icon.svg");
     margin-right: 20px;
 }
 
@@ -157,14 +157,14 @@
 }
 
 .type::before {
-    content: url("/images/key-icon.svg");
+    content: url("../images/key-icon.svg");
 }
 
 .version::before {
-    content: url("/images/global-icon.svg");
+    content: url("../images/global-icon.svg");
 }
 .activate::before {
-    content: url("/images/verified-icon.svg");
+    content: url("../images/verified-icon.svg");
 }
 
 .less::after {
@@ -199,11 +199,11 @@
 }
 
 .paypal-letters::after {
-    content: url("/images/paypal-letters.svg");
+    content: url("../images/paypal-letters.svg");
 }
 
 .googlepay-letters::after {
-    content: url("/images/googlepay-letters.svg");
+    content: url("../images/googlepay-letters.svg");
 }
 
 .fast-img::before {
