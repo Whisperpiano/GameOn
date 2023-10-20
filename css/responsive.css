@@ -49,7 +49,8 @@
 
 	/* PAYMENT PAGE */
 
-	.main-payment .coupons-responsive {
+	.main-payment .coupons-responsive,
+	.main-payment .cart-summary__bottom {
 		display: none;
 	}
 
@@ -134,7 +135,8 @@
 	/* PAYMENT PAGE */
 
 
-	.main-payment .coupons-responsive {
+	.main-payment .coupons-responsive,
+	.main-payment .cart-summary__bottom {
 		display: none;
 	}
 
@@ -344,6 +346,8 @@
 	}
 
 	/* CONTACT PAGE */
+
+	/* PAYMENT PAGE */
 
 	/* SUCCESS PAGE */
 
@@ -854,6 +858,10 @@
 
 	/* PAYMENT PAGE */
 
+	.main-payment .cart-summary__bottom {
+		display: block;
+	}
+
 	.main-payment .coupons,
 	.main-payment .gift,
 	.main-payment .pay-with-card,
@@ -919,6 +927,10 @@
 	}
 
 	/* SUCCESS PAGE */
+
+	.footer-success {
+		display: none;
+	}
 
 	.main-success.success {
 		padding: 120px 20px;

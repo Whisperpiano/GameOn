@@ -555,8 +555,8 @@
 
     .item-overlay__buttons {
         display: flex;
-        gap: 15px;
-        margin-left: -15px;
+        gap: 25px;
+        margin-left: -25px;
     }
 
     .item-platforms {
