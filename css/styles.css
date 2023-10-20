@@ -1430,10 +1430,13 @@
         padding: 15px;
     }
 
-
-
-
-
+    .google-login a,
+    .facebook-login a,
+    .apple-login a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 /* Small framework */
     .margin-auto-0 {

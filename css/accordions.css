@@ -96,7 +96,7 @@ label {
 }
 
 .no-display:checked ~ label::before {
-    content: url("/images/btn-on.svg");
+    content: url("../images/btn-on.svg");
     transition: content 0.35s;
 }
 
