@@ -1,8 +1,8 @@
-@import url("framework.css");
-@import url("responsive.css");
-@import url("sliders.css");
-@import url("icons.css");
-@import url("accordions.css");
+@import url("./framework.css");
+@import url("./responsive.css");
+@import url("./sliders.css");
+@import url("./icons.css");
+@import url("./accordions.css");
 /* @import url("carousels.css"); */
 
 

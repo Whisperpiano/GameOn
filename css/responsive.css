@@ -5,7 +5,7 @@
 	/* HEADER */
 
 	/* FOOTER */
-
+	
 	/*HOME PAGE*/
 
 	.search-bar-responsive,
@@ -17,7 +17,6 @@
 	.res-slider,
 	.responsive-reviews,
 	.res-payment-methods,
-	.links,
 	.responsive-links {
         display: none;
     }
