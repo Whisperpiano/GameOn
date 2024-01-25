@@ -1,5 +1,6 @@
 /* ----- SLIDER ----- */
-.main-slider {
+.main-slider,
+.reviews-slider {
     overflow: hidden;
 }
 .slider {
@@ -22,6 +23,9 @@
 }
 
 .slider-nav a.selected {
+    opacity: 1;
+}
+.slider-nav a.rev-selected {
     opacity: 1;
 }
 
