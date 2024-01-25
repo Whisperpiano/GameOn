@@ -1,12 +1,13 @@
 /* ----- SLIDER ----- */
-
+.main-slider {
+    overflow: hidden;
+}
 .slider {
     display:flex;
-    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    overflow-x:hidden
-
+    transform: translateX(0%);
+    transition: all ease 500ms;
 }
 
 
@@ -20,6 +21,10 @@
     column-gap: 1.2rem;
 }
 
+.slider-nav a.selected {
+    opacity: 1;
+}
+
 .slider-nav a {
     width: 1rem;
     height: 1rem;
@@ -31,6 +36,7 @@
 
 .slider-nav a:hover {
     opacity: 1;
+    scale: 1.1;
 }
 
 .slide-img {
