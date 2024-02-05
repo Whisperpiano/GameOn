@@ -3,6 +3,7 @@
 @import url("./sliders.css");
 @import url("./icons.css");
 @import url("./accordions.css");
+
 /* @import url("carousels.css"); */
 
 
@@ -406,8 +407,7 @@
         background: var(--color-6);
         color: #14151B;
         text-align: center;
-        width: 17px;
-        height: 17px;
+        min-width: 17px;
         border-radius: 50%;
         position: absolute;
         top: 50%;
@@ -1471,7 +1471,6 @@
         color: var(--color-4);
         text-decoration: underline;
     }
-
 
 
 

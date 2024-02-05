@@ -1,5 +1,3 @@
-console.log('Holaaaaa')
-
 const mainSlider = document.querySelector('.slider')
 const reviewSlider = document.querySelector('#reviews-slider')
 
