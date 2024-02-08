@@ -5,6 +5,8 @@ import { reviewsSliderTemplate, reviewsSliderContainer } from "../modules/compon
 import { RenderError } from "../modules/utils/errorHandling.mjs";
 import { users } from "../modules/services/users-fetch.mjs";
 import { randomTime } from "../modules/utils/random-time.mjs";
+import { mainSliderResponsiveTemplate, responsiveMainSliderContainer } from "../modules/components/templates/main-slider-responsive-template.mjs";
+
 
 async function renderMainSlider() {
     try {
@@ -122,11 +124,38 @@ async function renderReviews() {
     }
 }
 
+async function renderMainSliderResponsive() {
+    try {
+        const gamesArray = await data();
+
+        if(!gamesArray) {
+            throw new RenderError("Can not render responsive main slider . Data received from API is empty or invalid.");
+        }
+
+        const favoriteGames = gamesArray.filter((game) => game.favorite === true);
+    
+        favoriteGames.map((game)=> {
+            const { title, image, id } = game;
+            const favoriteGameElement = mainSliderResponsiveTemplate(title, image, id);
+            responsiveMainSliderContainer.appendChild(favoriteGameElement); 
+        })
+        
+    } catch (error) {
+        if(error instanceof RenderError) {
+            console.error(`RenderError: ${error.message}`);
+        } else {
+            console.error('An unknown error occurred rendering responsive main slider.');
+        }
+    }
+
+}
+
 function main () {
     renderMainSlider();
     renderBestseller();
     renderNewReleases();
     renderReviews();
+    renderMainSliderResponsive();
 }
 
 main()
