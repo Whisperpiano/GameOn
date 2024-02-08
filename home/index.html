@@ -16,11 +16,11 @@
       rel="stylesheet"
     />
     <!-- Javascript -->
-    <script src="../js/main.mjs" defer></script>
-    <script src="../js/modules/sliders.mjs" defer></script>
-    <script src="../js/modules/add-to-cart-btns.mjs" defer></script>
-    <script src="../js/modules/api.mjs" defer></script>
-    <script src="../js/modules/exampleOliver.mjs" defer></script>
+    <script src="../js/main.mjs" type="module"></script>
+    <script src="../js/modules/services/api-fetch.mjs" type="module"></script>
+    <script src="../js/pages/index.mjs" type="module"></script>
+    <script src="../js/modules/components/sliders.mjs" type="module"></script>
+    <script src="../js/modules/components/add-to-cart-btns.mjs" type="module"></script>
   </head>
   <body>
       <header class="grey-section border-bottom pd-20">
@@ -266,186 +266,14 @@
 
         <section class="main-slider mw-1340 pd-90-0">
           
-          <div class="slider">
-        
-            <article id="slide-1" class="flex">
-              
-              <a href="./product/index.html" class="slide-img slide-img-1"></a>
-              <div class="slide-info flex pd-40">
-                    <div class="slide-info__top flex justify-sb">
-                        <span class="onsale btn-3 uppercase">On sale</span>
-                        <div class="flex gap-15">
-                          <span class="playstation"></span>
-                          <span class="xbox"></span>
-                          <span class="steam"></span>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-sb gap-20">
-                        <div class="name-price flex row justify-sb">
-                          <h3 class="name-hover"><a href="./product/index.html" class="name">Metro: Exodus</a></h3>
-                          <span class="price"> €19.99</span>
-                        </div>
-                        <div class="stars-subprice flex row justify-sb">
-                          <div class="stars name-hover"><a href="./product/index.html"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a></div>
-                          <span class="subprice">€29.99</span>
-                        </div>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste, neque animi inventore quod sapiente officia optio maiores ratione molestias magnam distinctio sunt nemo cumque deleniti velit ipsa? Iusto autem iste quod. Accusamus obcaecati atque a ad! Rerum, dolore nostrum!</p>
-
-                    <div class="flex justify-sb gap-30">                      
-                      <button type="button" class=" btn btn-1 width-100 uppercase shopping-icon" name="addToCartBtn">Add to cart</button>                     
-                      <button type="button" class="btn btn-2 width-100 heart-icon" name="addToFavBtn">Add to wishlist</button>
-                    </div>
-              </div>
-
-            </article>
-
-            <article id="slide-2" class="flex">
-
-              <a href="#" class="slide-img slide-img-2"></a>
-              <div class="slide-info flex pd-40">
-                  <div class="slide-info__top flex justify-sb">
-                      <span class="onsale btn btn-3 uppercase">On sale</span>
-                      <div class="flex gap-15">
-                        <span class="playstation"></span>
-                        <span class="xbox"></span>
-                        <span class="steam"></span>
-                      </div>
-                  </div>
-
-                  <div class="flex justify-sb gap-20">
-                      <div class="name-price flex row justify-sb">
-                        <h3 class="name-hover"><a href="./product/index.html" class="name">Outriders</a></h3>
-                        <span class="price"> €39.95</span>
-                      </div>
-                      <div class="stars-subprice flex row justify-sb">
-                        <div class="stars name-hover"><a href="./product/index.html"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a></div>
-                        <span class="subprice">€59.99</span>
-                      </div>
-                  </div>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste, neque animi inventore quod sapiente officia optio maiores ratione molestias magnam distinctio sunt nemo cumque deleniti velit ipsa? Iusto autem iste quod. Accusamus obcaecati atque a ad! Rerum, dolore nostrum!</p>
-
-                <div class="flex justify-sb gap-30">        
-                    <button type="button" class=" btn btn-1 width-100 uppercase shopping-icon" name="addToCartBtn">Add to cart</button>
-                    <button type="button" class="btn btn-2 width-100 heart-icon" name="addToFavBtn">Add to wishlist</button>
-                </div>
-              </div>
-
-            </article>
-
-            <article id="slide-3" class="flex">
-
-              <a href="#" class="slide-img slide-img-3"></a>
-              <div class="slide-info flex pd-40">
-                  <div class="slide-info__top flex justify-sb">
-                      <span class="onsale btn btn-3 uppercase">On sale</span>
-                      <div class="flex gap-15">
-                        <span class="playstation"></span>
-                        <span class="xbox"></span>
-                        <span class="steam"></span>
-                      </div>
-                  </div>
-
-                  <div class="flex justify-sb gap-20">
-                      <div class="name-price flex row justify-sb">
-                        <h3 class="name-hover"><a href="./product/index.html" class="name">Star Wars: Battlefront 2</a></h3>
-                        <span class="price"> €9.95</span>
-                      </div>
-                      <div class="stars-subprice flex row justify-sb">
-                        <div class="stars name-hover"><a href="./product/index.html"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a></div>
-                        <span class="subprice">€29.99</span>
-                      </div>
-                  </div>
-
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste, neque animi inventore quod sapiente officia optio maiores ratione molestias magnam distinctio sunt nemo cumque deleniti velit ipsa? Iusto autem iste quod. Accusamus obcaecati atque a ad! Rerum, dolore nostrum!</p>
-
-                  <div class="flex justify-sb gap-30">  
-                      <button type="button" class=" btn btn-1 width-100 uppercase shopping-icon" name="addToCartBtn">Add to cart</button>
-                      <button type="button" class="btn btn-2 width-100 heart-icon" name="addToFavBtn">Add to wishlist</button>
-                  </div>
-              </div>
-
-            </article>
-
-            <article id="slide-4" class="flex">
-
-              <a href="#" class="slide-img slide-img-4"></a>
-              <div class="slide-info flex pd-40">
-                  <div class="slide-info__top flex justify-sb">
-                      <span class="onsale btn btn-3 uppercase">On sale</span>
-                      <div class="flex gap-15">
-                        <span class="playstation"></span>
-                        <span class="xbox"></span>
-                        <span class="steam"></span>
-                      </div>
-                  </div>
-
-                  <div class="flex justify-sb gap-20">
-                      <div class="name-price flex row justify-sb">
-                        <h3 class="name-hover"><a href="./product/index.html" class="name">Magic Legends</a></h3>
-                        <span class="price"> €15.95</span>
-                      </div>
-                      <div class="stars-subprice flex row justify-sb">
-                        <div class="stars name-hover"><a href="./product/index.html"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a></div>
-                        <span class="subprice">€25.99</span>
-                      </div>
-                  </div>
-
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste, neque animi inventore quod sapiente officia optio maiores ratione molestias magnam distinctio sunt nemo cumque deleniti velit ipsa? Iusto autem iste quod. Accusamus obcaecati atque a ad! Rerum, dolore nostrum!</p>
-
-                  <div class="flex justify-sb gap-30">                      
-                      <button type="button" class=" btn btn-1 width-100 uppercase shopping-icon" name="addToCartBtn">Add to cart</button>
-                      <button type="button" class="btn btn-2 width-100 heart-icon" name="addToFavBtn">Add to wishlist</button>
-                  </div>
-              </div>
-
-            </article>
-
-            <article id="slide-5" class="flex">
-
-              <a href="#" class="slide-img slide-img-1"></a>
-              <div class="slide-info flex pd-40">
-                  <div class="slide-info__top flex justify-sb">
-                      <span class="onsale btn btn-3 uppercase">On sale</span>
-                      <div class="flex gap-15">
-                        <span class="playstation"></span>
-                        <span class="xbox"></span>
-                        <span class="steam"></span>
-                      </div>
-                  </div>
-
-                  <div class="flex justify-sb gap-20">
-                      <div class="name-price flex row justify-sb">
-                        <h3 class="name-hover"><a href="./product/index.html" class="name">Metro: Exodus</a></h3>
-                        <span class="price"> €19.99</span>
-                      </div>
-                      <div class="stars-subprice flex row justify-sb">
-                        <div class="stars name-hover"><a href="./product/index.html"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a></div>
-                        <span class="subprice">€29.99</span>
-                      </div>
-                  </div>
-
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste, neque animi inventore quod sapiente officia optio maiores ratione molestias magnam distinctio sunt nemo cumque deleniti velit ipsa? Iusto autem iste quod. Accusamus obcaecati atque a ad! Rerum, dolore nostrum!</p>
-
-                  <div class="flex justify-sb gap-30">   
-                      <button type="button" class=" btn btn-1 width-100 uppercase shopping-icon" name="addToCartBtn">Add to cart</button>
-                      <button type="button" class="btn btn-2 width-100 heart-icon" name="addToFavBtn">Add to wishlist</button>
-                  </div>
-              </div>
-
-            </article>
-
+          <div class="slider slider-header">
           </div>
 
           <div class="slider-nav center pd-30" id="controls">
             <a class="selected"></a>
             <a></a>
             <a></a>
-            <a></a>
-            <a></a>
+           
           </div>
           
         </section>
@@ -459,11 +287,11 @@
 
           <article class="bestseller__container">
 
-            <div class="item">
+            <!-- <div class="item item-template">
               <div class="relative">
                 <a href="./product/index.html">
                   <picture>
-                    <img class="item-img" src="../images/game1.png" alt="Lego">
+                    <img class="item-img" alt="Lego">
                   </picture>
 
                   <div class="item-platforms flex">
@@ -489,9 +317,11 @@
                 <a href="./product/index.html" class="name-hover"><h6 class="item-name">Lego: Star wars - Complete edition</h6></a>
                 <span class="item-price">€28.95</span>
               </div>
-            </div>
+            </div> -->
 
-            <div class="item">
+          
+
+            <!-- <div class="item">
               <div class="relative">
                 <a href="./product/index.html">
                   <picture>
@@ -654,7 +484,7 @@
                 <a href="./product/index.html" class="name-hover"><h6 class="item-name">Boiling Bolt</h6></a>
                 <span class="item-price">€7.95</span>
               </div>
-            </div>
+            </div> -->
 
           </article>
 
@@ -673,7 +503,7 @@
 
           <article class="newreleases__container">
 
-            <div class="item">
+            <!-- <div class="item">
               <div class="relative">
                 <a href="./product/index.html">
                   <picture>
@@ -862,7 +692,7 @@
                 <a href="./product/index.html" class="name-hover"><h6 class="item-name">Boiling Bolt</h6></a>
                 <span class="item-price">€7.95</span>
               </div>
-            </div>
+            </div> -->
 
           </article>
 
@@ -916,136 +746,11 @@
 
           <div class="mw-1340 reviews-slider">
 
-            <div class="slider" id="reviews-slider">  
-              <article class="flex" id="rev-slide-1">
-
-                 <a class="review-img" href="./product/index.html"><img class="review-img" src="../images/slider-img-3.png" alt=""></a>
-
-                 <div class="rev-slide-info flex column justify-sb pd-30">
-                      <h3><a href="./product/index.html" class="name-hover">Star Wars: Battlefront 2</a></h3>
-
-                      <div class="stars"><a href="./product/index.html" class="name-hover"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a>
-                      </div>
-
-                      <p class="grey">This game is great but if I had to give one criticism is that it doesn't take place on a island at all. Everything you do is glorious with awesome gore effe cts. You can chop arms off break their legs and literally nock their jaws off. Its gorious.</p>
-
-                      <div class="metadata flex justify-sb align-items-center">
-                            <div class="user-time flex column">
-                                  <span class="user-name">User name</span>
-                                  <span class="grey">2 hours ago</span>
-                            </div>
-                            <div class="read-review">
-                                  <a href="./product/index.html" class="name-hover"><span class="text-orange">Read review</span></a>
-                            </div>
-                       </div>
-                    </div>
-
-                </article>
-                
-              <article class="flex" id="rev-slide-2">
-                  <a class="review-img" href="./product/index.html"><img class="review-img" src="../images/slider-img-4.png" alt=""></a>
- 
-                  <div class="rev-slide-info flex column justify-sb pd-30">
- 
-                       <h3><a href="./product/index.html" class="name-hover">Magic Legends</a></h3>
- 
-                       <div class="stars"><a href="./product/index.html" class="name-hover"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a>
-                       </div>
- 
-                       <p class="grey">This game is great but if I had to give one criticism is that it doesn't take place on a island at all. Everything you do is glorious with awesome gore effe cts. You can chop arms off break their legs and literally nock their jaws off. Its gorious.</p>
- 
-                       <div class="metadata flex justify-sb align-items-center">
-                             <div class="user-time flex column">
-                                   <span class="user-name">User name</span>
-                                   <span class="grey">2 hours ago</span>
-                             </div>
-                             <div class="read-review">
-                                   <a href="./product/index.html" class="name-hover"><span class="text-orange">Read review</span></a>
-                             </div>
-                        </div>
-                     </div>
-                </article>
-
-              <article class="flex" id="rev-slide-3">
-                  <a class="review-img" href="./product/index.html"><img class="review-img" src="../images/slider-img-5png.png" alt=""></a>
- 
-                  <div class="rev-slide-info flex column justify-sb pd-30">
- 
-                       <h3><a href="./product/index.html" class="name-hover">Cyberpunk 2077</a></h3>
- 
-                       <div class="stars"><a href="./product/index.html" class="name-hover"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a>
-                       </div>
- 
-                       <p class="grey">This game is great but if I had to give one criticism is that it doesn't take place on a island at all. Everything you do is glorious with awesome gore effe cts. You can chop arms off break their legs and literally nock their jaws off. Its gorious.</p>
- 
-                       <div class="metadata flex justify-sb align-items-center">
-                             <div class="user-time flex column">
-                                   <span class="user-name">User name</span>
-                                   <span class="grey">2 hours ago</span>
-                             </div>
-                             <div class="read-review">
-                                   <a href="./product/index.html" class="name-hover"><span class="text-orange">Read review</span></a>
-                             </div>
-                        </div>
-                     </div>
-
-                </article>
-
-              <article class="flex" id="rev-slide-4">
-                  <a class="review-img" href="./product/index.html"><img class="review-img" src="../images/slider-img-2.png" alt=""></a>
- 
-                  <div class="rev-slide-info flex column justify-sb pd-30">
- 
-                       <h3><a href="./product/index.html" class="name-hover">Outriders</a></h3>
- 
-                       <div class="stars"><a href="./product/index.html" class="name-hover"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a>
-                       </div>
- 
-                       <p class="grey">This game is great but if I had to give one criticism is that it doesn't take place on a island at all. Everything you do is glorious with awesome gore effe cts. You can chop arms off break their legs and literally nock their jaws off. Its gorious.</p>
- 
-                       <div class="metadata flex justify-sb align-items-center">
-                             <div class="user-time flex column">
-                                   <span class="user-name">User name</span>
-                                   <span class="grey">2 hours ago</span>
-                             </div>
-                             <div class="read-review">
-                                   <a href="./product/index.html" class="name-hover"><span class="text-orange">Read review</span></a>
-                             </div>
-                        </div>
-                     </div>
-
-                </article>
-
-              <article class="flex" id="rev-slide-5">
-                  <a class="review-img" href="./product/index.html"><img class="review-img" src="../images/slider-img-1.png" alt=""></a>
- 
-                  <div class="rev-slide-info flex column justify-sb pd-30">
- 
-                       <h3><a href="./product/index.html" class="name-hover">Metro: Exodus</a></h3>
- 
-                       <div class="stars"><a href="./product/index.html" class="name-hover"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a>
-                       </div>
- 
-                       <p class="grey">This game is great but if I had to give one criticism is that it doesn't take place on a island at all. Everything you do is glorious with awesome gore effe cts. You can chop arms off break their legs and literally nock their jaws off. Its gorious.</p>
- 
-                       <div class="metadata flex justify-sb align-items-center">
-                             <div class="user-time flex column">
-                                   <span class="user-name">User name</span>
-                                   <span class="grey">2 hours ago</span>
-                             </div>
-                             <div class="read-review">
-                                   <a href="./product/index.html" class="name-hover"><span class="text-orange">Read review</span></a>
-                             </div>
-                        </div>
-                     </div>
-
-                </article>
+            <div class="slider" id="reviews-slider">
             </div>
 
             <div class="slider-nav center pd-top-30" id="reviews-controls">
                 <a class="rev-selected"></a>
-                <a></a>
-                <a></a>
                 <a></a>
                 <a></a>
             </div>

@@ -20,6 +20,7 @@
 .slider-nav {
     display: flex;
     column-gap: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .slider-nav a.selected {
@@ -104,13 +105,13 @@
 /* -----> Slider reviews design <----- */
 
 .review-img {  /* <---------------- IF NEED TO CHANGE */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 560px;
     height: 300px;
-    object-fit: cover;
     overflow: hidden;
-    background-position-x: center;
-    background-position-y: 10% ;
     border-radius: 2px 0px 0px 2px;
 }
 

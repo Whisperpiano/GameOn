@@ -424,10 +424,19 @@
     /* Slider */
 
     .onsale {
+        display:grid;
+        place-content: center;
         font-size: 12px;
         font-weight: 700;
         border-radius: 0px 0px 15px 0px; 
         padding: 5px 25px; 
+
+    }
+
+    .slide-genre {
+        background: rgba(255, 255, 255, 0.10);
+        padding: 8px;
+        border-radius: 8px;
     }
 
 
@@ -519,7 +528,7 @@
     
     .item-platforms {
         gap: 15px;
-        padding: 8px 8px 0px 8px;
+        padding: 8px;
         background: rgba(23, 24, 28, 0.70);
         align-items: flex-start; 
         position: absolute;

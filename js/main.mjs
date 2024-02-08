@@ -1,4 +1,4 @@
-console.log('Hello World')
+    console.log('Hello World')
 
 
 const url = 'https://api.noroff.dev/api/v1/gamehub';
