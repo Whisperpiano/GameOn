@@ -1,3 +1,4 @@
+
 import { createStarsContainer, createStarsLink, createRandomStars } from "./main-slider-template.mjs";
 
 export const reviewsSliderContainer = document.querySelector('#reviews-slider');
@@ -100,7 +101,7 @@ function createUserSpan() {
 
 function createCommentTimeSpan() {
     const timeSpan = document.createElement("span");
-    timeSpan.classList.add("grey");
+    timeSpan.classList.add("grey","comment-time");
     timeSpan.textContent = "2 days ago";
     return timeSpan;
 }

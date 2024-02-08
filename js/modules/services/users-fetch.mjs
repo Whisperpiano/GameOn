@@ -1,7 +1,7 @@
 import { FetchError, DataError } from "../utils/errorHandling.mjs";
 
 export const users = async function fetchData() {
-    const url = 'https://jsonplaceholder.typicode.com/users'
+    const url = '../data/users.json'
 
     try {
         const response = await fetch(url);
@@ -15,7 +15,7 @@ export const users = async function fetchData() {
         if(!data) {
             throw new DataError("Data received from Users-API is empty or invalid.");
         }
-
+        
         return data;
 
     } catch (error) {

@@ -3,6 +3,8 @@ import { gameTemplate, bestsellerContainer } from "../modules/components/templat
 import { mainSliderTemplate, mainSliderContainer } from "../modules/components/templates/main-slider-template.mjs";
 import { reviewsSliderTemplate, reviewsSliderContainer } from "../modules/components/templates/reviews-template.mjs";
 import { RenderError } from "../modules/utils/errorHandling.mjs";
+import { users } from "../modules/services/users-fetch.mjs";
+import { randomTime } from "../modules/utils/random-time.mjs";
 
 async function renderMainSlider() {
     try {
@@ -87,12 +89,29 @@ async function renderReviews() {
 
         const reviewsArray = gamesArray.slice(6, 9);
 
+        const usersArray = await users();
+
+        if(!usersArray) {
+            throw new RenderError("Can not render reviews section. Data received from Users-API is empty or invalid.");
+        }
+        // Renders the reviews section.
         reviewsArray.map((game)=> {
             const { title, image, id } = game;
             const reviewElement = reviewsSliderTemplate(title, image, id);
             reviewsSliderContainer.appendChild(reviewElement);
-
         })
+        // Patches to add user names and random time to reviews
+        const name = document.querySelectorAll('.user-name');
+        for (let i = 0; i < name.length; i++) { 
+            name[i].textContent = usersArray[i].username; 
+        }
+
+        const commentTime = document.querySelectorAll('.comment-time');
+
+        for (let i = 0; i < commentTime.length; i++) { 
+            commentTime[i].textContent = randomTime(); 
+        }
+
      
     } catch (error) {
         if(error instanceof RenderError) {
@@ -102,9 +121,6 @@ async function renderReviews() {
         }
     }
 }
-
-
-
 
 function main () {
     renderMainSlider();
