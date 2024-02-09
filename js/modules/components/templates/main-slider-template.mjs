@@ -7,7 +7,7 @@ export function mainSliderTemplate(title, description, image, genre, price, disc
   const platformsArrayLength = platformsArray.length;
 
   const slide = createSlide(id);
-  const slideImage = createSlideImage(image, title);
+  const slideImage = createSlideImage(image, title, id);
   const slideContent = createSlideContent();
   const slideContentTop = createSlideContentTop();
   const onSaleSpan = createOnSaleSpan();
@@ -16,11 +16,11 @@ export function mainSliderTemplate(title, description, image, genre, price, disc
   const gameInfo = createGameInfo();
   const nameAndPriceContainer = createNameAndPriceContainer();
   const gameName = createGameName();
-  const gameNameLink = createGameNameLink(title);
+  const gameNameLink = createGameNameLink(title, id);
   const priceSpan = createPriceSpan(discountedPrice);
   const starsAndPriceBeforeContainer = createStarsAndPriceBeforeContainer();
   const starsContainer = createStarsContainer();
-  const starsLink = createStarsLink(title);
+  const starsLink = createStarsLink(title, id);
   const priceBefore = createPriceBefore(price);
   const gameDescription = createGameDescription(description);
   const slideButtonsContainer = createSlideButtonsContainer();
@@ -49,10 +49,10 @@ function createSlide(id) {
   return slide;
 }
 
-function createSlideImage(image, title) {
+function createSlideImage(image, title, id) {
   const slideImage = document.createElement("a");
   const titleWithoutSpaces = title.split(' ').join('-');
-  slideImage.href = `./product/index.html?product=${titleWithoutSpaces}`;
+  slideImage.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
   slideImage.classList.add("slide-img");
   slideImage.style.backgroundImage = `url(${image})`;
   slideImage.style.backgroundPositionY = "30%";
@@ -114,10 +114,10 @@ function createGameName(){
   return gameName;
 }
 
-function createGameNameLink(title){
+function createGameNameLink(title, id){
   const gameNameLink = document.createElement("a");
   const titleWithoutSpaces = title.split(' ').join('-');
-  gameNameLink.href = `./product/index.html?product=${titleWithoutSpaces}`;
+  gameNameLink.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
   gameNameLink.classList.add("name");
   gameNameLink.textContent = title;
   return gameNameLink;
@@ -142,10 +142,10 @@ export function createStarsContainer() {
   return starsContainer;
 }
 
-export function createStarsLink(title) {
+export function createStarsLink(title, id) {
   const starsLink = document.createElement("a");
   const titleWithoutSpaces = title.split(' ').join('-');
-  starsLink.href = `./product/index.html?product=${titleWithoutSpaces}`;
+  starsLink.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
 
   const halfStar = document.createElement("i");
   halfStar.classList.add("fa-sharp","fa-solid","fa-star-half-stroke");

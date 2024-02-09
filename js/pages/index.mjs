@@ -45,8 +45,8 @@ async function renderBestseller() {
         const bestsellerArray = gamesArray.slice(0, 6);
 
         bestsellerArray.map((game)=> {
-            const { title, image, genre, price, discountedPrice, platforms } = game;
-            const gameElement = gameTemplate(title, image, genre, price, discountedPrice, platforms);
+            const { title, image, id, price, discountedPrice, platforms } = game;
+            const gameElement = gameTemplate(title, image, id, price, discountedPrice, platforms);
             bestsellerContainer.appendChild(gameElement);
         })
         

@@ -2,13 +2,13 @@ import { getPercentage } from '../../utils/calculate-percentage.mjs';
 
 export const bestsellerContainer = document.querySelector('.bestseller__container');
 
-export function gameTemplate(name, imageURL, genre, price, discountedPrice, platforms) {
+export function gameTemplate(name, imageURL, id, price, discountedPrice, platforms) {
     const platformsArray = Object.entries(platforms);
     const platformsArrayLength = platformsArray.length;
 
     const gameContainer = createGameContainer();
     const topContainer = createTopContainer();
-    const link = createLink(name);
+    const link = createLink(name, id);
     const picture = createPicture(imageURL, name);
     const platformsContainer = createPlatformsContainer(platformsArray, platformsArrayLength);
     const discountContainer = createDiscountContainer(price, discountedPrice);
@@ -16,10 +16,10 @@ export function gameTemplate(name, imageURL, genre, price, discountedPrice, plat
     const overlayButtonsContainer = createOverlayButtonsContainer();
     const addToCartLink = createAddToCartLink();
     const addToCartBtn = createAddToCartButton();
-    const viewLink = createViewLink(name);
+    const viewLink = createViewLink(name, id);
     const viewBtn = createViewButton();
     const bottomContainer = createBottomContainer();
-    const bottomLink = createBottomLink(name);
+    const bottomLink = createBottomLink(name,id);
     const itemTitle = createItemTitle(name);
     const itemPrice = createItemPrice(discountedPrice);
 
@@ -48,10 +48,10 @@ function createTopContainer() {
     return topContainer;
 }
 
-function createLink(title) {
+function createLink(title, id) {
     const link = document.createElement('a');
     const titleWithoutSpaces = title.split(' ').join('-');
-    link.href = `./product/index.html?product=${titleWithoutSpaces}`;
+    link.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
     return link;
 }
 
@@ -129,10 +129,10 @@ function createAddToCartButton() {
     return addToCartBtn;
 }
 
-function createViewLink(title) {
+function createViewLink(title, id) {
     const viewLink = document.createElement('a');
     const titleWithoutSpaces = title.split(' ').join('-');
-    viewLink.href = `./product/index.html?product=${titleWithoutSpaces}`;
+    viewLink.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
     return viewLink;
 }
 
@@ -153,10 +153,10 @@ function createBottomContainer() {
     return bottomContainer;
 }
 
-function createBottomLink(title) {
+function createBottomLink(title, id) {
     const bottomLink = document.createElement('a');
     const titleWithoutSpaces = title.split(' ').join('-');
-    bottomLink.href = `./product/index.html?product=${titleWithoutSpaces}`;
+    bottomLink.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
     bottomLink.classList.add('name-hover');
     return bottomLink;
 }
