@@ -32,7 +32,7 @@ async function renderMainSlider() {
         } else {
             console.error('An unknown error occurred rendering main slider.');
         }
-    }
+    } 
 }
 async function renderBestseller() {
     try {
@@ -188,6 +188,7 @@ async function renderReviewsSliderResponsive() {
 }
 
 
+
 function main () {
     renderMainSlider();
     renderBestseller();
@@ -195,11 +196,9 @@ function main () {
     renderReviews();
     renderMainSliderResponsive();
     renderReviewsSliderResponsive();
+    
 }
 
 main()
 
-
-
-
-
+console.log('hello')

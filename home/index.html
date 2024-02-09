@@ -16,11 +16,9 @@
       rel="stylesheet"
     />
     <!-- Javascript -->
-    <script src="../js/main.mjs" type="module"></script>
-    <script src="../js/modules/services/api-fetch.mjs" type="module"></script>
     <script src="../js/pages/index.mjs" type="module"></script>
     <script src="../js/modules/components/sliders.mjs" type="module"></script>
-    <script src="../js/modules/components/add-to-cart-btns.mjs" type="module"></script>
+    
   </head>
   <body>
       <header class="grey-section border-bottom pd-20">
@@ -178,6 +176,12 @@
       </header>
 
       <main class="main-home">
+
+        <section class="preloader__container">
+          <div id="preloader">
+            <span class="loader"></span>
+          </div>
+        </section>
 
         <section class="search-bar-responsive pd-30">
           <search>

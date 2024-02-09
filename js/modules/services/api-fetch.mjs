@@ -1,3 +1,4 @@
+import { showLoader, hideLoader } from "../components/loader.mjs";
 import { FetchError, DataError } from "../utils/errorHandling.mjs";
 import { randomTime } from "../utils/random-time.mjs";
 
@@ -6,6 +7,7 @@ export const url = 'https://api.noroff.dev/api/v1/gamehub';
 
 export const data = async function fetchData() {
     try {
+        showLoader();
         const response = await fetch('https://api.noroff.dev/api/v1/gamehub');
 
         if (!response.ok) {
@@ -53,5 +55,8 @@ export const data = async function fetchData() {
         } else {
             console.error('An unknown error occurred.');
         }
+    } 
+    finally{
+        hideLoader();
     }
 }
