@@ -21,8 +21,8 @@ async function renderMainSlider() {
         const favoriteGames = gamesArray.filter((game) => game.favorite === true);
     
         favoriteGames.map((game)=> {
-            const { title, image, genre, description, price, discountedPrice, onSale, id} = game;
-            const favoriteGameElement = mainSliderTemplate(title, description, image, genre, price, discountedPrice, onSale, id);
+            const { title, image, genre, description, price, discountedPrice, onSale, id, platforms} = game;
+            const favoriteGameElement = mainSliderTemplate(title, description, image, genre, price, discountedPrice, onSale, id, platforms);
             mainSliderContainer.appendChild(favoriteGameElement); 
         })
         
@@ -45,7 +45,8 @@ async function renderBestseller() {
         const bestsellerArray = gamesArray.slice(0, 6);
 
         bestsellerArray.map((game)=> {
-            const gameElement = gameTemplate(game.title, game.image, game.genre, game.price, game.discountedPrice);
+            const { title, image, genre, price, discountedPrice, platforms } = game;
+            const gameElement = gameTemplate(title, image, genre, price, discountedPrice, platforms);
             bestsellerContainer.appendChild(gameElement);
         })
         
@@ -70,7 +71,8 @@ async function renderNewReleases() {
         const newReleasesArray = gamesArray.slice(4, 10);
 
         newReleasesArray.map((game)=> {
-            const gameElement = gameTemplate(game.title, game.image, game.genre, game.price, game.discountedPrice);
+            const { title, image, genre, price, discountedPrice, platforms } = game;
+            const gameElement = gameTemplate(title, image, genre, price, discountedPrice, platforms);
             newReleasesContainer.appendChild(gameElement);
         })
         

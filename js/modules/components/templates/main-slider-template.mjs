@@ -2,13 +2,17 @@ import { randomNumber } from "../../utils/random-numbers.mjs";
 
 export const mainSliderContainer = document.querySelector('.slider-header');
 
-export function mainSliderTemplate(title, description, image, genre, price, discountedPrice, onSale, id) {
+export function mainSliderTemplate(title, description, image, genre, price, discountedPrice, onSale, id, platforms) {
+  const platformsArray = Object.entries(platforms);
+  const platformsArrayLength = platformsArray.length;
+
   const slide = createSlide(id);
   const slideImage = createSlideImage(image);
   const slideContent = createSlideContent();
   const slideContentTop = createSlideContentTop();
   const onSaleSpan = createOnSaleSpan();
-  const genreSpan = createGenreSpan(genre);
+  const platformsContainer = createPlatformsContainer(platformsArray, platformsArrayLength);
+  
   const gameInfo = createGameInfo();
   const nameAndPriceContainer = createNameAndPriceContainer();
   const gameName = createGameName();
@@ -23,7 +27,8 @@ export function mainSliderTemplate(title, description, image, genre, price, disc
   const slideAddToCartButton = createSlideAddToCartButton();
   const slideAddToWishButton = createSlideAddToWishButton();
 
-  slideContentTop.append(onSaleSpan, genreSpan);
+  
+  slideContentTop.append(onSaleSpan,platformsContainer);
   gameName.appendChild(gameNameLink);
   nameAndPriceContainer.append(gameName, priceSpan);
   starsAndPriceBeforeContainer.append(starsContainer, priceBefore);
@@ -32,6 +37,7 @@ export function mainSliderTemplate(title, description, image, genre, price, disc
   gameInfo.append(nameAndPriceContainer, starsAndPriceBeforeContainer, gameDescription, slideButtonsContainer);
   slideContent.append(slideContentTop, gameInfo);
   slide.append(slideImage, slideContent);
+ 
   return slide;
 
 }
@@ -70,10 +76,22 @@ function createOnSaleSpan() {
   return onSaleSpan;
 }
 
-function createGenreSpan(genre) {
+function createPlatformsContainer(array, length) {
+  const platformsContainer = document.createElement("div");
+  platformsContainer.classList.add("flex","gap-15");
+
+  for (let i = 0; i < length; i++) {
+    if (array[i][1] === true) {
+      const span = createPlatformsSpan(array[i][0]);
+      platformsContainer.appendChild(span);
+    }
+  }
+  return platformsContainer;
+}
+
+function createPlatformsSpan(platformType) {
   const genreSpan = document.createElement("span");
-  genreSpan.classList.add("slide-genre","flex","gap-15");
-  genreSpan.textContent = genre;
+  genreSpan.classList.add(`${platformType}`);
   return genreSpan;
 }
 
