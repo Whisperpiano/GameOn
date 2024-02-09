@@ -6,6 +6,8 @@ import { RenderError } from "../modules/utils/errorHandling.mjs";
 import { users } from "../modules/services/users-fetch.mjs";
 import { randomTime } from "../modules/utils/random-time.mjs";
 import { mainSliderResponsiveTemplate, responsiveMainSliderContainer } from "../modules/components/templates/main-slider-responsive-template.mjs";
+import { responsiveReviewsSlideContainer, responsiveReviewsSliderTemplate } from "../modules/components/templates/reviews-responsive-template.mjs";
+import { compareValues } from "../modules/utils/compare-values.mjs";
 
 
 async function renderMainSlider() {
@@ -96,25 +98,26 @@ async function renderReviews() {
         if(!usersArray) {
             throw new RenderError("Can not render reviews section. Data received from Users-API is empty or invalid.");
         }
-        // Renders the reviews section.
+
+        const newObjectKey = 'time';
         reviewsArray.map((game)=> {
-            const { title, image, id } = game;
-            const reviewElement = reviewsSliderTemplate(title, image, id);
+            game[newObjectKey] = randomTime();
+        });
+
+        let sortedArray =  reviewsArray.sort(compareValues('time'))
+
+        // Renders the reviews section.
+        sortedArray.map((game)=> {
+            const { title, image, id, time } = game;
+            const reviewElement = reviewsSliderTemplate(title, image, id, time);
             reviewsSliderContainer.appendChild(reviewElement);
         })
-        // Patches to add user names and random time to reviews
+        // Patches to add user names
         const name = document.querySelectorAll('.user-name');
         for (let i = 0; i < name.length; i++) { 
             name[i].textContent = usersArray[i].username; 
         }
 
-        const commentTime = document.querySelectorAll('.comment-time');
-
-        for (let i = 0; i < commentTime.length; i++) { 
-            commentTime[i].textContent = randomTime(); 
-        }
-
-     
     } catch (error) {
         if(error instanceof RenderError) {
             console.error(`RenderError: ${error.message}`);
@@ -147,8 +150,41 @@ async function renderMainSliderResponsive() {
             console.error('An unknown error occurred rendering responsive main slider.');
         }
     }
+}
+
+async function renderReviewsSliderResponsive() {
+    try {
+        const gamesArray = await data();
+
+        if(!gamesArray) {
+            throw new RenderError("Can not render responsive reviews section. Data received from API is empty or invalid.");
+        }
+
+        const reviewsArray = gamesArray.slice(4, 9);
+
+        const newObjectKey = 'time';
+        reviewsArray.map((game)=> {
+            game[newObjectKey] = randomTime();
+        });
+
+        let sortedArray =  reviewsArray.sort(compareValues('time'))
+
+        sortedArray.map((game)=> {
+            const { title, image, id, time } = game;
+            const reviewElement = responsiveReviewsSliderTemplate(title, image, id, time);
+            responsiveReviewsSlideContainer.appendChild(reviewElement);
+        });
+
+    } catch (error) {
+        if(error instanceof RenderError) {
+            console.error(`RenderError: ${error.message}`);
+        } else {
+            console.error('An unknown error occurred rendering responsive reviews section.');
+        }
+    }
 
 }
+
 
 function main () {
     renderMainSlider();
@@ -156,6 +192,7 @@ function main () {
     renderNewReleases();
     renderReviews();
     renderMainSliderResponsive();
+    renderReviewsSliderResponsive();
 }
 
 main()

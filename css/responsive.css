@@ -632,8 +632,7 @@
 	.main-home .res-reviews__card,
 	.main-home .res-slider__card div {
 		min-width: 280px;
-		border-radius: 20px;
-		overflow: hidden;
+		
 	}
 
 	.main-home .pd-30,

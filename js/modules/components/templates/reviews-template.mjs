@@ -1,9 +1,10 @@
 
+import { randomTime } from "../../utils/random-time.mjs";
 import { createStarsContainer, createStarsLink, createRandomStars } from "./main-slider-template.mjs";
 
 export const reviewsSliderContainer = document.querySelector('#reviews-slider');
 
-export function reviewsSliderTemplate(title, image, id) {
+export function reviewsSliderTemplate(title, image, id, time) {
     const reviewsSlider = reviewsArticle(id);
     const imageLink = createLinkAndImage();
     const reviewImg = createImg(title, image, id);
@@ -16,7 +17,7 @@ export function reviewsSliderTemplate(title, image, id) {
     const metaDataContainer = createMetaDataContainer();
     const userAndTimeContainer = createUserAndTimeContainer();
     const userName = createUserSpan();
-    const timeSpan = createCommentTimeSpan();
+    const timeSpan = createCommentTimeSpan(time);
     const readReviewContainer = createReadReviewContainer();
     const readLink = createReadReviewLink();
     const readSpan = createReadReviewSpan();
@@ -99,10 +100,10 @@ function createUserSpan() {
     return userName;
 }
 
-function createCommentTimeSpan() {
+function createCommentTimeSpan(time) {
     const timeSpan = document.createElement("span");
     timeSpan.classList.add("grey","comment-time");
-    timeSpan.textContent = "2 days ago";
+    timeSpan.textContent = `${time} minutes ago`;
     return timeSpan;
 }
 
