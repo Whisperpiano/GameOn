@@ -6,11 +6,11 @@ export const responsiveReviewsSlideContainer = document.querySelector('.res-revi
 export function responsiveReviewsSliderTemplate(title, image, id, time) {
     const reviewContainer = createReviewContainer();
     const imageContainer = createImageContainer();
-    const imageLink = createImageLink();
+    const imageLink = createImageLink(title);
     const imageElement = createImage(title, image);
     const reviewInfoContainer = createReviewInfoContainer();
     const starsContainer = createStarsContainer();
-    const starsLink = createStarsLink();
+    const starsLink = createStarsLink(title);
     const comment = createComment();
     const timeSpan = createTimeSpan(time);
 
@@ -34,9 +34,10 @@ function createImageContainer() {
     return imageContainer;
 }
 
-function createImageLink() {
+function createImageLink(title) {
     const imageLink = document.createElement('a');
-    imageLink.href = `./product/index.html`;
+    const titleWithoutSpaces = title.split(' ').join('-');
+    imageLink.href = `./product/index.html?product=${titleWithoutSpaces}`;
     imageLink.classList.add('name-hover');
     return imageLink;
 }

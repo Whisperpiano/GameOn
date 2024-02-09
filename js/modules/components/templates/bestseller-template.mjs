@@ -8,7 +8,7 @@ export function gameTemplate(name, imageURL, genre, price, discountedPrice, plat
 
     const gameContainer = createGameContainer();
     const topContainer = createTopContainer();
-    const link = createLink();
+    const link = createLink(name);
     const picture = createPicture(imageURL, name);
     const platformsContainer = createPlatformsContainer(platformsArray, platformsArrayLength);
     const discountContainer = createDiscountContainer(price, discountedPrice);
@@ -16,10 +16,10 @@ export function gameTemplate(name, imageURL, genre, price, discountedPrice, plat
     const overlayButtonsContainer = createOverlayButtonsContainer();
     const addToCartLink = createAddToCartLink();
     const addToCartBtn = createAddToCartButton();
-    const viewLink = createViewLink();
+    const viewLink = createViewLink(name);
     const viewBtn = createViewButton();
     const bottomContainer = createBottomContainer();
-    const bottomLink = createBottomLink();
+    const bottomLink = createBottomLink(name);
     const itemTitle = createItemTitle(name);
     const itemPrice = createItemPrice(discountedPrice);
 
@@ -48,9 +48,10 @@ function createTopContainer() {
     return topContainer;
 }
 
-function createLink() {
+function createLink(title) {
     const link = document.createElement('a');
-    link.href = './product/index.html';
+    const titleWithoutSpaces = title.split(' ').join('-');
+    link.href = `./product/index.html?product=${titleWithoutSpaces}`;
     return link;
 }
 
@@ -73,7 +74,7 @@ function createPlatformsContainer(platformsArray, platformsArrayLength) {
             platformsContainer.appendChild(span);
         }
     }
-    
+
     return platformsContainer;
 }
 
@@ -128,9 +129,10 @@ function createAddToCartButton() {
     return addToCartBtn;
 }
 
-function createViewLink() {
+function createViewLink(title) {
     const viewLink = document.createElement('a');
-    viewLink.href = '#';
+    const titleWithoutSpaces = title.split(' ').join('-');
+    viewLink.href = `./product/index.html?product=${titleWithoutSpaces}`;
     return viewLink;
 }
 
@@ -151,9 +153,10 @@ function createBottomContainer() {
     return bottomContainer;
 }
 
-function createBottomLink() {
+function createBottomLink(title) {
     const bottomLink = document.createElement('a');
-    bottomLink.href = './product/index.html';
+    const titleWithoutSpaces = title.split(' ').join('-');
+    bottomLink.href = `./product/index.html?product=${titleWithoutSpaces}`;
     bottomLink.classList.add('name-hover');
     return bottomLink;
 }

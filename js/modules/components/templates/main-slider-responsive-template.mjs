@@ -3,7 +3,7 @@ export const responsiveMainSliderContainer = document.querySelector('.res-slider
 export function mainSliderResponsiveTemplate(title, image, id) {
     const responsiveSliderFigure = createFigure();
     const imageContainer = createImageContainer();
-    const imageLink = createImageLink();
+    const imageLink = createImageLink(title, id);
     const imageElement = createImage(title, image);
     const titleElement = createTitle(title);
 
@@ -25,9 +25,10 @@ function createImageContainer() {
     return createDiv;
 }
 
-function createImageLink(){
+function createImageLink(title, id){
     const imageLink = document.createElement('a');
-    imageLink.href = `./product/index.html`
+    const nameWithoutSpaces = title.split(' ').join('-');
+    imageLink.href = `./product/index.html?product=${nameWithoutSpaces}`
     return imageLink;
 }
 

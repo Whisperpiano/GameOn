@@ -6,20 +6,20 @@ export const reviewsSliderContainer = document.querySelector('#reviews-slider');
 
 export function reviewsSliderTemplate(title, image, id, time) {
     const reviewsSlider = reviewsArticle(id);
-    const imageLink = createLinkAndImage();
+    const imageLink = createLinkAndImage(title);
     const reviewImg = createImg(title, image, id);
     const reviewInfo = createReviewInfoContainer();
     const nameContainer = createNameContainer();
     const nameLink = createNameLink(title);
     const starsContainer = createStarsContainer();
-    const starsLink = createStarsLink();
+    const starsLink = createStarsLink(title);
     const comment = createComment();
     const metaDataContainer = createMetaDataContainer();
     const userAndTimeContainer = createUserAndTimeContainer();
     const userName = createUserSpan();
     const timeSpan = createCommentTimeSpan(time);
     const readReviewContainer = createReadReviewContainer();
-    const readLink = createReadReviewLink();
+    const readLink = createReadReviewLink(title);
     const readSpan = createReadReviewSpan();
 
     metaDataContainer.append(userAndTimeContainer, readReviewContainer);
@@ -42,9 +42,10 @@ function reviewsArticle(id) {
     return reviewsArticle;
 }
 
-function createLinkAndImage() {
+function createLinkAndImage(title) {
     const link = document.createElement("a");
-    link.href = `./product/index.html`;
+    const titleWithoutSpaces = title.split(' ').join('-');
+    link.href = `./product/index.html?product=${titleWithoutSpaces}`;
     link.classList.add("review-img");
     return link;
 }
@@ -70,7 +71,8 @@ function createNameContainer() {
 
 function createNameLink(title) {
     const link = document.createElement("a");
-    link.href = `./product/index.html`;
+    const titleWithoutSpaces = title.split(' ').join('-');
+    link.href = `./product/index.html?product=${titleWithoutSpaces}`;
     link.textContent = title;
     return link;
 }
@@ -113,10 +115,11 @@ function createReadReviewContainer() {
     return div;
 }
 
-function createReadReviewLink() {
+function createReadReviewLink(title) {
     const readLink = document.createElement("a");
+    const titleWithoutSpaces = title.split(' ').join('-');
+    readLink.href = `./product/index.html?product=${titleWithoutSpaces}`;
     readLink.classList.add("name-hover")
-    readLink.href = `./product/index.html`;
     return readLink;
 }
 
