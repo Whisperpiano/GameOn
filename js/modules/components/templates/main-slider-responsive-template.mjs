@@ -28,7 +28,7 @@ function createImageContainer() {
 function createImageLink(title, id){
     const imageLink = document.createElement('a');
     const nameWithoutSpaces = title.split(' ').join('-');
-    imageLink.href = `./product/index.html?product=${nameWithoutSpaces}`
+    imageLink.href = `./product/index.html?product=${nameWithoutSpaces}&id=${id}`
     return imageLink;
 }
 

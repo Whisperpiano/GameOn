@@ -182,13 +182,13 @@ function createGameDescription(description) {
   return gameDescription;
 }
 
-function createSlideButtonsContainer() {
+export function createSlideButtonsContainer() {
   const slideButtonsContainer = document.createElement("div");
   slideButtonsContainer.classList.add("flex","justify-sb","gap-30");
   return slideButtonsContainer;
 }
 
-function createSlideAddToCartButton() {
+export function createSlideAddToCartButton() {
   const slideAddToCartButton = document.createElement("button");
   slideAddToCartButton.type = "button";
   slideAddToCartButton.name = "addToCartBtn";
@@ -197,7 +197,7 @@ function createSlideAddToCartButton() {
   return slideAddToCartButton;
 }
 
-function createSlideAddToWishButton() {
+export function createSlideAddToWishButton() {
   const slideAddToWishButton = document.createElement("button");
   slideAddToWishButton.type = "button";
   slideAddToWishButton.name = "addToFavBtn";

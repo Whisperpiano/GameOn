@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="../../js/pages/product.mjs" type="module"></script>
   </head>
   <body>
           
@@ -166,6 +167,12 @@
 
       <main class="main-product">
 
+        <section class="preloader__container">
+          <div id="preloader">
+            <span class="loader"></span>
+          </div>
+        </section>
+
         <section class="menu-responsive pd-30">
           <nav>
             <ul class="flex justify-sa">
@@ -178,104 +185,11 @@
         </section>
 
         <section class="product-panel">
-
-          <article class="mw-1340 flex">
-
-            <div class="image-grid border-radius-2">
-
-              <picture class="big image-grid-col-4 image-grid-row-4">
-                <img class="big" src="../../images/slider-img-2.png" alt="Outriders image cover">
-              </picture>
-
-              <div class="panel-right image-grid-col-2 image-grid-row-5 flex column justify-sb text-center grey-section ">
-              
-                <h2 class="product-name">Outriders</h2>
-
-                <div class="select-container flex justify-sb">
-                  <select  class="btn-2" name="Platform" id="">
-                    <option value="Playstation">Playstation</option>
-                    <option value="Xbox">Xbox</option>
-                    <option value="Nintendo">Nintendo</option>
-                    <option value="Steam">Steam</option>
-                    <option value="Windows">Windows</option>
-                  </select>
-                  <select  class="btn-2" name="Edition" id="">
-                    <option value="Standard">Standard</option>
-                    <option value="Legendary">Legendary</option>
-                  </select>
-                </div>
-
-                <div class="product-price">
-                  <p class="price-before">€29.99</p>
-                  <p class="price-discount">-18%</p>
-                  <p class="price-after">€19.95</p>
-                </div>
-
-                <div class="flex justify-sb gap-30">
-                  <a href="../cart/index.html" class="btn btn-1 width-100 shopping-icon uppercase">Add to cart</a>
-                  <a href="#" class="btn btn-2 width-100 heart-icon ">Add to wishlist</a>
-                 </div>
-
-                <div class="product-metadata flex justify-sb">
-                  <div class="flex align-items-center gap-10">
-                    <img src="../../images/key-icon.svg" alt="">
-                    <div class="flex column">
-                      <span class="grey">Type</span>
-                      <span>Key</span>
-                    </div>
-                  </div>
-                  <div class="flex align-items-center gap-10">
-                    <img src="../../images/global-icon.svg" alt="">
-                    <div class="flex column">
-                      <span class="grey">Version</span>
-                      <span>Global</span>
-                    </div>
-                  </div>
-                  <div class="flex align-items-center gap-10">
-                    <img src="../../images/verified-icon.svg" alt="">
-                    <div class="flex column">
-                      <span class="grey">Can activate in:</span>
-                      <span>Norway</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="small m-right-10 border-radius-2 relative">
-                <a class="prev-img" href=""><i class="fa-solid fa-angle-left"></i></a>
-                <img src="../../images/slider-img-2.png" alt="Outriders image cover">
-              </div>
-
-              <div class="small m-right-10 border-radius-2">
-                <img src="../../images/product-1.png" alt="Outriders image game play">
-              </div>
-
-              <div class="small m-right-10 border-radius-2">
-                <img src="../../images/product-2.png" alt="Outriders image game play">
-              </div>
-
-              <div class="small border-radius-2 relative">
-                <a class="next-img" href=""><i class="fa-solid fa-angle-right"></i></a>
-                <img src="../../images/product-3.png" alt="Outriders image game play">
-              </div>  
-
-            </div>
-
-            <div class="stars-section">
-              <div class="flex gap-5">
-                <div class="stars"><a href="#reviews" class="name-hover"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a></div> <span>4.8</span>
-              </div>
-              <p class="grey">Based on <a href="#reviews" class="white underline name-hover">142 reviews</a></p>
-            </div>
-
-          </article>
-
         </section>
 
         <section class="responsive-product-panel">
 
-          <figure>
+          <!-- <figure id="responsive-product-panel">
 
             <div class="product-panel-responsive border-bottom">
 
@@ -351,7 +265,7 @@
 
             </div>
 
-          </figure>
+          </figure> -->
 
         </div>
 

@@ -71,8 +71,8 @@ async function renderNewReleases() {
         const newReleasesArray = gamesArray.slice(4, 10);
 
         newReleasesArray.map((game)=> {
-            const { title, image, genre, price, discountedPrice, platforms } = game;
-            const gameElement = gameTemplate(title, image, genre, price, discountedPrice, platforms);
+            const { title, image, id, price, discountedPrice, platforms } = game;
+            const gameElement = gameTemplate(title, image, id, price, discountedPrice, platforms);
             newReleasesContainer.appendChild(gameElement);
         })
         
