@@ -1,106 +1,54 @@
-import { createProductMetadataContainer } from "./product-banner-template.mjs";
+import { getPercentage } from '../../utils/calculate-percentage.mjs';
+import { capitalizeFirstLetter } from '../capitalize-first-letter.mjs';
 
-export function productBannerResponsiveTemplate(id, title, description, genre, released, ageRating, price, discountedPrice, onSale, image) {
-    const bannerResponsiveContainer = createBannerResponsiveContainer();
-    const topBannerContainer = createTopBannerContainer();
-    const bottomBannerContainer = createBottomBannerContainer();
-    const nameContainer = createNameContainer();
-    const goBackLink = createGoBackLink();
-    const goBackIcon = createGoBackIcon();
-    const productName = createProductName(title);
-    const shareLink = createShareLink();
-    const shareIcon = createShareIcon();
-    const imageContainer = createImageContainer();
-    const productImage = createImage(image, title);
-    const metadataContainer = createProductMetadataContainer();
+export function productBannerResponsiveTemplate(id, title, description, genre, released, ageRating, price, discountedPrice, onSale, image, platforms) {
+    const responsiveMainPicture = createResponsiveMainPicture(image, title);
+    const responsiveProductName = createResponsiveProductName(title);
+    const selectPlatform = createResponsivePlatformsOptions(platforms);
+    const updatedPrice = createResponsivePrices(price, discountedPrice);
+}
 
-    metadataContainer.classList.remove('justify-sb');
-    metadataContainer.classList.add('center','gap-50');
+function createResponsiveMainPicture(image, title) {
+    const responsiveMainPicture = document.querySelector('#responsive-main-picture');
+    responsiveMainPicture.src = image;
+    responsiveMainPicture.alt = `${title} cover image`;
+    return responsiveMainPicture;
+}
 
-    imageContainer.append(productImage);
+function createResponsiveProductName(title) {
+    const responsiveProductName = document.querySelector('#responsive-name');
+    responsiveProductName.textContent = title;
+    return responsiveProductName;
+}
 
-
-    goBackLink.append(goBackIcon);
-    shareLink.append(shareIcon);
-    nameContainer.append(goBackLink, productName, shareLink);
-
-    topBannerContainer.append(nameContainer, imageContainer, metadataContainer);
-
-    bannerResponsiveContainer.append(topBannerContainer, bottomBannerContainer);
-
-    return bannerResponsiveContainer;
+function createResponsivePlatformsOptions(platforms) {
+    const selectPlatform = document.querySelector('#responsive-platforms-select');
+    const platformsArray = Object.entries(platforms);
+    const options = platformsArray.map(([platform, available]) => {
+        if (available) {
+            const option = document.createElement('option');
+            option.value = platform;
+            option.textContent = capitalizeFirstLetter(platform);
+            selectPlatform.append(option);
+            return option;
+        }
+    });
     
+    return selectPlatform;
 }
 
-function createBannerResponsiveContainer() {
-    const createBannerResponsiveContainer = document.createElement('figure');
-    return createBannerResponsiveContainer;
+function createResponsivePrices(price, discountedPrice) {
+    const responsivePriceBefore = document.querySelector('#responsive-price-before');
+    const responsiveDiscount = document.querySelector('#responsive-price-discount');
+    const responsivePriceAfter = document.querySelector('#responsive-price-after');
+    const percentage = getPercentage(price, discountedPrice);
+
+    responsivePriceBefore.textContent = price;
+    responsiveDiscount.textContent = `-${percentage}%`;
+    responsivePriceAfter.textContent = discountedPrice;
+    if (price === discountedPrice) {
+        responsivePriceBefore.style.display = 'none';
+        responsiveDiscount.style.display = 'none';
+    }
+    return responsivePriceAfter;
 }
-
-//* Top container
-
-function createTopBannerContainer(){
-    const topBannerContainer = document.createElement('div');
-    topBannerContainer.classList.add('product-panel-responsive','border-bottom');
-    return topBannerContainer;
-}
-
-function createNameContainer() {
-    const nameContainer = document.createElement('div');
-    nameContainer.classList.add('pp-responsive-top','flex','justify-sb');
-    return nameContainer;
-}
-
-function createGoBackLink() {
-    const goBackButton = document.createElement('a');
-    goBackButton.href = '../index.html';
-    return goBackButton;
-}
-
-function createGoBackIcon() {
-    const goBackIcon = document.createElement('i');
-    goBackIcon.classList.add('fa-solid','fa-chevron-left');
-    return goBackIcon;
-}
-
-function createProductName(title) {
-    const productName = document.createElement('h2');
-    productName.classList.add('headline');
-    productName.textContent = title;
-    return productName;
-}
-
-function createShareLink() {
-    const shareLink = document.createElement('a');
-    shareLink.href = '#';
-    return shareLink;
-}
-
-function createShareIcon() {
-    const shareIcon = document.createElement('i');
-    shareIcon.classList.add('fa-solid','fa-share-nodes');
-    return shareIcon;
-}
-
-function createImageContainer() {
-    const imageContainer = document.createElement('div');
-    imageContainer.classList.add('pp-responsive-mid','flex','center');
-    return imageContainer;
-}
-
-function createImage(image, title) {
-    const productImage = document.createElement('img');
-    productImage.src = image;
-    productImage.alt = title;
-    return productImage;
-}
-
-
-//* Bottom container
-
-function createBottomBannerContainer() {
-    const bottomBannerContainer = document.createElement('div');
-    bottomBannerContainer.classList.add('pp-responsive-bottom','flex','column','justify-sb','text-center');
-    return bottomBannerContainer;
-}
-

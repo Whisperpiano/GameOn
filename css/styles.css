@@ -664,6 +664,10 @@
     
     /* Reviews */
 
+    #productpage-reviews-slider {
+        overflow: hidden;
+    }
+
     /* Reviews responsive */
 
     .res-reviews__container {
@@ -976,6 +980,26 @@
             color: rgba(241, 241, 241, 1);
         }
 
+        .prev-img,
+        .next-img {
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        #small-picture-1,
+        #small-picture-2,
+        #small-picture-3,
+        #small-picture-4 {
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover {
+                    border: 2px solid var(--color-4);
+                    
+                    opacity: 0.8;
+                }
+        }
+
         .prev-img {
             display: flex;
             align-items: center;
@@ -984,7 +1008,8 @@
             max-width: 20px; 
             width: 100%;
             min-height: 100%;
-            background: rgba(53, 53, 53, 0.70);;
+            background: rgba(53, 53, 53, 0.70);
+            transition: all 0.5s;
         }
 
         .next-img {
@@ -996,12 +1021,14 @@
             right: 0;
             width: 100%;
             min-height: 100%;
-            background: rgba(53, 53, 53, 0.70);;
+            background: rgba(53, 53, 53, 0.70);
+            transition: all 0.5s;
         }
 
         .prev-img:hover,
         .next-img:hover {
-            background: rgba(53, 53, 53, 0.80);
+            background: rgba(53, 53, 53, 1);
+            
             
         }
 

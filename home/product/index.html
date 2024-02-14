@@ -185,22 +185,108 @@
         </section>
 
         <section class="product-panel">
+          <article class="mw-1340 flex">
+
+            <div class="image-grid border-radius-2">
+
+              <picture class="big image-grid-col-4 image-grid-row-4">
+                <img id="main-picture" class="big" src="" alt="">
+              </picture>
+
+              <div class="panel-right image-grid-col-2 image-grid-row-5 flex column justify-sb text-center grey-section ">
+              
+                <h2 id="product-name" class="product-name"></h2>
+
+                <div class="select-container flex justify-sb">
+                  <select  class="btn-2" name="Platform" id="platforms-select">
+                  </select>
+                  <select  class="btn-2" name="Edition" id="edition-select">
+                    <option value="Standard">Standard</option>
+                    <option value="Legendary">Legendary</option>
+                  </select>
+                </div>
+
+                <div id="price-container" class="product-price">
+                  <p id="price-before" class="price-before">€29.99</p>
+                  <p id="price-discount" class="price-discount">-18%</p>
+                  <p id="price-after" class="price-after">€19.95</p>
+                </div>
+
+                <div class="flex justify-sb gap-30">
+                  <a href="cart.html" class="btn btn-1 width-100 shopping-icon uppercase">Add to cart</a>
+                  <a href="#" class="btn btn-2 width-100 heart-icon ">Add to wishlist</a>
+                 </div>
+
+                <div class="product-metadata flex justify-sb">
+                  <div class="flex align-items-center gap-10">
+                    <img src="../../images/key-icon.svg" alt="">
+                    <div class="flex column">
+                      <span class="grey">Type</span>
+                      <span>Key</span>
+                    </div>
+                  </div>
+                  <div class="flex align-items-center gap-10">
+                    <img src="../../images/global-icon.svg" alt="">
+                    <div class="flex column">
+                      <span class="grey">Version</span>
+                      <span>Global</span>
+                    </div>
+                  </div>
+                  <div class="flex align-items-center gap-10">
+                    <img src="../../images/verified-icon.svg" alt="">
+                    <div class="flex column">
+                      <span class="grey">Can activate in:</span>
+                      <span>Norway</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="small m-right-10 border-radius-2 relative">
+                <a id="prev-btn" class="prev-img"><i class="fa-solid fa-angle-left"></i></a>
+                <img id="small-picture-1" src="" alt="">
+              </div>
+
+              <div class="small m-right-10 border-radius-2">
+                <img id="small-picture-2" src="../../images/product-2.jpg" alt="">
+              </div>
+
+              <div class="small m-right-10 border-radius-2">
+                <img id="small-picture-3" src="../../images/product-3.jpg" alt="">
+              </div>
+
+              <div class="small border-radius-2 relative">
+                <a id="next-btn" class="next-img"><i class="fa-solid fa-angle-right"></i></a>
+                <img id="small-picture-4" src="../../images/product-4.jpg" alt="">
+              </div>  
+
+            </div>
+
+            <div class="stars-section">
+              <div id="rating-container" class="flex gap-5">
+                <div class="stars"><a href="#reviews" class="name-hover"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i></a></div> <span id="rating">4.8</span>
+              </div>
+              <p class="grey">Based on <a href="#reviews" class="white underline name-hover">142 reviews</a></p>
+            </div>
+
+          </article>
         </section>
 
         <section class="responsive-product-panel">
 
-          <!-- <figure id="responsive-product-panel">
+          <figure id="responsive-product-panel">
 
             <div class="product-panel-responsive border-bottom">
 
               <div class="pp-responsive-top flex justify-sb">
                 <a href="../index.html"><i class="fa-solid fa-chevron-left"></i></a>
-                <h2 class="headline">Outriders</h2>
+                <h2 id="responsive-name" class="headline">Outriders</h2>
                 <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
               </div>
 
               <div class="pp-responsive-mid flex center">
-                <img src="../../images/slider-img-2.png" alt="">
+                <img id="responsive-main-picture" src="../../images/slider-img-2.png" alt="">
               </div>
 
               <div class="product-metadata flex center gap-50">
@@ -238,24 +324,19 @@
              
               
               <div class="select-container flex center gap-30">
-                <select  class="btn-2" name="Platform" id="">
-                  <option value="Playstation">Playstation</option>
-                  <option value="Xbox">Xbox</option>
-                  <option value="Nintendo">Nintendo</option>
-                  <option value="Steam">Steam</option>
-                  <option value="Windows">Windows</option>
+                <select id="responsive-platforms-select" class="btn-2" name="Platform">
                 </select>
 
-                <select  class="btn-2" name="Edition" id="">
+                <select id="responsive-edition-select" class="btn-2" name="Edition">
                   <option value="Standard">Standard</option>
                   <option value="Legendary">Legendary</option>
                 </select>
               </div>
 
-              <div class="product-price">
-                <p class="price-before">€29.99</p>
-                <p class="price-discount">-18%</p>
-                <p class="price-after">€19.95</p>
+              <div id="responsive-price-container" class="product-price">
+                <p id="responsive-price-before" class="price-before">€29.99</p>
+                <p id="responsive-price-discount" class="price-discount">-18%</p>
+                <p id="responsive-price-after" class="price-after">€19.95</p>
               </div>
 
               <div class="pp-responsive__buttons flex justify-sb gap-30">
@@ -265,7 +346,7 @@
 
             </div>
 
-          </figure> -->
+          </figure>
 
         </div>
 
@@ -417,15 +498,15 @@
 
           <h2 class="headline">Last reviews</h2>
 
-          <div class="slider">
+          <div id="productpage-reviews-slider" class="slider">
 
-            <article id="slide-1" class="product-reviews__container grid-2-col">
+            <article id="slide-1" class="reviews-slide-1 product-reviews__container grid-2-col">
 
               <div class="user-review grey-section flex gap-30 pd-30 ">
                 
                 <div class="user-review__top flex justify-sb align-items-center">
                   <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
+                    <img class="avatar" src="../../images/user-1.svg" alt="">
                     <div class="user-data">
                       <p>User nickname</p>
                       <p class="grey">2 hours ago</p>
@@ -468,7 +549,7 @@
                 <div class="user-review__top flex justify-sb align-items-center">
 
                   <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
+                    <img class="avatar" src="../../images/user-2.svg" alt="">
                     <div class="user-data">
                       <p>User nickname</p>
                       <p class="grey">2 hours ago</p>
@@ -508,7 +589,7 @@
                 
                 <div class="user-review__top flex justify-sb align-items-center">
                   <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
+                    <img class="avatar" src="../../images/user-1.svg" alt="">
                     <div class="user-data">
                       <p>User nickname</p>
                       <p class="grey">2 hours ago</p>
@@ -548,7 +629,7 @@
 
                 <div class="user-review__top flex justify-sb align-items-center">
                   <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
+                    <img class="avatar" src="../../images/user-1.svg" alt="">
                     <div class="user-data">
                       <p>User nickname</p>
                       <p class="grey">2 hours ago</p>
@@ -589,166 +670,6 @@
             <article id="slide-2" class="product-reviews__container grid-2-col">
 
               <div class="user-review grey-section flex gap-30 pd-30 ">
-
-                <div class="user-review__top flex justify-sb align-items-center">
-                  <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
-                    <div class="user-data">
-                      <p>User nickname</p>
-                      <p class="grey">2 hours ago</p>
-                      <p class="grey">Reviews: 14</p>
-                    </div>
-                  </div>
-                  <div class="user-top-right ">
-                    <div class="user-stars flex right stars">
-                      <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="user-review__mid border-bottom">
-                  <h4>Lorem ipsum dolor sit</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur. Vulputate massa accumsan aliquet sed sodales urna ac vitae. Scelerisque viverra consequat mi aliquam tempor odio sagittis. Nunc sed neque facilisi egestas in. Nisl enim elit lacus in at. Vitae vivamus id mattis vehicula aenean tristique convallis turpis fringilla. Vel quis orci magna eros tortor tincidunt pellentesque arcu odio. Dictum viverra pretium risus adipiscing porttitor.</p>
-                </div>
-
-                <div class="user-review__bottom flex justify-sa align-items-center">
-                  <span>Was this review helpful?</span>
-                  <a class="btn btn-2 width">
-                    <img src="../../images/like.svg" alt="">
-                    <span>0</span>
-                  </a>
-                  <a class="btn btn-2">
-                    <img src="../../images/dislike.svg" alt="">
-                    <span>0</span>
-                  </a>
-                  <a class="report btn btn-2">
-                    <span>Report</span>
-                  </a>
-                </div>
-              </div>
-              <div class="user-review grey-section flex gap-30 pd-30 ">
-                <div class="user-review__top flex justify-sb align-items-center">
-                  <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
-                    <div class="user-data">
-                      <p>User nickname</p>
-                      <p class="grey">2 hours ago</p>
-                      <p class="grey">Reviews: 14</p>
-                    </div>
-                  </div>
-                  <div class="user-top-right ">
-                    <div class="user-stars flex right stars">
-                      <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="user-review__mid border-bottom">
-                  <h4>Lorem ipsum dolor sit</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur. Vulputate massa accumsan aliquet sed sodales urna ac vitae. Scelerisque viverra consequat mi aliquam tempor odio sagittis. Nunc sed neque facilisi egestas in. Nisl enim elit lacus in at. Vitae vivamus id mattis vehicula aenean tristique convallis turpis fringilla. Vel quis orci magna eros tortor tincidunt pellentesque arcu odio. Dictum viverra pretium risus adipiscing porttitor.</p>
-                </div>
-                <div class="user-review__bottom flex justify-sa align-items-center">
-                  <span>Was this review helpful?</span>
-                  <a class="btn btn-2 width">
-                    <img src="../../images/like.svg" alt="">
-                    <span>0</span>
-                  </a>
-                  <a class="btn btn-2">
-                    <img src="../../images/dislike.svg" alt="">
-                    <span>0</span>
-                  </a>
-                  <a class="report btn btn-2">
-                    <span>Report</span>
-                  </a>
-                </div>
-              </div>
-              <div class="user-review grey-section flex gap-30 pd-30 ">
-                <div class="user-review__top flex justify-sb align-items-center">
-                  <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
-                    <div class="user-data">
-                      <p>User nickname</p>
-                      <p class="grey">2 hours ago</p>
-                      <p class="grey">Reviews: 14</p>
-                    </div>
-                  </div>
-                  <div class="user-top-right ">
-                    <div class="user-stars flex right stars">
-                      <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="user-review__mid border-bottom">
-                  <h4>Lorem ipsum dolor sit</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur. Vulputate massa accumsan aliquet sed sodales urna ac vitae. Scelerisque viverra consequat mi aliquam tempor odio sagittis. Nunc sed neque facilisi egestas in. Nisl enim elit lacus in at. Vitae vivamus id mattis vehicula aenean tristique convallis turpis fringilla. Vel quis orci magna eros tortor tincidunt pellentesque arcu odio. Dictum viverra pretium risus adipiscing porttitor.</p>
-                </div>
-                <div class="user-review__bottom flex justify-sa align-items-center">
-                  <span>Was this review helpful?</span>
-                  <a class="btn btn-2 width">
-                    <img src="../../images/like.svg" alt="">
-                    <span>0</span>
-                  </a>
-                  <a class="btn btn-2">
-                    <img src="../../images/dislike.svg" alt="">
-                    <span>0</span>
-                  </a>
-                  <a class="report btn btn-2">
-                    <span>Report</span>
-                  </a>
-                </div>
-              </div>
-              <div class="user-review grey-section flex gap-30 pd-30 ">
-                <div class="user-review__top flex justify-sb align-items-center">
-                  <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
-                    <div class="user-data">
-                      <p>User nickname</p>
-                      <p class="grey">2 hours ago</p>
-                      <p class="grey">Reviews: 14</p>
-                    </div>
-                  </div>
-                  <div class="user-top-right ">
-                    <div class="user-stars flex right stars">
-                      <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="user-review__mid border-bottom">
-                  <h4>Lorem ipsum dolor sit</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur. Vulputate massa accumsan aliquet sed sodales urna ac vitae. Scelerisque viverra consequat mi aliquam tempor odio sagittis. Nunc sed neque facilisi egestas in. Nisl enim elit lacus in at. Vitae vivamus id mattis vehicula aenean tristique convallis turpis fringilla. Vel quis orci magna eros tortor tincidunt pellentesque arcu odio. Dictum viverra pretium risus adipiscing porttitor.</p>
-                </div>
-                <div class="user-review__bottom flex justify-sa align-items-center">
-                  <span>Was this review helpful?</span>
-                  <a class="btn btn-2 width">
-                    <img src="../../images/like.svg" alt="">
-                    <span>0</span>
-                  </a>
-                  <a class="btn btn-2">
-                    <img src="../../images/dislike.svg" alt="">
-                    <span>0</span>
-                  </a>
-                  <a class="report btn btn-2">
-                    <span>Report</span>
-                  </a>
-                </div>
-              </div>
-
-            </article>
-
-            <article id="slide-3" class="product-reviews__container grid-2-col">
-
-              <div class="user-review grey-section flex gap-30 pd-30 ">
                 
                 <div class="user-review__top flex justify-sb align-items-center">
 
@@ -766,7 +687,7 @@
                       <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
                     </div>
                     <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
+                      <p class="flex pd-top-10 gap-5"><img  alt="">Verified purchase</p>
                     </div>
                   </div>
 
@@ -946,7 +867,7 @@
 
             </article>
 
-            <article id="slide-4" class="product-reviews__container grid-2-col">
+            <!-- <article id="slide-3" class="product-reviews__container grid-2-col">
 
               <div class="user-review grey-section flex gap-30 pd-30 ">
                 
@@ -1144,215 +1065,13 @@
                 </div>
               </div>
 
-            </article>
-
-            <article id="slide-5" class="product-reviews__container grid-2-col">
-
-              <div class="user-review grey-section flex gap-30 pd-30 ">
-                
-                <div class="user-review__top flex justify-sb align-items-center">
-
-                  <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
-                    <div class="user-data">
-                      <p>User nickname</p>
-                      <p class="grey">2 hours ago</p>
-                      <p class="grey">Reviews: 14</p>
-                    </div>
-                  </div>
-
-                  <div class="user-top-right ">
-                    <div class="user-stars flex right stars">
-                      <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="user-review__mid border-bottom">
-                  <h4>Lorem ipsum dolor sit</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur. Vulputate massa accumsan aliquet sed sodales urna ac vitae. Scelerisque viverra consequat mi aliquam tempor odio sagittis. Nunc sed neque facilisi egestas in. Nisl enim elit lacus in at. Vitae vivamus id mattis vehicula aenean tristique convallis turpis fringilla. Vel quis orci magna eros tortor tincidunt pellentesque arcu odio. Dictum viverra pretium risus adipiscing porttitor.</p>
-                </div>
-
-                <div class="user-review__bottom flex justify-sa align-items-center">
-
-                  <span>Was this review helpful?</span>
-
-                  <a class="btn btn-2 width">
-                    <img src="../../images/like.svg" alt="">
-                    <span>0</span>
-                  </a>
-
-                  <a class="btn btn-2">
-                    <img src="../../images/dislike.svg" alt="">
-                    <span>0</span>
-                  </a>
-
-                  <a class="report btn btn-2">
-                    <span>Report</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="user-review grey-section flex gap-30 pd-30 ">
-                
-                <div class="user-review__top flex justify-sb align-items-center">
-
-                  <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
-                    <div class="user-data">
-                      <p>User nickname</p>
-                      <p class="grey">2 hours ago</p>
-                      <p class="grey">Reviews: 14</p>
-                    </div>
-                  </div>
-
-                  <div class="user-top-right ">
-                    <div class="user-stars flex right stars">
-                      <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="user-review__mid border-bottom">
-                  <h4>Lorem ipsum dolor sit</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur. Vulputate massa accumsan aliquet sed sodales urna ac vitae. Scelerisque viverra consequat mi aliquam tempor odio sagittis. Nunc sed neque facilisi egestas in. Nisl enim elit lacus in at. Vitae vivamus id mattis vehicula aenean tristique convallis turpis fringilla. Vel quis orci magna eros tortor tincidunt pellentesque arcu odio. Dictum viverra pretium risus adipiscing porttitor.</p>
-                </div>
-
-                <div class="user-review__bottom flex justify-sa align-items-center">
-
-                  <span>Was this review helpful?</span>
-
-                  <a class="btn btn-2 width">
-                    <img src="../../images/like.svg" alt="">
-                    <span>0</span>
-                  </a>
-
-                  <a class="btn btn-2">
-                    <img src="../../images/dislike.svg" alt="">
-                    <span>0</span>
-                  </a>
-
-                  <a class="report btn btn-2">
-                    <span>Report</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="user-review grey-section flex gap-30 pd-30 ">
-                
-                <div class="user-review__top flex justify-sb align-items-center">
-
-                  <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
-                    <div class="user-data">
-                      <p>User nickname</p>
-                      <p class="grey">2 hours ago</p>
-                      <p class="grey">Reviews: 14</p>
-                    </div>
-                  </div>
-
-                  <div class="user-top-right ">
-                    <div class="user-stars flex right stars">
-                      <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="user-review__mid border-bottom">
-                  <h4>Lorem ipsum dolor sit</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur. Vulputate massa accumsan aliquet sed sodales urna ac vitae. Scelerisque viverra consequat mi aliquam tempor odio sagittis. Nunc sed neque facilisi egestas in. Nisl enim elit lacus in at. Vitae vivamus id mattis vehicula aenean tristique convallis turpis fringilla. Vel quis orci magna eros tortor tincidunt pellentesque arcu odio. Dictum viverra pretium risus adipiscing porttitor.</p>
-                </div>
-
-                <div class="user-review__bottom flex justify-sa align-items-center">
-
-                  <span>Was this review helpful?</span>
-
-                  <a class="btn btn-2 width">
-                    <img src="../../images/like.svg" alt="">
-                    <span>0</span>
-                  </a>
-
-                  <a class="btn btn-2">
-                    <img src="../../images/dislike.svg" alt="">
-                    <span>0</span>
-                  </a>
-
-                  <a class="report btn btn-2">
-                    <span>Report</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="user-review grey-section flex gap-30 pd-30 ">
-                
-                <div class="user-review__top flex justify-sb align-items-center">
-
-                  <div class="user-top-left flex align-items-center gap-20">
-                    <img src="../../images/user-1.svg" alt="">
-                    <div class="user-data">
-                      <p>User nickname</p>
-                      <p class="grey">2 hours ago</p>
-                      <p class="grey">Reviews: 14</p>
-                    </div>
-                  </div>
-
-                  <div class="user-top-right ">
-                    <div class="user-stars flex right stars">
-                      <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <div class="user-verify">
-                      <p class="flex pd-top-10 gap-5"><img src="../../images/verified-icon.svg" alt="">Verified purchase</p>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="user-review__mid border-bottom">
-                  <h4>Lorem ipsum dolor sit</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur. Vulputate massa accumsan aliquet sed sodales urna ac vitae. Scelerisque viverra consequat mi aliquam tempor odio sagittis. Nunc sed neque facilisi egestas in. Nisl enim elit lacus in at. Vitae vivamus id mattis vehicula aenean tristique convallis turpis fringilla. Vel quis orci magna eros tortor tincidunt pellentesque arcu odio. Dictum viverra pretium risus adipiscing porttitor.</p>
-                </div>
-
-                <div class="user-review__bottom flex justify-sa align-items-center">
-
-                  <span>Was this review helpful?</span>
-
-                  <a class="btn btn-2 width">
-                    <img src="../../images/like.svg" alt="">
-                    <span>0</span>
-                  </a>
-
-                  <a class="btn btn-2">
-                    <img src="../../images/dislike.svg" alt="">
-                    <span>0</span>
-                  </a>
-
-                  <a class="report btn btn-2">
-                    <span>Report</span>
-                  </a>
-                </div>
-              </div>
-
-            </article>
+            </article> -->
         </div>
 
         <div class="slider-nav center pd-30">
           <a href="#slide-1"></a>
           <a href="#slide-2"></a>
           <a href="#slide-3"></a>
-          <a href="#slide-4"></a>
-          <a href="#slide-5"></a>
         </div>
 
         </section>

@@ -5,7 +5,7 @@ export class FetchError extends Error {
     }
 }
 
-export class DataError extends Error{
+export class DataError extends Error {
     constructor(message) {
         super(message);
         this.name = 'DataError';

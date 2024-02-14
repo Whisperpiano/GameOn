@@ -20,6 +20,8 @@ export async function data(url = url_api) {
             throw new DataError("Data received from API is empty or invalid.");
         }
 
+        //* Add new keys to the object
+
         const newObjectKeyTime = 'time';
         const newObjectKeyPlatforms = 'platforms';
 
@@ -44,7 +46,7 @@ export async function data(url = url_api) {
                 game.platforms.nintendo = false;
             }
         });
-     
+        
         return data;
 
     } catch (error) {
@@ -61,32 +63,32 @@ export async function data(url = url_api) {
     }
 }
 
-export async function dataById(id) {
-    try {
-        showLoader();
-        const response = await fetch(`${url_api}/${id}`);
+// export async function dataById(id) {
+//     try {
+//         showLoader();
+//         const response = await fetch(`${url_api}/${id}`);
 
-        if (!response.ok) {
-            throw new FetchError(`Error making request to ${url_api}/${id}`, response.status); 
-        }
+//         if (!response.ok) {
+//             throw new FetchError(`Error making request to ${url_api}/${id}`, response.status); 
+//         }
 
-        const data = await response.json();
+//         const data = await response.json();
 
-        if(!data) {
-            throw new DataError("Data received from API is empty or invalid.");
-        }
-        return data;
+//         if(!data) {
+//             throw new DataError("Data received from API is empty or invalid.");
+//         }
+//         return data;
 
-    } catch (error) {
-        if (error instanceof FetchError) {
-            console.error(`FetchError: ${error.message}, Status: ${error.status}`);
-        } else if (error instanceof DataError) {
-            console.error(`DataError: ${error.message}`);
-        } else {
-            console.error('An unknown error occurred.');
-        }
-    } 
-    finally{
-        hideLoader();
-    }
-}
+//     } catch (error) {
+//         if (error instanceof FetchError) {
+//             console.error(`FetchError: ${error.message}, Status: ${error.status}`);
+//         } else if (error instanceof DataError) {
+//             console.error(`DataError: ${error.message}`);
+//         } else {
+//             console.error('An unknown error occurred.');
+//         }
+//     } 
+//     finally{
+//         hideLoader();
+//     }
+// }

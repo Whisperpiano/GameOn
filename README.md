@@ -61,3 +61,11 @@ Written reflection on the CA process
 
 > [!TIP]
 > [Noroff course](https://mollify.noroff.dev/content/feu1/javascript-1/module-1?nav=course)
+
+## Ideas
+
+- [ ] Product page: make dynamic stars
+- [ ] Product page: random reviews
+- [ ] Product page: about game section
+- [ ] Product page: next and prev buttons
+ 
