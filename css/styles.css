@@ -1118,7 +1118,7 @@
     }
 
     .product-accordion__label {
-        margin-top: 10px;
+        margin-top: 30px;
     }
 
     .product-accordion__label span {
@@ -1200,6 +1200,32 @@
 
     
 /* Cart page */
+
+    .empty-cart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .empty-cart-icon {
+        max-width: 100px;
+        width: 100%;
+        margin: auto;
+        padding-top: 60px;
+    }
+
+    .headline-empty-cart {
+        font-size: 40px;
+    }
+    .last-p {
+        margin-bottom: 40px;
+    }
+
+    .continue-cart-btn {
+        max-width: 500px;
+        margin-bottom: 60px;
+    }
 
     .main-cart {
         padding-top: 60px;

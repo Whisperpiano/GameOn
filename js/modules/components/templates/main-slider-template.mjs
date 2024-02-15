@@ -1,8 +1,19 @@
 import { randomNumber } from "../../utils/random-numbers.mjs";
+import {  increment } from "../buttons.mjs";
 
-export const mainSliderContainer = document.querySelector('.slider-header');
+export const mainSliderContainer = document.querySelector(".slider-header");
 
-export function mainSliderTemplate(title, description, image, genre, price, discountedPrice, onSale, id, platforms) {
+export function mainSliderTemplate(
+  title,
+  description,
+  image,
+  genre,
+  price,
+  discountedPrice,
+  onSale,
+  id,
+  platforms
+) {
   const platformsArray = Object.entries(platforms);
   const platformsArrayLength = platformsArray.length;
 
@@ -11,8 +22,11 @@ export function mainSliderTemplate(title, description, image, genre, price, disc
   const slideContent = createSlideContent();
   const slideContentTop = createSlideContentTop();
   const onSaleSpan = createOnSaleSpan();
-  const platformsContainer = createPlatformsContainer(platformsArray, platformsArrayLength);
-  
+  const platformsContainer = createPlatformsContainer(
+    platformsArray,
+    platformsArrayLength
+  );
+
   const gameInfo = createGameInfo();
   const nameAndPriceContainer = createNameAndPriceContainer();
   const gameName = createGameName();
@@ -24,22 +38,25 @@ export function mainSliderTemplate(title, description, image, genre, price, disc
   const priceBefore = createPriceBefore(price);
   const gameDescription = createGameDescription(description);
   const slideButtonsContainer = createSlideButtonsContainer();
-  const slideAddToCartButton = createSlideAddToCartButton();
+  const slideAddToCartButton = createSlideAddToCartButton(id);
   const slideAddToWishButton = createSlideAddToWishButton();
 
-  
-  slideContentTop.append(onSaleSpan,platformsContainer);
+  slideContentTop.append(onSaleSpan, platformsContainer);
   gameName.appendChild(gameNameLink);
   nameAndPriceContainer.append(gameName, priceSpan);
   starsAndPriceBeforeContainer.append(starsContainer, priceBefore);
   starsContainer.appendChild(starsLink);
   slideButtonsContainer.append(slideAddToCartButton, slideAddToWishButton);
-  gameInfo.append(nameAndPriceContainer, starsAndPriceBeforeContainer, gameDescription, slideButtonsContainer);
+  gameInfo.append(
+    nameAndPriceContainer,
+    starsAndPriceBeforeContainer,
+    gameDescription,
+    slideButtonsContainer
+  );
   slideContent.append(slideContentTop, gameInfo);
   slide.append(slideImage, slideContent);
- 
-  return slide;
 
+  return slide;
 }
 
 function createSlide(id) {
@@ -51,7 +68,7 @@ function createSlide(id) {
 
 function createSlideImage(image, title, id) {
   const slideImage = document.createElement("a");
-  const titleWithoutSpaces = title.split(' ').join('-');
+  const titleWithoutSpaces = title.split(" ").join("-");
   slideImage.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
   slideImage.classList.add("slide-img");
   slideImage.style.backgroundImage = `url(${image})`;
@@ -79,7 +96,7 @@ function createOnSaleSpan() {
 
 function createPlatformsContainer(array, length) {
   const platformsContainer = document.createElement("div");
-  platformsContainer.classList.add("flex","gap-15");
+  platformsContainer.classList.add("flex", "gap-15");
 
   for (let i = 0; i < length; i++) {
     if (array[i][1] === true) {
@@ -98,25 +115,30 @@ function createPlatformsSpan(platformType) {
 
 function createGameInfo() {
   const gameInfo = document.createElement("div");
-  gameInfo.classList.add("flex","justify-sb","gap-20");
+  gameInfo.classList.add("flex", "justify-sb", "gap-20");
   return gameInfo;
 }
 
 function createNameAndPriceContainer() {
   const nameAndPriceContainer = document.createElement("div");
-  nameAndPriceContainer.classList.add("name-price","flex","row","justify-sb");
+  nameAndPriceContainer.classList.add(
+    "name-price",
+    "flex",
+    "row",
+    "justify-sb"
+  );
   return nameAndPriceContainer;
 }
 
-function createGameName(){
+function createGameName() {
   const gameName = document.createElement("h3");
   gameName.classList.add("name-hover");
   return gameName;
 }
 
-function createGameNameLink(title, id){
+function createGameNameLink(title, id) {
   const gameNameLink = document.createElement("a");
-  const titleWithoutSpaces = title.split(' ').join('-');
+  const titleWithoutSpaces = title.split(" ").join("-");
   gameNameLink.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
   gameNameLink.classList.add("name");
   gameNameLink.textContent = title;
@@ -132,23 +154,28 @@ function createPriceSpan(discountedPrice) {
 
 function createStarsAndPriceBeforeContainer() {
   const starsAndPriceBefore = document.createElement("div");
-  starsAndPriceBefore.classList.add("stars-subprice","flex","row","justify-sb");
+  starsAndPriceBefore.classList.add(
+    "stars-subprice",
+    "flex",
+    "row",
+    "justify-sb"
+  );
   return starsAndPriceBefore;
 }
 
 export function createStarsContainer() {
   const starsContainer = document.createElement("div");
-  starsContainer.classList.add("stars","name-hover");
+  starsContainer.classList.add("stars", "name-hover");
   return starsContainer;
 }
 
 export function createStarsLink(title, id) {
   const starsLink = document.createElement("a");
-  const titleWithoutSpaces = title.split(' ').join('-');
+  const titleWithoutSpaces = title.split(" ").join("-");
   starsLink.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
 
   const halfStar = document.createElement("i");
-  halfStar.classList.add("fa-sharp","fa-solid","fa-star-half-stroke");
+  halfStar.classList.add("fa-sharp", "fa-solid", "fa-star-half-stroke");
   const numStars = randomNumber();
 
   for (let i = 0; i < numStars; i++) {
@@ -157,13 +184,13 @@ export function createStarsLink(title, id) {
   }
 
   starsLink.appendChild(halfStar);
-  
+
   return starsLink;
 }
 
 export function createRandomStars() {
   const stars = document.createElement("i");
-  stars.classList.add("fa-sharp","fa-solid","fa-star");
+  stars.classList.add("fa-sharp", "fa-solid", "fa-star");
   return stars;
 }
 
@@ -184,16 +211,27 @@ function createGameDescription(description) {
 
 export function createSlideButtonsContainer() {
   const slideButtonsContainer = document.createElement("div");
-  slideButtonsContainer.classList.add("flex","justify-sb","gap-30");
+  slideButtonsContainer.classList.add("flex", "justify-sb", "gap-30");
   return slideButtonsContainer;
 }
 
-export function createSlideAddToCartButton() {
+export function createSlideAddToCartButton(id) {
   const slideAddToCartButton = document.createElement("button");
   slideAddToCartButton.type = "button";
   slideAddToCartButton.name = "addToCartBtn";
-  slideAddToCartButton.classList.add("btn","btn-1","width-100","uppercase","shopping-icon");
+  slideAddToCartButton.classList.add(
+    "btn",
+    "btn-1",
+    "width-100",
+    "uppercase",
+    "shopping-icon"
+  );
   slideAddToCartButton.textContent = "Add to cart";
+  slideAddToCartButton.addEventListener('click', (event) => {
+    increment(id);
+  
+  });
+  
   return slideAddToCartButton;
 }
 
@@ -201,7 +239,7 @@ export function createSlideAddToWishButton() {
   const slideAddToWishButton = document.createElement("button");
   slideAddToWishButton.type = "button";
   slideAddToWishButton.name = "addToFavBtn";
-  slideAddToWishButton.classList.add("btn","btn-2","width-100","heart-icon");
+  slideAddToWishButton.classList.add("btn", "btn-2", "width-100", "heart-icon");
   slideAddToWishButton.textContent = "Add to wishlist";
   return slideAddToWishButton;
 }

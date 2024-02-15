@@ -9,7 +9,6 @@ import { mainSliderResponsiveTemplate, responsiveMainSliderContainer } from "../
 import { responsiveReviewsSlideContainer, responsiveReviewsSliderTemplate } from "../modules/components/templates/reviews-responsive-template.mjs";
 import { compareValues } from "../modules/utils/compare-values.mjs";
 
-
 async function renderMainSlider() {
     try {
         const gamesArray = await data();

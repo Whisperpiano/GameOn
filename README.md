@@ -68,4 +68,6 @@ Written reflection on the CA process
 - [ ] Product page: random reviews
 - [ ] Product page: about game section
 - [ ] Product page: next and prev buttons
+- [ ] Home page: FIX read review
+- [ ] Loader: FIX loaders
  
