@@ -1,5 +1,7 @@
 import { getPercentage } from "../../utils/calculate-percentage.mjs";
 import { cart, increment, decrement, updateCart, calculateTotal } from "../buttons.mjs";
+import { renderCart } from '../../../pages/cart.mjs';
+import { hideLoader, showLoader } from "../loader.mjs";
 
 export function cartTemplate(findGame, product) {
   const cartContainer = document.querySelector(".cart-items");
@@ -17,11 +19,11 @@ export function cartTemplate(findGame, product) {
   const zoneSpan = createZoneSpan();
   const quantityResponsiveContainer = createQuantityResponsiveContainer();
   const minusResponsiveContainer = createMinusContainer();
-  const minusResponsiveButton = createMinusButton();
+  const minusResponsiveButton = createMinusButton(product.productID);
   const quantityResponsiveMarkContainer = createQuantityMarkContainer();
   const quantityResponsiveMark = createQuantityMark(product.quantity);
   const plusResponsiveContainer = createPlusContainer();
-  const plusResponsiveButton = createPlusButton();
+  const plusResponsiveButton = createPlusButton(product.productID, product.quantity, product);
   const midContainer = createMidContainer();
   const minusContainer = createMinusContainer();
   const minusButton = createMinusButton(product.productID);
@@ -193,10 +195,11 @@ function createMinusContainer() {
 function createMinusButton(id) {
   const createMinusButton = document.createElement("a");
   createMinusButton.classList.add("circle", "minus");
-  createMinusButton.addEventListener("click", () =>{
-    updateCart(id);
-    decrement(id)
-    updateCart(id);
+  createMinusButton.addEventListener("click", () =>{;
+    const cartitems = document.querySelector('.cart-items');
+    decrement(id);
+    cartitems.innerHTML = '';
+    renderCart();
   });
   return createMinusButton;
 }
@@ -209,7 +212,6 @@ function createQuantityMarkContainer() {
 function createQuantityMark(quantity) {
   const createQuantityMark = document.createElement("span");
   createQuantityMark.classList.add("qty-number", "border");
-  createQuantityMark.id = "qty-number";
   createQuantityMark.textContent = quantity;
   return createQuantityMark;
 }
@@ -225,10 +227,10 @@ function createPlusButton(id, quantity, product) {
   createPlusButton.classList.add("circle", "plus");
   createPlusButton.id = "plus";
   createPlusButton.addEventListener("click", () =>{
-    updateCart(id);
+    const cartitems = document.querySelector('.cart-items');
     increment(id);
-    updateCart();
-    calculateTotal();
+    cartitems.innerHTML = '';
+    renderCart();
     });
   return createPlusButton;
 }
