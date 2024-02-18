@@ -217,6 +217,7 @@ function createMinusContainer() {
 function createMinusButton(id) {
   const createMinusButton = document.createElement("a");
   createMinusButton.classList.add("circle", "minus");
+  createMinusButton.style.cursor = "pointer";
   createMinusButton.addEventListener("click", () => {
     const cartitems = document.querySelector(".cart-items");
     decrement(id);
@@ -248,6 +249,7 @@ function createPlusButton(id, quantity, product) {
   const createPlusButton = document.createElement("a");
   createPlusButton.classList.add("circle", "plus");
   createPlusButton.id = "plus";
+  createPlusButton.style.cursor = "pointer";
   createPlusButton.addEventListener("click", () => {
     const cartitems = document.querySelector(".cart-items");
     increment(id);
@@ -318,6 +320,7 @@ function createActualPrice(discountedPrice, quantity) {
 function createRemoveButton(id) {
   const createRemoveButton = document.createElement("button");
   createRemoveButton.classList.add("btn-remove", "trash");
+  createRemoveButton.style.cursor = "pointer";
   createRemoveButton.addEventListener("click", () => {
     const cartitems = document.querySelector(".cart-items");
     removeItemFromCart(id);
