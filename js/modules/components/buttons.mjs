@@ -62,4 +62,11 @@ export let calculateTotal = () => {
   return cart.map((product) => product.quantity).reduce((x, y) => x + y, 0);
 };
 
+export let removeItemFromCart = (id) => {
+  let selectedItemId = id;
+  cart = cart.filter((product) => product.productID !== selectedItemId);
+  localStorage.setItem("cartData", JSON.stringify(cart));
+  updateCart(selectedItemId);
+};
+
 updateCart();

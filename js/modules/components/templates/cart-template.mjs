@@ -1,6 +1,13 @@
 import { getPercentage } from "../../utils/calculate-percentage.mjs";
-import { cart, increment, decrement, updateCart, calculateTotal } from "../buttons.mjs";
-import { renderCart } from '../../../pages/cart.mjs';
+import {
+  cart,
+  increment,
+  decrement,
+  updateCart,
+  calculateTotal,
+  removeItemFromCart,
+} from "../buttons.mjs";
+import { renderCart } from "../../../pages/cart.mjs";
 import { hideLoader, showLoader } from "../loader.mjs";
 
 export function cartTemplate(findGame, product) {
@@ -23,31 +30,46 @@ export function cartTemplate(findGame, product) {
   const quantityResponsiveMarkContainer = createQuantityMarkContainer();
   const quantityResponsiveMark = createQuantityMark(product.quantity);
   const plusResponsiveContainer = createPlusContainer();
-  const plusResponsiveButton = createPlusButton(product.productID, product.quantity, product);
+  const plusResponsiveButton = createPlusButton(
+    product.productID,
+    product.quantity,
+    product
+  );
   const midContainer = createMidContainer();
   const minusContainer = createMinusContainer();
   const minusButton = createMinusButton(product.productID);
   const quantityMarkContainer = createQuantityMarkContainer();
   const quantityMark = createQuantityMark(product.quantity);
   const plusContainer = createPlusContainer();
-  const plusButton = createPlusButton(product.productID, product.quantity, product);
+  const plusButton = createPlusButton(
+    product.productID,
+    product.quantity,
+    product
+  );
   const rightContainer = createRightContainer();
   const priceBeforeSpan = createPriceBeforeSpan(
     findGame.price,
-    findGame.discountedPrice, product.quantity
+    findGame.discountedPrice,
+    product.quantity
   );
   const discountSpan = createDiscountSpan(
     findGame.price,
-    findGame.discountedPrice, 
+    findGame.discountedPrice
   );
-  const actualPrice = createActualPrice(findGame.discountedPrice, product.quantity);
-  const removeButton = createRemoveButton();
-
- 
+  const actualPrice = createActualPrice(
+    findGame.discountedPrice,
+    product.quantity
+  );
+  const removeButton = createRemoveButton(product.productID);
 
   cartContainer.append(article);
   article.appendChild(divContainer);
-  divContainer.append(leftContainer, midContainer, rightContainer, removeButton);
+  divContainer.append(
+    leftContainer,
+    midContainer,
+    rightContainer,
+    removeButton
+  );
   leftContainer.append(
     imageContainer,
     infoContainer,
@@ -195,10 +217,10 @@ function createMinusContainer() {
 function createMinusButton(id) {
   const createMinusButton = document.createElement("a");
   createMinusButton.classList.add("circle", "minus");
-  createMinusButton.addEventListener("click", () =>{;
-    const cartitems = document.querySelector('.cart-items');
+  createMinusButton.addEventListener("click", () => {
+    const cartitems = document.querySelector(".cart-items");
     decrement(id);
-    cartitems.innerHTML = '';
+    cartitems.innerHTML = "";
     renderCart();
   });
   return createMinusButton;
@@ -226,12 +248,12 @@ function createPlusButton(id, quantity, product) {
   const createPlusButton = document.createElement("a");
   createPlusButton.classList.add("circle", "plus");
   createPlusButton.id = "plus";
-  createPlusButton.addEventListener("click", () =>{
-    const cartitems = document.querySelector('.cart-items');
+  createPlusButton.addEventListener("click", () => {
+    const cartitems = document.querySelector(".cart-items");
     increment(id);
-    cartitems.innerHTML = '';
+    cartitems.innerHTML = "";
     renderCart();
-    });
+  });
   return createPlusButton;
 }
 
@@ -293,10 +315,14 @@ function createActualPrice(discountedPrice, quantity) {
   return createActualPrice;
 }
 
-function createRemoveButton() {
-    const createRemoveButton = document.createElement("button");
-    createRemoveButton.classList.add('btn-remove','trash');
-    return createRemoveButton;
+function createRemoveButton(id) {
+  const createRemoveButton = document.createElement("button");
+  createRemoveButton.classList.add("btn-remove", "trash");
+  createRemoveButton.addEventListener("click", () => {
+    const cartitems = document.querySelector(".cart-items");
+    removeItemFromCart(id);
+    cartitems.innerHTML = "";
+    renderCart();
+  });
+  return createRemoveButton;
 }
-
-
