@@ -19,7 +19,6 @@ export function increment(id) {
 
   localStorage.setItem("cartData", JSON.stringify(cart));
   updateCart(selectedItemId);
-
 }
 
 export function decrement(id) {
@@ -41,9 +40,7 @@ export function decrement(id) {
 
 export function updateCart(id) {
   const cartSpan = document.querySelector("#cart-span");
-  const itemsSpan = document.querySelector('#items-span');
- 
-  
+  const itemsSpan = document.querySelector("#items-span");
 
   let searchCart = cart.find((product) => product.productID === id);
   calculateTotal();
@@ -51,14 +48,9 @@ export function updateCart(id) {
   if (itemsSpan) {
     itemsSpan.textContent = `( ${calculateTotal()} items )`;
   }
- 
-  
-  
- 
 }
 
 export let calculateTotal = () => {
-  
   return cart.map((product) => product.quantity).reduce((x, y) => x + y, 0);
 };
 
@@ -68,5 +60,11 @@ export let removeItemFromCart = (id) => {
   localStorage.setItem("cartData", JSON.stringify(cart));
   updateCart(selectedItemId);
 };
+
+export function clearCart() {
+  cart = [];
+  updateCart();
+  localStorage.setItem("cartData", JSON.stringify(cart));
+}
 
 updateCart();

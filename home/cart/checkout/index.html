@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="../../../js/pages/checkout.mjs"></script>
   </head>
   <body>
           
@@ -51,7 +52,7 @@
 
                 <li class="btn btn-2 relative">
                   <a href="../../cart/index.html" class="cart"></a>
-                  <span class="cantidad">0</span>
+                  <span class="cantidad" id="cart-span"></span>
                 </li>
 
                 <li class="btn btn-2 relative">
@@ -171,6 +172,11 @@
     </header>
 
       <main class="main-payment mw-1340">
+        <section class="preloader__container">
+          <div id="preloader">
+            <span class="loader"></span>
+          </div>
+        </section>
 
         <h2 class="headline">Billing address</h2>
 
@@ -275,7 +281,7 @@
                             </div>
 
                             <div class="pay-with-card">
-                              <a href="./confirmation.html" class="btn btn-1 width-100">Pay with card payment</a>
+                              <a href="./confirmation.html" class="pay-card-btn btn btn-1 width-100">Pay with card payment</a>
                             </div>
 
                           </div>
@@ -297,7 +303,7 @@
                           <p>Click the button to be redirected to PayPal and complete your payment securely.</p>
 
                           <div class="pay-with-paypal flex right">
-                            <a class="flex center btn-4 width-100" href="./confirmation.html">Pay with <img src="../../../images/paypal-letters.svg" alt=""></a>
+                            <a class="pay-paypal-btn clear-cart flex center btn-4 width-100" href="./confirmation.html">Pay with <img src="../../../images/paypal-letters.svg" alt=""></a>
                           </div>
                         </div>
                       </div>
@@ -312,7 +318,7 @@
                         <div class="pd-0-30">
                           <p>Click the button to be redirected to Google Pay and complete your payment securely.</p>
                           <div class="pay-with-googlepay flex right">
-                            <a class="flex center btn-4 width-100" href="./confirmation.html">Pay with <img src="../../../images/googlepay-letters.svg" alt=""></a>
+                            <a class="pay-google-btn clear-cart flex center btn-4 width-100" href="./confirmation.html">Pay with <img src="../../../images/googlepay-letters.svg" alt=""></a>
                           </div>
                         </div>
                       </div>
@@ -325,7 +331,7 @@
 
             </div>
 
-            <aside class="c3">
+            <aside class="summary c3">
               <div class="cart-summary border ">
                 <div class="cart-summary__top grey-section pd-20">
                   <h5>Cart summary</h5>
@@ -333,12 +339,12 @@
 
                         <div class="full-price flex justify-sb">
                             <span>Full price:</span>
-                            <span class="text-line-through">€111.95</span>
+                            <span class="summary-price-before text-line-through">0</span>
                         </div>
     
                         <div class="flex justify-sb">
                             <span>Your saving:</span>
-                            <span class="color-6">-€42.95</span>
+                            <span class="summary-discount color-6">0</span>
                         </div>
                     </div>
 
@@ -346,7 +352,7 @@
 
                     <div class="total-price flex justify-sb pd-top-30">
                         <h6>Total price:</h6>
-                        <span class="h4 color-6">€69.95</span>
+                        <span class="summary-price-after h4 color-6">0</span>
                     </div>
                 </div>
 
