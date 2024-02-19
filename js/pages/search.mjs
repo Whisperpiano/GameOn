@@ -60,9 +60,49 @@ function filterByPlatform() {
   );
 }
 
+async function renderSearchBar() {
+  const searchBarBtn = document.querySelector("#searchbar-btn");
+  const searchInput = document.querySelector("#searchbar-input");
+
+  try {
+    const gamesArray = await data();
+
+    if (!searchInput) {
+      return;
+    }
+
+    searchBarBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      const searchValue = searchInput.value;
+      redirectToSearchPage(searchValue);
+    });
+
+    searchInput.addEventListener("input", (e) => {
+      const searchValue = e.target.value.toLowerCase();
+      const filteredGames = filterGames(gamesArray, searchValue);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function filterGames(gamesArray, searchValue) {
+  return gamesArray.filter((game) => {
+    return (
+      game.title.toLowerCase().includes(searchValue) ||
+      game.genre.toLowerCase().includes(searchValue)
+    );
+  });
+}
+
+function redirectToSearchPage(searchValue) {
+  window.location.href = `./index.html?platform=${searchValue.toLowerCase()}`;
+}
+
 function main() {
   renderSearchPage();
   filterByPlatform();
+  renderSearchBar();
 }
 
 main();

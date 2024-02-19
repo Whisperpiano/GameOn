@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <script type="module" src="../../js/pages/search.mjs"></script>
+    <script type="module" src="../../js/modules/components/searchbar.mjs"></script>
   </head>
   <body>
           
@@ -36,9 +37,9 @@
             </nav>
 
             <search>
-              <form action="#" class="search-bar">
-                <input type="search" placeholder="Minecraft, RPG, multiplayer..."/>
-                <button class="search-icon" type="submit"></button>
+              <form name="searchbar" action="#" class="search-bar">
+                <input id="searchbar-input" type="search" placeholder="Minecraft, RPG, multiplayer..."/>
+                <button id="searchbar-btn" class="search-icon" type="submit"></button>
               </form>
             </search>
           </div>
