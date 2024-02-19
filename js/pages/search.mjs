@@ -1,7 +1,7 @@
 import { data } from "../modules/services/api-fetch.mjs";
 import { searchPageTemplate } from "../modules/components/templates/search-page-template.mjs";
 
-async function renderSearchPage() {
+export async function renderSearchPage() {
   try {
     const urlString = window.location.search;
     const searchPlatform = new URLSearchParams(urlString).get("platform");
@@ -10,7 +10,11 @@ async function renderSearchPage() {
     const gamesArray = await data();
 
     const filteredGames = gamesArray.filter((game) => {
-      return game.platforms[searchPlatform] === true;
+      return (
+        game.platforms[searchPlatform] === true ||
+        game.title.toLowerCase().includes(searchPlatform.toLowerCase()) ||
+        game.genre.toLowerCase().includes(searchPlatform.toLowerCase())
+      );
     });
 
     const renderSearch = filteredGames.map((game) => {

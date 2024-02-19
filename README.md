@@ -70,13 +70,22 @@ Written reflection on the CA process
 
 ## Ideas
 
-- [ ] Product page: make dynamic stars
-- [ ] Product page: random reviews
-- [x] Product page: about game section
-- [ ] Product page: next and prev buttons
+DONE
+
 - [x] Home page: FIX read review
+- [x] Product page: about game section
 - [x] Loader: FIX loaders
 - [x] Product page: addtocart btn
 - [x] Product page: cartspan
+
+URGENT
+
 - [ ] Checkout: forms
 - [ ] SEARCHBAR
+- [ ] add span cart in responsive
+
+OPTIONAL
+
+- [ ] Product page: make dynamic stars
+- [ ] Product page: random reviews
+- [ ] Product page: next and prev buttons
