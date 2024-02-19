@@ -1,7 +1,7 @@
 import { FetchError, DataError } from "../utils/errorHandling.mjs";
 
 export async function users() {
-  const url = "../../data/users.json";
+  const url = "../data/users.json";
 
   try {
     const response = await fetch(url);
