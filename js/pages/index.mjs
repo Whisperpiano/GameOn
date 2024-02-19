@@ -268,6 +268,20 @@ function filterByPlatform() {
   filterXbox.href = "./search/index.html?platform=xbox";
   const filterNintendo = document.querySelector(".filter-nintendo");
   filterNintendo.href = "./search/index.html?platform=nintendo";
+  const filterXboxResponsive = document.querySelector(
+    ".filter-xbox-responsive"
+  );
+  filterXboxResponsive.href = "./search/index.html?platform=xbox";
+  const filterPlaystationResponsive = document.querySelector(
+    ".filter-playstation-responsive"
+  );
+  filterPlaystationResponsive.href = "./search/index.html?platform=playstation";
+  const filterPCResponsive = document.querySelector(".filter-pc-responsive");
+  filterPCResponsive.href = "./search/index.html?platform=steam";
+  const filterNintendoResponsive = document.querySelector(
+    ".filter-nintendo-responsive"
+  );
+  filterNintendoResponsive.href = "./search/index.html?platform=nintendo";
 }
 
 function main() {
