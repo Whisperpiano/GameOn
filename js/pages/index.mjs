@@ -65,7 +65,7 @@ async function renderMainSlider() {
     if (error instanceof RenderError) {
       console.error(`RenderError: ${error.message}`);
     } else {
-      console.error("An unknown error occurred rendering main slider.");
+      console.error("An unknown error occurred rendering main slider..");
     }
   }
 }
