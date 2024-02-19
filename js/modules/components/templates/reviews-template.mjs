@@ -22,7 +22,7 @@ export function reviewsSliderTemplate(title, image, id, time) {
   const userName = createUserSpan();
   const timeSpan = createCommentTimeSpan(time);
   const readReviewContainer = createReadReviewContainer();
-  const readLink = createReadReviewLink(title);
+  const readLink = createReadReviewLink(title, id);
   const readSpan = createReadReviewSpan();
 
   metaDataContainer.append(userAndTimeContainer, readReviewContainer);

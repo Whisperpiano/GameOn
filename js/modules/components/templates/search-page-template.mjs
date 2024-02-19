@@ -23,6 +23,7 @@ export function searchPageTemplate(
 ) {
   const platformsArray = Object.entries(platforms);
   const platformsArrayLength = platformsArray.length;
+
   const searchContainer = document.querySelector(".search-page__container");
   const itemContainer = createItemContainer();
   const topContainer = createTopContainer();

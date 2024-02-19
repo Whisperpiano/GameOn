@@ -81,10 +81,21 @@ export async function renderSummaryCart() {
     console.log(error);
   }
 }
+function filterByPlatform() {
+  const filterPC = document.querySelector(".filter-pc");
+  filterPC.href = "../search/index.html?platform=steam";
+  const filterPlaystation = document.querySelector(".filter-playstation");
+  filterPlaystation.href = "../search/index.html?platform=playstation";
+  const filterXbox = document.querySelector(".filter-xbox");
+  filterXbox.href = "../search/index.html?platform=xbox";
+  const filterNintendo = document.querySelector(".filter-nintendo");
+  filterNintendo.href = "../search/index.html?platform=nintendo";
+}
 
 function main() {
   renderCart();
   renderSummaryCart();
+  filterByPlatform();
 }
 
 main();

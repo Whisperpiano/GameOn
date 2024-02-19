@@ -53,8 +53,20 @@ payWithPaypalBtn.addEventListener("click", clearCart);
 const payWithGoogleBtn = document.querySelector(".pay-google-btn");
 payWithGoogleBtn.addEventListener("click", clearCart);
 
+function filterByPlatform() {
+  const filterPC = document.querySelector(".filter-pc");
+  filterPC.href = "../../search/index.html?platform=steam";
+  const filterPlaystation = document.querySelector(".filter-playstation");
+  filterPlaystation.href = "../../search/index.html?platform=playstation";
+  const filterXbox = document.querySelector(".filter-xbox");
+  filterXbox.href = "../../search/index.html?platform=xbox";
+  const filterNintendo = document.querySelector(".filter-nintendo");
+  filterNintendo.href = "../../search/index.html?platform=nintendo";
+}
+
 function main() {
   renderCheckout();
+  filterByPlatform();
 }
 
 main();

@@ -124,15 +124,21 @@ async function renderProductReviews() {
     const usersSlicedArray = usersArray.slice(0, 4);
 
     usersSlicedArray.map((user) => {
-
-        const { username, comment_title, video_game_comment, verified_purchase, avatar } = user;
-        const userReview = oneReviewTemplate(username, comment_title, video_game_comment, verified_purchase, avatar
-        );
-
-        
+      const {
+        username,
+        comment_title,
+        video_game_comment,
+        verified_purchase,
+        avatar,
+      } = user;
+      const userReview = oneReviewTemplate(
+        username,
+        comment_title,
+        video_game_comment,
+        verified_purchase,
+        avatar
+      );
     });
-
-
   } catch (error) {
     if (error instanceof RenderError) {
       console.error(`RenderError: ${error.message}`);
@@ -142,11 +148,23 @@ async function renderProductReviews() {
   }
 }
 
+function filterByPlatform() {
+  const filterPC = document.querySelector(".filter-pc");
+  filterPC.href = "../search/index.html?platform=steam";
+  const filterPlaystation = document.querySelector(".filter-playstation");
+  filterPlaystation.href = "../search/index.html?platform=playstation";
+  const filterXbox = document.querySelector(".filter-xbox");
+  filterXbox.href = "../search/index.html?platform=xbox";
+  const filterNintendo = document.querySelector(".filter-nintendo");
+  filterNintendo.href = "../search/index.html?platform=nintendo";
+}
+
 function main() {
   renderProductBannerTemplate();
   renderProductBannerResponsiveTemplate();
   informationDropDown();
-//   renderProductReviews();
+  filterByPlatform();
+  //   renderProductReviews();
 }
 
 main();

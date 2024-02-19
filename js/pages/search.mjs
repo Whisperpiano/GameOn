@@ -5,6 +5,8 @@ async function renderSearchPage() {
   try {
     const urlString = window.location.search;
     const searchPlatform = new URLSearchParams(urlString).get("platform");
+    const headline = document.querySelector(".headline-search-span");
+    headline.textContent = `${searchPlatform}`;
     const gamesArray = await data();
 
     const filteredGames = gamesArray.filter((game) => {
@@ -40,8 +42,23 @@ async function renderSearchPage() {
   }
 }
 
+function filterByPlatform() {
+  const filterPC = document.querySelector(".filter-pc");
+  filterPC.href = "./index.html?platform=steam";
+  const filterPlaystation = document.querySelector(".filter-playstation");
+  filterPlaystation.href = "./index.html?platform=playstation";
+  const filterXbox = document.querySelector(".filter-xbox");
+  filterXbox.href = "./index.html?platform=xbox";
+  const filterNintendo = document.querySelector(".filter-nintendo");
+  filterNintendo.href = "./index.html?platform=nintendo";
+  const filterXboxResponsive = document.querySelector(
+    ".filter-xbox-responsive"
+  );
+}
+
 function main() {
   renderSearchPage();
+  filterByPlatform();
 }
 
 main();
