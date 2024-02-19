@@ -185,37 +185,37 @@
             <div>
               <article class="billing-address">
                   <div class="billing-address__container flex grey-section">
-                    <form class="flex gap-30" action="">
+                    <form name="billingForm" class="flex gap-30" method="get">
 
                           <div class="form-box width-100">
-                              <label for="">Full name</label>
-                              <input class="btn-2" type="text">
+                              <label for="billing-name">Full name</label>
+                              <input class="btn-2" type="text" id="billing-name" required>
                           </div>
 
                           <div class="form-box width-100">
-                              <label for="">Address</label>
-                              <input class="btn-2" type="text">
+                              <label for="billing-address">Address</label>
+                              <input class="btn-2" type="text" id="billing-address" required>
                           </div>
 
                           <div class="grid-2-col width-100">
                               <div class="form-box">
-                                <label for="">Country</label>
-                                <input class="btn-2" type="text">
+                                <label for="billing-country" >Country</label>
+                                <input class="btn-2" type="text" id="billing-country" required>
                               </div>
 
                               <div class="form-box">
-                                <label for="">State / Privince</label>
-                                <input class="btn-2" type="text">
+                                <label for="billing-province">State / Privince</label>
+                                <input class="btn-2" type="text" id="billing-province" required>
                               </div>
 
                               <div class="form-box">
-                                <label for="">ZIP / Postal code</label>
-                                <input class="btn-2" type="text">
+                                <label for="billing-zip" >ZIP / Postal code</label>
+                                <input class="btn-2" type="text" id="billing-zip" required>
                               </div>
 
                               <div class="form-box">
-                                <label for="">Phone number</label>
-                                <input class="btn-2" type="text">
+                                <label for="billing-phone">Phone number</label>
+                                <input class="btn-2" type="text" id="billing-phone" required>
                               </div>
                           </div>
 
@@ -249,27 +249,27 @@
                         <form class="flex column gap-30 pd-0-30" action="">
 
                           <div class="form-box">
-                            <label for="">Card number</label>
-                            <input class="btn-2" type="text">
+                            <label for="card-number">Card number</label>
+                            <input class="btn-2" type="text" id="card-number" required>
                           </div>
 
                           <div class="form-box">
-                            <label for="">Cardholder name</label>
-                            <input class="btn-2" type="text">
+                            <label for="cardholder">Cardholder name</label>
+                            <input class="btn-2" type="text" id="cardholder" required>
                           </div>
 
                           <div class="grid-3-col">
                               <div class="form-box">
-                                <label for="">Expiry month</label>
-                                <input class="btn-2" type="text">
+                                <label for="expiry-month">Expiry month</label>
+                                <input class="btn-2" type="text" id="expiry-month" required>
                               </div>
                               <div class="form-box">
-                                <label for="">Expiry year</label>
-                                <input class="btn-2" type="text">
+                                <label for="expiry-year">Expiry year</label>
+                                <input class="btn-2" type="text" id="expiry-year" required>
                               </div>
                               <div class="form-box">
-                                <label for="">CVC/CVV</label>
-                                <input class="btn-2" type="text">
+                                <label for="cvc">CVC/CVV</label>
+                                <input class="btn-2" type="text" id="cvc" required>
                               </div>
                           </div>
 
@@ -277,7 +277,7 @@
 
                             <div class="remember-card">
                               <input class="" type="checkbox">
-                              <label for="">Remember card details</label>
+                              <label >Remember card details</label>
                             </div>
 
                             <div class="pay-with-card">
@@ -357,7 +357,7 @@
                 </div>
 
                 <div class="cart-summary__bottom flex column gap-20 grey-section pd-20">
-                        <a href="./confirmation.html" class="btn btn-1 width-100">Pay</a>
+                        <a href="./confirmation.html" class="pay-btn-responsive btn btn-1 width-100">Pay</a>
                 </div>
             </div>
 

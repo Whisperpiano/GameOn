@@ -5,6 +5,7 @@ import { productBannerResponsiveTemplate } from "../modules/components/templates
 import { users } from "../modules/services/users-fetch.mjs";
 import { oneReviewTemplate } from "../modules/components/templates/product-page-reviews-template.mjs";
 import { informationDropDown } from "../modules/components/templates/product-info-dropdown.mjs";
+import { calculateTotal } from "../modules/components/cart-functions.mjs";
 
 async function renderProductBannerTemplate() {
   try {
@@ -164,6 +165,7 @@ function main() {
   renderProductBannerResponsiveTemplate();
   informationDropDown();
   filterByPlatform();
+  calculateTotal();
   //   renderProductReviews();
 }
 

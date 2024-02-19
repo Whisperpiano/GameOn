@@ -284,6 +284,15 @@ function filterByPlatform() {
   filterNintendoResponsive.href = "./search/index.html?platform=nintendo";
 }
 
+// function searchBar() {
+//   const searchbar = document.forms["searchbar"];
+//   searchbar.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     const searchTerm = searchbar.querySelector("input").value;
+//     window.location.href = `./search/index.html?search=${searchTerm}`;
+//   });
+// }
+
 function main() {
   renderMainSlider();
   renderBestseller();
@@ -292,8 +301,7 @@ function main() {
   renderMainSliderResponsive();
   renderReviewsSliderResponsive();
   filterByPlatform();
+  // searchBar();
 }
 
 main();
-
-console.log("hello");

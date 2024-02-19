@@ -44,14 +44,19 @@ export async function renderCheckout() {
   }
 }
 
-const payWithCardBtn = document.querySelector(".pay-card-btn");
-payWithCardBtn.addEventListener("click", clearCart);
+function payButtons() {
+  const payWithCardBtn = document.querySelector(".pay-card-btn");
+  payWithCardBtn.addEventListener("click", clearCart);
 
-const payWithPaypalBtn = document.querySelector(".pay-paypal-btn");
-payWithPaypalBtn.addEventListener("click", clearCart);
+  const payWithPaypalBtn = document.querySelector(".pay-paypal-btn");
+  payWithPaypalBtn.addEventListener("click", clearCart);
 
-const payWithGoogleBtn = document.querySelector(".pay-google-btn");
-payWithGoogleBtn.addEventListener("click", clearCart);
+  const payWithGoogleBtn = document.querySelector(".pay-google-btn");
+  payWithGoogleBtn.addEventListener("click", clearCart);
+
+  const payBtnResponsive = document.querySelector(".pay-btn-responsive");
+  payBtnResponsive.addEventListener("click", clearCart);
+}
 
 function filterByPlatform() {
   const filterPC = document.querySelector(".filter-pc");
@@ -67,6 +72,7 @@ function filterByPlatform() {
 function main() {
   renderCheckout();
   filterByPlatform();
+  payButtons();
 }
 
 main();

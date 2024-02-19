@@ -51,7 +51,7 @@
                 </li>
                 <li class="btn btn-2 relative">
                   <a href="../cart/index.html" class="cart"></a>
-                  <span class="cantidad">0</span>
+                  <span id="cart-span" class="cantidad"></span>
                 </li>
                 <li class="btn btn-2 relative">
                   <a href="#" class="fav"></a>
@@ -213,8 +213,8 @@
                 </div>
 
                 <div class="flex justify-sb gap-30">
-                  <a href="cart.html" class="btn btn-1 width-100 shopping-icon uppercase">Add to cart</a>
-                  <a href="#" class="btn btn-2 width-100 heart-icon ">Add to wishlist</a>
+                  <a class="add-to-cart btn btn-1 width-100 shopping-icon uppercase" name="addToCartBtn">Add to cart</a>
+                  <button href="#" class="btn btn-2 width-100 heart-icon ">Add to wishlist</button>
                  </div>
 
                 <div class="product-metadata flex justify-sb">
@@ -340,7 +340,7 @@
               </div>
 
               <div class="pp-responsive__buttons flex justify-sb gap-30">
-                <a href="../cart/index.html" class="btn btn-1 width-100 shopping-icon uppercase">Add to cart</a>
+                <a class="add-to-cart-responsive btn btn-1 width-100 shopping-icon uppercase">Add to cart</a>
                 <a href="#" class="btn btn-2 width-100 heart-icon ">Add to wishlist</a>
                </div>
 
