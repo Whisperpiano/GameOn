@@ -78,7 +78,7 @@ function createPicture(imageURL, name) {
   return picture;
 }
 
-function createPlatformsContainer(platformsArray, platformsArrayLength) {
+export function createPlatformsContainer(platformsArray, platformsArrayLength) {
   const platformsContainer = document.createElement("div");
   platformsContainer.classList.add("item-platforms", "flex");
   for (let i = 0; i < platformsArrayLength; i++) {
@@ -97,7 +97,7 @@ function createPlatformsSpan(platformType) {
   return platformSpan;
 }
 
-function createDiscountContainer(price, discountedPrice) {
+export function createDiscountContainer(price, discountedPrice) {
   const discountContainer = document.createElement("div");
   discountContainer.classList.add("item-discount", "btn", "btn-3");
   const discountSpan = document.createElement("span");
@@ -113,25 +113,25 @@ function createDiscountContainer(price, discountedPrice) {
   return discountContainer;
 }
 
-function createOverlayContainer() {
+export function createOverlayContainer() {
   const overlayContainer = document.createElement("div");
   overlayContainer.classList.add("item-overlay");
   return overlayContainer;
 }
 
-function createOverlayButtonsContainer() {
+export function createOverlayButtonsContainer() {
   const overlayButtonsContainer = document.createElement("div");
   overlayButtonsContainer.classList.add("item-overlay__buttons");
   return overlayButtonsContainer;
 }
 
-function createAddToCartLink() {
+export function createAddToCartLink() {
   const addToCartLink = document.createElement("a");
   addToCartLink.href = "javascript:void(0)";
   return addToCartLink;
 }
 
-function createAddToCartButton(id) {
+export function createAddToCartButton(id) {
   const addToCartBtn = document.createElement("button");
   addToCartBtn.type = "button";
   addToCartBtn.classList.add("btn", "btn-1", "btn-overlay", "uppercase");
@@ -145,14 +145,14 @@ function createAddToCartButton(id) {
   return addToCartBtn;
 }
 
-function createViewLink(title, id) {
+export function createViewLink(title, id) {
   const viewLink = document.createElement("a");
   const titleWithoutSpaces = title.split(" ").join("-");
   viewLink.href = `./product/index.html?product=${titleWithoutSpaces}&id=${id}`;
   return viewLink;
 }
 
-function createViewButton() {
+export function createViewButton() {
   const viewBtn = document.createElement("button");
   viewBtn.type = "button";
   viewBtn.classList.add("btn", "btn-2", "btn-overlay", "uppercase");
@@ -177,14 +177,14 @@ function createBottomLink(title, id) {
   return bottomLink;
 }
 
-function createItemTitle(name) {
+export function createItemTitle(name) {
   const itemTitle = document.createElement("h6");
   itemTitle.classList.add("item-name");
   itemTitle.textContent = name;
   return itemTitle;
 }
 
-function createItemPrice(discountedPrice) {
+export function createItemPrice(discountedPrice) {
   const itemPrice = document.createElement("span");
   itemPrice.textContent = `$${discountedPrice}`;
   itemPrice.classList.add("item-price");

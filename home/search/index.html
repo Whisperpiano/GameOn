@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="../../js/pages/search.mjs"></script>
   </head>
   <body>
           
@@ -51,7 +52,7 @@
 
                 <li class="btn btn-2 relative">
                   <a href="../cart/index.html" class="cart"></a>
-                  <span class="cantidad">0</span>
+                  <span id="cart-span" class="cantidad">0</span>
                 </li>
 
                 <li class="btn btn-2 relative">
@@ -172,6 +173,12 @@
 
     <main class="main__search-page">
 
+      <section class="preloader__container">
+        <div id="preloader">
+          <span class="loader"></span>
+        </div>
+      </section>
+
       <section class="search-bar-responsive">
 
         <search>
@@ -215,7 +222,7 @@
 
           <div class="search-page__container">
 
-            <div class="item">
+            <!-- <div class="item">
 
               <div class="relative">
 
@@ -743,7 +750,7 @@
                 
               </div>
 
-            </div>
+            </div> -->
 
             
 
@@ -751,7 +758,7 @@
 
 
       </section>
-
+<!-- 
       <div class="page-change flex center gap-20 pd-50">
             <span class="btn btn-2 icon-previous"></span>
             <span class="btn btn-2">1</span>
@@ -760,7 +767,7 @@
             <span class="btn btn-2">5</span>
             <span class="btn btn-2">4</span>
             <span class="btn btn-2 icon-next"></span>
-      </div>
+      </div> -->
        
       </main>
 
