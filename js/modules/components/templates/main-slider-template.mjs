@@ -1,5 +1,5 @@
 import { randomNumber } from "../../utils/random-numbers.mjs";
-import {  increment } from "../buttons.mjs";
+import { increment } from "../cart-functions.mjs";
 
 export const mainSliderContainer = document.querySelector(".slider-header");
 
@@ -227,11 +227,10 @@ export function createSlideAddToCartButton(id) {
     "shopping-icon"
   );
   slideAddToCartButton.textContent = "Add to cart";
-  slideAddToCartButton.addEventListener('click', (event) => {
+  slideAddToCartButton.addEventListener("click", (event) => {
     increment(id);
-  
   });
-  
+
   return slideAddToCartButton;
 }
 

@@ -1,5 +1,5 @@
 import { getPercentage } from "../../utils/calculate-percentage.mjs";
-import { increment } from "../buttons.mjs";
+import { increment } from "../cart-functions.mjs";
 
 export const bestsellerContainer = document.querySelector(
   ".bestseller__container"
@@ -127,7 +127,7 @@ function createOverlayButtonsContainer() {
 
 function createAddToCartLink() {
   const addToCartLink = document.createElement("a");
-  addToCartLink.href = 'javascript:void(0)';
+  addToCartLink.href = "javascript:void(0)";
   return addToCartLink;
 }
 

@@ -6,8 +6,8 @@ import {
   updateCart,
   calculateTotal,
   removeItemFromCart,
-} from "../buttons.mjs";
-import { renderCart } from "../../../pages/cart.mjs";
+} from "../cart-functions.mjs";
+import { renderCart, renderSummaryCart } from "../../../pages/cart.mjs";
 import { hideLoader, showLoader } from "../loader.mjs";
 
 export function cartTemplate(findGame, product) {
@@ -223,6 +223,7 @@ function createMinusButton(id) {
     decrement(id);
     cartitems.innerHTML = "";
     renderCart();
+    renderSummaryCart();
   });
   return createMinusButton;
 }
@@ -255,6 +256,7 @@ function createPlusButton(id, quantity, product) {
     increment(id);
     cartitems.innerHTML = "";
     renderCart();
+    renderSummaryCart();
   });
   return createPlusButton;
 }
@@ -326,6 +328,7 @@ function createRemoveButton(id) {
     removeItemFromCart(id);
     cartitems.innerHTML = "";
     renderCart();
+    renderSummaryCart();
   });
   return createRemoveButton;
 }
