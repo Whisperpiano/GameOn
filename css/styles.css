@@ -1560,6 +1560,12 @@
         align-items: center;
     }
 
+    .main__search-page {
+       
+            min-height: 100dvh;
+
+    }
+
 /* Small framework */
     .margin-auto-0 {
         margin: auto 0;

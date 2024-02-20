@@ -77,11 +77,11 @@ DONE
 - [x] Loader: FIX loaders
 - [x] Product page: addtocart btn
 - [x] Product page: cartspan
+- [x] SEARCHBAR
 
 URGENT
 
 - [ ] Checkout: forms
-- [ ] SEARCHBAR
 - [ ] add span cart in responsive
 
 OPTIONAL

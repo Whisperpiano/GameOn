@@ -7,7 +7,7 @@ export async function renderSearchPage() {
     const urlString = window.location.search;
     const searchPlatform = new URLSearchParams(urlString).get("platform");
     const headline = document.querySelector(".headline-search-span");
-    headline.textContent = `${searchPlatform}`;
+    headline.textContent = `${searchPlatform ? searchPlatform : ""}`;
     const gamesArray = await data();
 
     const filteredGames = gamesArray.filter((game) => {
