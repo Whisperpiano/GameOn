@@ -12,9 +12,10 @@ export async function renderSearchPage() {
 
     const filteredGames = gamesArray.filter((game) => {
       return (
-        game.platforms[searchPlatform] === true ||
-        game.title.toLowerCase().includes(searchPlatform.toLowerCase()) ||
-        game.genre.toLowerCase().includes(searchPlatform.toLowerCase())
+        searchPlatform &&
+        (game.platforms[searchPlatform] === true ||
+          game.title.toLowerCase().includes(searchPlatform.toLowerCase()) ||
+          game.genre.toLowerCase().includes(searchPlatform.toLowerCase()))
       );
     });
 

@@ -686,9 +686,7 @@
 	.main__search-page .search-bar-responsive {
 		padding-top: 30px;
 	}
-	.main__search-page {
-		min-height: 100dvh;
-	}
+	
 
 	.search-page__container {
 		display: grid; 
