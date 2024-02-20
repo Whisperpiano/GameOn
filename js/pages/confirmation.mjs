@@ -1,6 +1,9 @@
-const orderNumberSpan = document.querySelector(".order-number");
+import { renderSearchBar } from "../modules/components/searchbar.mjs";
 
-orderNumberSpan.textContent = Math.floor(Math.random() * 1000000000);
+function updateNumberOrderSpan() {
+  const orderNumberSpan = document.querySelector(".order-number");
+  orderNumberSpan.textContent = Math.floor(Math.random() * 1000000000);
+}
 
 function filterByPlatform() {
   const filterPC = document.querySelector(".filter-pc");
@@ -13,4 +16,10 @@ function filterByPlatform() {
   filterNintendo.href = "../../search/index.html?platform=nintendo";
 }
 
-filterByPlatform();
+function main() {
+  updateNumberOrderSpan();
+  filterByPlatform();
+  renderSearchBar();
+}
+
+main();

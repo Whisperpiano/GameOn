@@ -5,6 +5,7 @@ import {
   removeEmptyCart,
 } from "../modules/components/templates/cart-template.mjs";
 import { cartEmptyTemplate } from "../modules/components/templates/cart-empty-template.mjs";
+import { renderSearchBar } from "../modules/components/searchbar.mjs";
 
 export async function renderCart() {
   try {
@@ -90,45 +91,6 @@ function filterByPlatform() {
   filterXbox.href = "../search/index.html?platform=xbox";
   const filterNintendo = document.querySelector(".filter-nintendo");
   filterNintendo.href = "../search/index.html?platform=nintendo";
-}
-
-async function renderSearchBar() {
-  const searchBarBtn = document.querySelector("#searchbar-btn");
-  const searchInput = document.querySelector("#searchbar-input");
-
-  try {
-    const gamesArray = await data();
-
-    if (!searchInput) {
-      return;
-    }
-
-    searchBarBtn.addEventListener("click", (event) => {
-      event.preventDefault();
-      const searchValue = searchInput.value;
-      redirectToSearchPage(searchValue);
-    });
-
-    searchInput.addEventListener("input", (e) => {
-      const searchValue = e.target.value.toLowerCase();
-      const filteredGames = filterGames(gamesArray, searchValue);
-    });
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-function filterGames(gamesArray, searchValue) {
-  return gamesArray.filter((game) => {
-    return (
-      game.title.toLowerCase().includes(searchValue) ||
-      game.genre.toLowerCase().includes(searchValue)
-    );
-  });
-}
-
-function redirectToSearchPage(searchValue) {
-  window.location.href = `../search/index.html?platform=${searchValue.toLowerCase()}`;
 }
 
 function main() {

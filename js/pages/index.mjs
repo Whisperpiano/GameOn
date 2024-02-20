@@ -23,6 +23,7 @@ import {
   responsiveReviewsSliderTemplate,
 } from "../modules/components/templates/reviews-responsive-template.mjs";
 import { compareValues } from "../modules/utils/compare-values.mjs";
+import { renderSearchBar } from "../modules/components/searchbar.mjs";
 
 async function renderMainSlider() {
   try {
@@ -282,45 +283,6 @@ function filterByPlatform() {
     ".filter-nintendo-responsive"
   );
   filterNintendoResponsive.href = "./search/index.html?platform=nintendo";
-}
-
-async function renderSearchBar() {
-  const searchBarBtn = document.querySelector("#searchbar-btn");
-  const searchInput = document.querySelector("#searchbar-input");
-
-  try {
-    const gamesArray = await data();
-
-    if (!searchInput) {
-      return;
-    }
-
-    searchBarBtn.addEventListener("click", (event) => {
-      event.preventDefault();
-      const searchValue = searchInput.value;
-      redirectToSearchPage(searchValue);
-    });
-
-    searchInput.addEventListener("input", (e) => {
-      const searchValue = e.target.value.toLowerCase();
-      const filteredGames = filterGames(gamesArray, searchValue);
-    });
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-function filterGames(gamesArray, searchValue) {
-  return gamesArray.filter((game) => {
-    return (
-      game.title.toLowerCase().includes(searchValue) ||
-      game.genre.toLowerCase().includes(searchValue)
-    );
-  });
-}
-
-function redirectToSearchPage(searchValue) {
-  window.location.href = `./search/index.html?platform=${searchValue.toLowerCase()}`;
 }
 
 function main() {
