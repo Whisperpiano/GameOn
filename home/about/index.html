@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="../../js/modules/components/cart-functions.mjs"></script>
   </head>
   <body>
          
@@ -51,7 +52,7 @@
 
                 <li class="btn btn-2 relative">
                   <a href="../cart/index.html" class="cart"></a>
-                  <span class="cantidad">0</span>
+                  <span class="cantidad" id="cart-span"></span>
                 </li>
 
                 <li class="btn btn-2 relative">
@@ -189,7 +190,7 @@
               
               <li><a href="../search/index.html" class="app-menu-search"></a></li>
               
-              <li><a href="../cart/index.html" class="app-menu-cart"></a></li>
+              <li><a href="../cart/index.html" class="app-menu-cart relative"><span id="responsive-cart-span">0</span></a></li>
               
               <li><a href="#dialog" class="app-menu-user"></a></li>
 

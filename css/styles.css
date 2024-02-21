@@ -451,6 +451,20 @@
         right: 0;
         left: 0;
         z-index: 10000000;
+        & #responsive-cart-span {
+            aspect-ratio: 1 / 1;
+            background: var(--color-6);
+            color: #14151B;
+            border-radius: 50%;
+            position: absolute;
+            display: grid;
+            place-content: center;
+            width: 18px;
+            max-height: 18px;
+            top: 0;
+            right: 0;
+            transform: translate(120%, -50%);
+        }
     }
 
     .header-right{

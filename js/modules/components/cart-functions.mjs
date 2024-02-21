@@ -41,6 +41,7 @@ export function decrement(id) {
 export function updateCart(id) {
   const cartSpan = document.querySelector("#cart-span");
   const itemsSpan = document.querySelector("#items-span");
+  const cartSpanResponsive = document.querySelector("#responsive-cart-span");
 
   let searchCart = cart.find((product) => product.productID === id);
   calculateTotal();
@@ -48,6 +49,7 @@ export function updateCart(id) {
   if (itemsSpan) {
     itemsSpan.textContent = `( ${calculateTotal()} items )`;
   }
+  cartSpanResponsive.textContent = calculateTotal();
 }
 
 export let calculateTotal = () => {
