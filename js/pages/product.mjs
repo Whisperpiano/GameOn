@@ -14,6 +14,7 @@ import {
   createRandomStars,
 } from "../modules/components/templates/main-slider-template.mjs";
 import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
+import { likeDislikeBtns } from "../modules/components/like-dislike-btns.mjs";
 
 async function renderProductBannerTemplate() {
   try {
@@ -203,6 +204,7 @@ function main() {
   renderSearchBar();
   renderProductReviews();
   updateWishlist();
+  likeDislikeBtns();
 }
 
 main();
