@@ -7,6 +7,12 @@ import { oneReviewTemplate } from "../modules/components/templates/product-page-
 import { informationDropDown } from "../modules/components/templates/product-info-dropdown.mjs";
 import { calculateTotal } from "../modules/components/cart-functions.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
+import { randomTime } from "../modules/utils/random-time.mjs";
+import {
+  createStarsContainer,
+  createStarsLink,
+  createRandomStars,
+} from "../modules/components/templates/main-slider-template.mjs";
 
 async function renderProductBannerTemplate() {
   try {
@@ -116,6 +122,9 @@ async function renderProductReviews() {
   try {
     const userReviewContainer = document.querySelectorAll(".user-review");
     const usersArray = await users();
+    const randomUser = () => {
+      return usersArray[Math.floor(Math.random() * usersArray.length)];
+    };
 
     if (!usersArray) {
       throw new RenderError(
@@ -123,23 +132,46 @@ async function renderProductReviews() {
       );
     }
 
-    const usersSlicedArray = usersArray.slice(0, 4);
+    const usersAvatars = document.querySelectorAll(".avatar");
+    usersAvatars.forEach((avatar, index) => {
+      avatar.src = usersArray[index].avatar;
+    });
 
-    usersSlicedArray.map((user) => {
-      const {
-        username,
-        comment_title,
-        video_game_comment,
-        verified_purchase,
-        avatar,
-      } = user;
-      const userReview = oneReviewTemplate(
-        username,
-        comment_title,
-        video_game_comment,
-        verified_purchase,
-        avatar
-      );
+    const userNicknames = document.querySelectorAll(".user-nickname");
+    userNicknames.forEach((nickname, index) => {
+      nickname.textContent = usersArray[index].username;
+    });
+
+    const userTimeReviews = document.querySelectorAll(".user-time");
+    const randomTimes = [...userTimeReviews].map(() => randomTime());
+    const orderedTimes = randomTimes.sort((a, b) => a - b);
+    userTimeReviews.forEach((userTime, index) => {
+      userTime.textContent = `${orderedTimes[index]} minutes ago`;
+    });
+
+    const userReviews = document.querySelectorAll(".user-quantity");
+    userReviews.forEach((review) => {
+      review.textContent = `Reviews: ${randomTime()}`;
+    });
+
+    const userReviewsTitle = document.querySelectorAll(".review-title");
+    userReviewsTitle.forEach((title, index) => {
+      title.textContent = usersArray[index].comment_title;
+    });
+
+    const userReviewsComment = document.querySelectorAll(".review-comment");
+    userReviewsComment.forEach((comment, index) => {
+      comment.textContent = usersArray[index].video_game_comment;
+    });
+
+    const starsContainer = document.querySelectorAll(".stars-container");
+    starsContainer.forEach((container, index) => {
+      const randomNumber1to5 = Math.floor(Math.random() * 4) + 2;
+      const stars = createRandomStars();
+      for (let i = 0; i < randomNumber1to5; i++) {
+        const star = createRandomStars();
+        container.appendChild(star);
+      }
     });
   } catch (error) {
     if (error instanceof RenderError) {
@@ -168,7 +200,7 @@ function main() {
   filterByPlatform();
   calculateTotal();
   renderSearchBar();
-  //   renderProductReviews();
+  renderProductReviews();
 }
 
 main();
