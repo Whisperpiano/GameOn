@@ -90,5 +90,5 @@ OPTIONAL
 - [x] Product page: make dynamic stars
 - [x] Product page: random reviews
 - [ ] Product page: next and prev buttons
-- [ ] Product page : like dislike buttons
+- [x] Product page : like dislike buttons
 - [x] Product page/ Home page: add to wishlist

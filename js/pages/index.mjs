@@ -294,6 +294,15 @@ function filterByPlatform() {
     ".filter-nintendo-responsive"
   );
   filterNintendoResponsive.href = "./search/index.html?platform=nintendo";
+
+  const showMoreBestseller = document.querySelector(".show-more-bestseller");
+  showMoreBestseller.href = "./search/index.html?platform=gamehub";
+  const showMoreReleases = document.querySelector(".show-more-new-releases");
+  showMoreReleases.href = "./search/index.html?platform=gamehub";
+  const showAllBest = document.querySelector(".show-all-best");
+  showAllBest.href = "./search/index.html?platform=gamehub";
+  const showAllNew = document.querySelector(".show-all-releases");
+  showAllNew.href = "./search/index.html?platform=gamehub";
 }
 
 function main() {

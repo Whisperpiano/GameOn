@@ -28,9 +28,11 @@ export async function renderSearchBar() {
 
 function filterGames(gamesArray, searchValue) {
   return gamesArray.filter((game) => {
+    console.log(game.tags[0].toLowerCase());
     return (
       game.title.toLowerCase().includes(searchValue) ||
-      game.genre.toLowerCase().includes(searchValue)
+      game.genre.toLowerCase().includes(searchValue) ||
+      game.tags[0].toLowerCase().includes(searchValue)
     );
   });
 }

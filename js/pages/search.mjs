@@ -16,7 +16,8 @@ export async function renderSearchPage() {
         searchPlatform &&
         (game.platforms[searchPlatform] === true ||
           game.title.toLowerCase().includes(searchPlatform.toLowerCase()) ||
-          game.genre.toLowerCase().includes(searchPlatform.toLowerCase()))
+          game.genre.toLowerCase().includes(searchPlatform.toLowerCase()) ||
+          game.tags[0].toLowerCase().includes(searchPlatform.toLowerCase()))
       );
     });
 
