@@ -1,7 +1,8 @@
 import { FetchError, DataError } from "../utils/errorHandling.mjs";
 
 export async function users() {
-  const url = "../../data/users.json";
+  const url =
+    "https://raw.githubusercontent.com/Whisperpiano/GameOn/js1_ca/data/users.json";
 
   try {
     const response = await fetch(url);
