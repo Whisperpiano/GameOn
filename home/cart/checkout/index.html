@@ -178,14 +178,14 @@
           </div>
         </section>
 
-        <h2 class="headline">Billing address</h2>
+        <h2 class="headline">Billing address <span>(optional)</span></h2>
 
         <section class="payment-page">
 
             <div>
               <article class="billing-address">
                   <div class="billing-address__container flex grey-section">
-                    <form name="billingForm" class="flex gap-30" method="get">
+                    <form name="billingForm" class="flex gap-30" method="get" id="billing-form">
 
                           <div class="form-box width-100">
                               <label for="billing-name">Full name</label>
@@ -218,7 +218,6 @@
                                 <input class="btn-2" type="text" id="billing-phone" required>
                               </div>
                           </div>
-
                     </form>
                   </div>
               </article>
@@ -246,7 +245,7 @@
                       <label class="btn-off-icon flex margin-auto-0 pd-30" for="payment-check1">Card payment </label>
                       <img class="pay-visa-icon pd-30" src="../../../images/pay-visa.svg" alt="">         
                       <div class="accordion-content">
-                        <form class="flex column gap-30 pd-0-30" action="">
+                        <form class="flex column gap-30 pd-0-30" id="pay-with-card-form">
 
                           <div class="form-box">
                             <label for="card-number">Card number</label>
@@ -281,7 +280,7 @@
                             </div>
 
                             <div class="pay-with-card">
-                              <a href="./confirmation.html" class="pay-card-btn btn btn-1 width-100">Pay with card payment</a>
+                              <button type="submit" class="pay-card-btn btn btn-1 width-100">Pay with card payment</button>
                             </div>
 
                           </div>

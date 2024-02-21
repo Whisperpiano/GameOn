@@ -47,7 +47,17 @@ export async function renderCheckout() {
 
 function payButtons() {
   const payWithCardBtn = document.querySelector(".pay-card-btn");
-  payWithCardBtn.addEventListener("click", clearCart);
+  payWithCardBtn.addEventListener("click", function (event) {
+    const form = document.forms["pay-with-card-form"];
+
+    if (form.checkValidity() !== false) {
+      event.preventDefault();
+      clearCart();
+      window.location.href = "confirmation.html";
+    } else {
+      return;
+    }
+  });
 
   const payWithPaypalBtn = document.querySelector(".pay-paypal-btn");
   payWithPaypalBtn.addEventListener("click", clearCart);
