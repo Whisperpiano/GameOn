@@ -82,8 +82,8 @@ function createNameLink(title, id) {
 
 function createComment() {
   const paragraph = document.createElement("p");
-  paragraph.textContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+  paragraph.classList.add("review-comment");
+
   return paragraph;
 }
 

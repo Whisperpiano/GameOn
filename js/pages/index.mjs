@@ -176,8 +176,18 @@ async function renderReviews() {
     });
     // Patches to add user names
     const name = document.querySelectorAll(".user-name");
+    const reviewComment = document.querySelectorAll(".review-comment");
     for (let i = 0; i < name.length; i++) {
       name[i].textContent = usersArray[i].username;
+      reviewComment[i].textContent = usersArray[i].video_game_comment;
+    }
+
+    // Patches to add user names in responsive view
+    const reviewCommentResponsive = document.querySelectorAll(
+      ".res-reviews__comment"
+    );
+    for (let i = 0; i < reviewCommentResponsive.length; i++) {
+      reviewCommentResponsive[i].textContent = usersArray[i].video_game_comment;
     }
   } catch (error) {
     if (error instanceof RenderError) {

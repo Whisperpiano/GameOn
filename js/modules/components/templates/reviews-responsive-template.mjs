@@ -68,6 +68,10 @@ function createReviewInfoContainer() {
 
 function createComment() {
   const comment = document.createElement("p");
+  comment.classList.add("res-reviews__comment");
+  comment.style.overflow = "hidden";
+  comment.style.textOverflow = "ellipsis";
+  comment.style.whiteSpace = "nowrap";
   comment.textContent =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.";
   return comment;

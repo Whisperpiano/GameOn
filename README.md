@@ -78,11 +78,12 @@ DONE
 - [x] Product page: addtocart btn
 - [x] Product page: cartspan
 - [x] SEARCHBAR
+- [x] Checkout: forms
+- [x] add span cart in responsive
 
 URGENT
 
-- [ ] Checkout: forms
-- [ ] add span cart in responsive
+- [ ] Home page: show more buttons
 
 OPTIONAL
 
