@@ -1,4 +1,5 @@
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
+import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
 
 function updateNumberOrderSpan() {
   const orderNumberSpan = document.querySelector(".order-number");
@@ -20,6 +21,7 @@ function main() {
   updateNumberOrderSpan();
   filterByPlatform();
   renderSearchBar();
+  updateWishlist();
 }
 
 main();

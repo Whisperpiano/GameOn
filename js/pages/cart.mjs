@@ -6,6 +6,7 @@ import {
 } from "../modules/components/templates/cart-template.mjs";
 import { cartEmptyTemplate } from "../modules/components/templates/cart-empty-template.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
+import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
 
 export async function renderCart() {
   try {
@@ -98,6 +99,7 @@ function main() {
   renderSummaryCart();
   filterByPlatform();
   renderSearchBar();
+  updateWishlist();
 }
 
 main();

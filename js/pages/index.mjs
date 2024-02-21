@@ -24,6 +24,7 @@ import {
 } from "../modules/components/templates/reviews-responsive-template.mjs";
 import { compareValues } from "../modules/utils/compare-values.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
+import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
 
 async function renderMainSlider() {
   try {
@@ -304,6 +305,7 @@ function main() {
   renderReviewsSliderResponsive();
   filterByPlatform();
   renderSearchBar();
+  updateWishlist();
 }
 
 main();

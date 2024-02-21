@@ -1,6 +1,7 @@
 import { getPercentage } from "../../utils/calculate-percentage.mjs";
 import { capitalizeFirstLetter } from "../capitalize-first-letter.mjs";
 import { increment } from "../cart-functions.mjs";
+import { addToWishlist } from "../wishlist-functions.mjs";
 
 export function productPanelTemplate(
   id,
@@ -22,6 +23,7 @@ export function productPanelTemplate(
   const smallPicture1 = updateSmallPicture1(image, title);
   addToCartBtn(id);
   addToCartBtnResponsive(id);
+  addToWishListhBtn(id);
 }
 
 function createMainPicture(image, title) {
@@ -90,6 +92,14 @@ function addToCartBtnResponsive(id) {
     increment(id);
   });
   return addToCartBtn;
+}
+
+function addToWishListhBtn(id) {
+  const addToWishListBtn = document.querySelector(`.add-to-wish`);
+  addToWishListBtn.addEventListener("click", () => {
+    addToWishlist(id);
+  });
+  return addToWishListBtn;
 }
 
 //* Slider

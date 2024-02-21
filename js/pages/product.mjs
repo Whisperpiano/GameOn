@@ -13,6 +13,7 @@ import {
   createStarsLink,
   createRandomStars,
 } from "../modules/components/templates/main-slider-template.mjs";
+import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
 
 async function renderProductBannerTemplate() {
   try {
@@ -201,6 +202,7 @@ function main() {
   calculateTotal();
   renderSearchBar();
   renderProductReviews();
+  updateWishlist();
 }
 
 main();

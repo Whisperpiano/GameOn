@@ -1,5 +1,6 @@
 import { randomNumber } from "../../utils/random-numbers.mjs";
 import { increment } from "../cart-functions.mjs";
+import { addToWishlist, updateWishlist } from "../wishlist-functions.mjs";
 
 export const mainSliderContainer = document.querySelector(".slider-header");
 
@@ -39,7 +40,7 @@ export function mainSliderTemplate(
   const gameDescription = createGameDescription(description);
   const slideButtonsContainer = createSlideButtonsContainer();
   const slideAddToCartButton = createSlideAddToCartButton(id);
-  const slideAddToWishButton = createSlideAddToWishButton();
+  const slideAddToWishButton = createSlideAddToWishButton(id);
 
   slideContentTop.append(onSaleSpan, platformsContainer);
   gameName.appendChild(gameNameLink);
@@ -234,11 +235,15 @@ export function createSlideAddToCartButton(id) {
   return slideAddToCartButton;
 }
 
-export function createSlideAddToWishButton() {
+export function createSlideAddToWishButton(id) {
   const slideAddToWishButton = document.createElement("button");
   slideAddToWishButton.type = "button";
   slideAddToWishButton.name = "addToFavBtn";
   slideAddToWishButton.classList.add("btn", "btn-2", "width-100", "heart-icon");
   slideAddToWishButton.textContent = "Add to wishlist";
+  slideAddToWishButton.addEventListener("click", (event) => {
+    addToWishlist(id);
+    updateWishlist(id);
+  });
   return slideAddToWishButton;
 }

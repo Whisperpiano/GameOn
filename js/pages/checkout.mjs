@@ -1,6 +1,7 @@
 import { data } from "../modules/services/api-fetch.mjs";
 import { cart, clearCart } from "../modules/components/cart-functions.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
+import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
 
 export async function renderCheckout() {
   const summary = document.querySelector(".summary");
@@ -85,6 +86,7 @@ function main() {
   filterByPlatform();
   payButtons();
   renderSearchBar();
+  updateWishlist();
 }
 
 main();

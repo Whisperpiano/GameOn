@@ -1,6 +1,7 @@
 import { data } from "../modules/services/api-fetch.mjs";
 import { searchPageTemplate } from "../modules/components/templates/search-page-template.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
+import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
 
 export async function renderSearchPage() {
   try {
@@ -66,6 +67,7 @@ function main() {
   renderSearchPage();
   filterByPlatform();
   renderSearchBar();
+  updateWishlist();
 }
 
 main();
