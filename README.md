@@ -80,15 +80,12 @@ DONE
 - [x] SEARCHBAR
 - [x] Checkout: forms
 - [x] add span cart in responsive
-
-URGENT
-
-- [ ] Home page: show more buttons
+- [x] Home page: show more buttons
 
 OPTIONAL
 
 - [x] Product page: make dynamic stars
 - [x] Product page: random reviews
-- [ ] Product page: next and prev buttons
+- [x] Product page: next and prev buttons
 - [x] Product page : like dislike buttons
 - [x] Product page/ Home page: add to wishlist

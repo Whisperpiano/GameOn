@@ -126,6 +126,42 @@ function nextButton() {
   const images = document.querySelectorAll(
     "#small-picture-1, #small-picture-2, #small-picture-3, #small-picture-4"
   );
+  nextButton.addEventListener("click", () => {
+    for (let i = 0; i < images.length; i++) {
+      if (mainImage.src === images[i].src) {
+        if (i === images.length - 1) {
+          mainImage.src = images[0].src;
+          break;
+        } else {
+          mainImage.src = images[i + 1].src;
+          break;
+        }
+      }
+    }
+  });
 }
 
 nextButton();
+
+function previousButton() {
+  const previousButton = document.querySelector("#prev-btn");
+  const mainImage = document.querySelector("#main-picture");
+  const images = document.querySelectorAll(
+    "#small-picture-1, #small-picture-2, #small-picture-3, #small-picture-4"
+  );
+  previousButton.addEventListener("click", () => {
+    for (let i = 0; i < images.length; i++) {
+      if (mainImage.src === images[i].src) {
+        if (i === 0) {
+          mainImage.src = images[images.length - 1].src;
+          break;
+        } else {
+          mainImage.src = images[i - 1].src;
+          break;
+        }
+      }
+    }
+  });
+}
+
+previousButton();
