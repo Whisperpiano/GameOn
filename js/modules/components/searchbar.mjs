@@ -28,7 +28,6 @@ export async function renderSearchBar() {
 
 function filterGames(gamesArray, searchValue) {
   return gamesArray.filter((game) => {
-    console.log(game.tags[0].toLowerCase());
     return (
       game.title.toLowerCase().includes(searchValue) ||
       game.genre.toLowerCase().includes(searchValue) ||
@@ -55,6 +54,12 @@ function redirectToSearchPage(searchValue) {
   }
   if (window.location.href.includes("search/index.html")) {
     window.location.href = `./index.html?platform=${searchValue.toLowerCase()}`;
+  }
+  if (window.location.href.includes('contact/index.html')){
+    window.location.href = `../search/index.html?platform=${searchValue.toLowerCase()}`
+  }
+  if (window.location.href.includes('about/index.html')){
+    window.location.href = `../search/index.html?platform=${searchValue.toLowerCase()}`
   }
 }
 

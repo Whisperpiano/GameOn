@@ -17,6 +17,7 @@
     />
     <script type="module" src="../../js/modules/components/cart-functions.mjs"></script>
     <script type="module" src="../../js/modules/components/wishlist-functions.mjs"></script>
+    <script type="module" src="../../js/pages/about.mjs"></script>
   </head>
   <body>
          
@@ -29,17 +30,17 @@
           <div class="menu h5">
             <nav class="filter-platform-nav">
               <ul class="flex">
-                <li class="pd-30"><a href="../search/index.html">PC</a></li>
-                <li class="pd-30"><a href="../search/index.html"> Playstation</a></li>
-                <li class="pd-30"><a href="../search/index.html">Xbox</a></li>
-                <li class="pd-30"><a href="../search/index.html">Nintendo</a></li>
+                <li class="pd-30"><a class="filter-pc" href="./search/index.html">PC</a></li>
+                <li class="pd-30"><a class="filter-playstation" href="./search/index.html"> Playstation</a></li>
+                <li class="pd-30"><a class="filter-xbox" href="./search/index.html">Xbox</a></li>
+                <li class="pd-30"><a class="filter-nintendo" href="./search/index.html">Nintendo</a></li>
               </ul>
             </nav>
 
             <search>
-              <form action="#" class="search-bar">
-                <input type="search" placeholder="Minecraft, RPG, multiplayer..."/>
-                <button class="search-icon" type="submit"></button>
+              <form name="searchbar" action="#" class="search-bar">
+                <input id="searchbar-input" type="search" placeholder="Minecraft, RPG, multiplayer..."/>
+                <button id="searchbar-btn" class="search-icon" type="submit"></button>
               </form>
             </search>
           </div>
@@ -173,6 +174,12 @@
     </header>
     
       <main class="about-us">
+
+        <section class="preloader__container">
+          <div id="preloader">
+            <span class="loader"></span>
+          </div>
+        </section>
 
         <section class="pageheader relative border-bottom">
           <div class="about-us__text main flex column align-content-center text-center gap-40">

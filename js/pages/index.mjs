@@ -12,6 +12,7 @@ import { compareValues } from "../modules/utils/compare-values.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
 import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
 import { setFilterLinks, setResponsiveFilterLinks, showMoreAllButtons } from "../modules/components/filter-by-platform.mjs";
+import { sliderFunctions } from "../modules/components/sliders.mjs";
 
 //* Renders the main slider with the favorite games from the API.
 async function renderMainSlider() {
@@ -210,8 +211,6 @@ async function renderReviewsSliderResponsive() {
   }
 }
 
-
-
 //* Renders the main page.
 function main() {
   renderMainSlider();
@@ -225,6 +224,7 @@ function main() {
   showMoreAllButtons("./search/index.html");
   renderSearchBar();
   updateWishlist();
+  sliderFunctions();
 }
 
 main();
