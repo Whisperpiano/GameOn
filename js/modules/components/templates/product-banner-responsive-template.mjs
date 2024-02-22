@@ -1,11 +1,11 @@
 import { getPercentage } from '../../utils/calculate-percentage.mjs';
 import { capitalizeFirstLetter } from '../capitalize-first-letter.mjs';
 
-export function productBannerResponsiveTemplate(id, title, description, genre, released, ageRating, price, discountedPrice, onSale, image, platforms) {
-    const responsiveMainPicture = createResponsiveMainPicture(image, title);
-    const responsiveProductName = createResponsiveProductName(title);
-    const selectPlatform = createResponsivePlatformsOptions(platforms);
-    const updatedPrice = createResponsivePrices(price, discountedPrice);
+export function productBannerResponsiveTemplate({ title, price, discountedPrice, image, platforms }) {
+    createResponsiveMainPicture(image, title);
+    createResponsiveProductName(title);
+    createResponsivePlatformsOptions(platforms);
+    createResponsivePrices(price, discountedPrice);
 }
 
 function createResponsiveMainPicture(image, title) {

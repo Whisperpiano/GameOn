@@ -2,19 +2,7 @@ import { randomNumber } from "../../utils/random-numbers.mjs";
 import { increment } from "../cart-functions.mjs";
 import { addToWishlist, updateWishlist } from "../wishlist-functions.mjs";
 
-export const mainSliderContainer = document.querySelector(".slider-header");
-
-export function mainSliderTemplate(
-  title,
-  description,
-  image,
-  genre,
-  price,
-  discountedPrice,
-  onSale,
-  id,
-  platforms
-) {
+export function mainSliderTemplate({title, description, image, price, discountedPrice, id, platforms}) {
   const platformsArray = Object.entries(platforms);
   const platformsArrayLength = platformsArray.length;
 
@@ -23,11 +11,7 @@ export function mainSliderTemplate(
   const slideContent = createSlideContent();
   const slideContentTop = createSlideContentTop();
   const onSaleSpan = createOnSaleSpan();
-  const platformsContainer = createPlatformsContainer(
-    platformsArray,
-    platformsArrayLength
-  );
-
+  const platformsContainer = createPlatformsContainer(platformsArray,platformsArrayLength);
   const gameInfo = createGameInfo();
   const nameAndPriceContainer = createNameAndPriceContainer();
   const gameName = createGameName();
@@ -48,12 +32,7 @@ export function mainSliderTemplate(
   starsAndPriceBeforeContainer.append(starsContainer, priceBefore);
   starsContainer.appendChild(starsLink);
   slideButtonsContainer.append(slideAddToCartButton, slideAddToWishButton);
-  gameInfo.append(
-    nameAndPriceContainer,
-    starsAndPriceBeforeContainer,
-    gameDescription,
-    slideButtonsContainer
-  );
+  gameInfo.append(nameAndPriceContainer,starsAndPriceBeforeContainer,gameDescription,slideButtonsContainer);
   slideContent.append(slideContentTop, gameInfo);
   slide.append(slideImage, slideContent);
 

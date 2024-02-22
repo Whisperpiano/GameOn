@@ -2,50 +2,45 @@ import { data } from "../modules/services/api-fetch.mjs";
 import { cart, clearCart } from "../modules/components/cart-functions.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
 import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
+import { calculateTotalPriceAfter, calculateTotalPriceBefore } from "../modules/components/templates/cart-summary-template.mjs";
+import { RenderError } from "../modules/utils/errorHandling.mjs";
+import { setFilterLinks } from "../modules/components/filter-by-platform.mjs";
 
-export async function renderCheckout() {
-  const summary = document.querySelector(".summary");
-
+//* Render checkout page
+async function renderCheckout() {
+  
   try {
     const gamesArray = await data();
-
+    // Checck if there is summary in the page.
+    const summary = document.querySelector(".summary");
     if (summary === null) {
       return;
     }
-
+    // Update price before discount
     const summaryPriceBefore = document.querySelector(".summary-price-before");
-    const summaryPriceAfter = document.querySelector(".summary-price-after");
-    const summaryPriceDiscount = document.querySelector(".summary-discount");
-
-    let totalPriceBefore = cart
-      .map((product) => {
-        const { productID, quantity } = product;
-        const findGame = gamesArray.find((game) => game.id === productID);
-
-        return quantity * findGame.price;
-      })
-      .reduce((x, y) => x + y, 0);
-
+    const totalPriceBefore = calculateTotalPriceBefore(cart, gamesArray);
     summaryPriceBefore.textContent = `$${totalPriceBefore.toFixed(2)}`;
 
-    let totalPriceAfter = cart
-      .map((product) => {
-        const { productID, quantity } = product;
-        const findGame = gamesArray.find((game) => game.id === productID);
-
-        return quantity * findGame.discountedPrice;
-      })
-      .reduce((x, y) => x + y, 0);
-
+    // Update price after discount
+    const summaryPriceAfter = document.querySelector(".summary-price-after");
+    const totalPriceAfter = calculateTotalPriceAfter(cart, gamesArray);
     summaryPriceAfter.textContent = `$${totalPriceAfter.toFixed(2)}`;
 
+    // Update discount
+    const summaryPriceDiscount = document.querySelector(".summary-discount");
     let totalDiscount = totalPriceBefore - totalPriceAfter;
     summaryPriceDiscount.textContent = `-$${totalDiscount.toFixed(2)}`;
+
   } catch (error) {
-    console.log(error);
+    if (error instanceof RenderError) {
+      console.error(`${error.name}: ${error.message}`);
+    } else {
+      console.error(error);
+    }
   }
 }
 
+//* Payment buttons
 function payButtons() {
   const payWithCardBtn = document.querySelector(".pay-card-btn");
   payWithCardBtn.addEventListener("click", function (event) {
@@ -70,20 +65,9 @@ function payButtons() {
   payBtnResponsive.addEventListener("click", clearCart);
 }
 
-function filterByPlatform() {
-  const filterPC = document.querySelector(".filter-pc");
-  filterPC.href = "../../search/index.html?platform=steam";
-  const filterPlaystation = document.querySelector(".filter-playstation");
-  filterPlaystation.href = "../../search/index.html?platform=playstation";
-  const filterXbox = document.querySelector(".filter-xbox");
-  filterXbox.href = "../../search/index.html?platform=xbox";
-  const filterNintendo = document.querySelector(".filter-nintendo");
-  filterNintendo.href = "../../search/index.html?platform=nintendo";
-}
-
 function main() {
   renderCheckout();
-  filterByPlatform();
+  setFilterLinks("../../search/index.html");
   payButtons();
   renderSearchBar();
   updateWishlist();

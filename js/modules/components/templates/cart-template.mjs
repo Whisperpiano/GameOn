@@ -1,14 +1,6 @@
 import { getPercentage } from "../../utils/calculate-percentage.mjs";
-import {
-  cart,
-  increment,
-  decrement,
-  updateCart,
-  calculateTotal,
-  removeItemFromCart,
-} from "../cart-functions.mjs";
-import { renderCart, renderSummaryCart } from "../../../pages/cart.mjs";
-import { hideLoader, showLoader } from "../loader.mjs";
+import { increment, decrement, removeItemFromCart } from "../cart-functions.mjs";
+import { renderCart, updateSummaryCart } from "../../../pages/cart.mjs";
 
 export function cartTemplate(findGame, product) {
   const cartContainer = document.querySelector(".cart-items");
@@ -16,11 +8,11 @@ export function cartTemplate(findGame, product) {
   const divContainer = createDivContainer();
   const leftContainer = createLeftContainer();
   const imageContainer = createImageContainer();
-  const imageLink = createImageLink();
+  const imageLink = createImageLink(findGame.id, findGame.title);
   const image = createImage(findGame.image, findGame.title);
   const infoContainer = createInfoContainer();
   const titleContainer = createTitleContainer();
-  const titleLink = createTitleLink();
+  const titleLink = createTitleLink(findGame.id, findGame.title);
   const title = createTitle(findGame.title);
   const platformSpan = createPlatformSpan();
   const zoneSpan = createZoneSpan();
@@ -30,61 +22,30 @@ export function cartTemplate(findGame, product) {
   const quantityResponsiveMarkContainer = createQuantityMarkContainer();
   const quantityResponsiveMark = createQuantityMark(product.quantity);
   const plusResponsiveContainer = createPlusContainer();
-  const plusResponsiveButton = createPlusButton(
-    product.productID,
-    product.quantity,
-    product
-  );
+  const plusResponsiveButton = createPlusButton(product.productID,product.quantity,product);
   const midContainer = createMidContainer();
   const minusContainer = createMinusContainer();
   const minusButton = createMinusButton(product.productID);
   const quantityMarkContainer = createQuantityMarkContainer();
   const quantityMark = createQuantityMark(product.quantity);
   const plusContainer = createPlusContainer();
-  const plusButton = createPlusButton(
-    product.productID,
-    product.quantity,
-    product
-  );
+  const plusButton = createPlusButton(product.productID,product.quantity,product);
   const rightContainer = createRightContainer();
-  const priceBeforeSpan = createPriceBeforeSpan(
-    findGame.price,
-    findGame.discountedPrice,
-    product.quantity
-  );
-  const discountSpan = createDiscountSpan(
-    findGame.price,
-    findGame.discountedPrice
-  );
-  const actualPrice = createActualPrice(
-    findGame.discountedPrice,
-    product.quantity
-  );
+  const priceBeforeSpan = createPriceBeforeSpan(findGame.price,findGame.discountedPrice,product.quantity);
+  const discountSpan = createDiscountSpan(findGame.price,findGame.discountedPrice);
+  const actualPrice = createActualPrice(findGame.discountedPrice,product.quantity);
   const removeButton = createRemoveButton(product.productID);
 
   cartContainer.append(article);
   article.appendChild(divContainer);
-  divContainer.append(
-    leftContainer,
-    midContainer,
-    rightContainer,
-    removeButton
-  );
-  leftContainer.append(
-    imageContainer,
-    infoContainer,
-    quantityResponsiveContainer
-  );
+  divContainer.append(leftContainer,midContainer,rightContainer,removeButton);
+  leftContainer.append(imageContainer,infoContainer,quantityResponsiveContainer);
   imageContainer.appendChild(imageLink);
   imageLink.appendChild(image);
   infoContainer.append(titleContainer);
   titleContainer.append(titleLink, platformSpan, zoneSpan);
   titleLink.appendChild(title);
-  quantityResponsiveContainer.append(
-    minusResponsiveContainer,
-    quantityResponsiveMarkContainer,
-    plusResponsiveContainer
-  );
+  quantityResponsiveContainer.append(minusResponsiveContainer,quantityResponsiveMarkContainer,plusResponsiveContainer);
   minusResponsiveContainer.appendChild(minusResponsiveButton);
   quantityResponsiveMarkContainer.appendChild(quantityResponsiveMark);
   plusResponsiveContainer.appendChild(plusResponsiveButton);
@@ -103,7 +64,6 @@ export function removeEmptyCart() {
 }
 
 // Next, create the item cart template.
-// prettier-ignore
 
 function createArticle() {
   const createArticle = document.createElement("article");
@@ -141,10 +101,10 @@ function createImageContainer() {
   return createImageContainer;
 }
 
-function createImageLink() {
+function createImageLink(id, title) {
   const createImageLink = document.createElement("a");
   createImageLink.classList.add("name-hover");
-  createImageLink.href = "#"; //! ADD LINK
+  createImageLink.href = `../product/index.html?product=${title}&id=${id}`;
   return createImageLink;
 }
 
@@ -172,10 +132,10 @@ function createTitleContainer() {
   return createTitleContainer;
 }
 
-function createTitleLink() {
+function createTitleLink(id, title) {
   const createTitleLink = document.createElement("a");
   createTitleLink.classList.add("name-hover");
-  createTitleLink.href = "#"; //! ADD LINK
+  createTitleLink.href = `../product/index.html?product=${title}&id=${id}`;
   return createTitleLink;
 }
 
@@ -223,7 +183,7 @@ function createMinusButton(id) {
     decrement(id);
     cartitems.innerHTML = "";
     renderCart();
-    renderSummaryCart();
+    updateSummaryCart();
   });
   return createMinusButton;
 }
@@ -256,7 +216,7 @@ function createPlusButton(id, quantity, product) {
     increment(id);
     cartitems.innerHTML = "";
     renderCart();
-    renderSummaryCart();
+    updateSummaryCart();
   });
   return createPlusButton;
 }
@@ -328,7 +288,7 @@ function createRemoveButton(id) {
     removeItemFromCart(id);
     cartitems.innerHTML = "";
     renderCart();
-    renderSummaryCart();
+    updateSummaryCart();
   });
   return createRemoveButton;
 }

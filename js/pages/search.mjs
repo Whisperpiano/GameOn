@@ -2,15 +2,20 @@ import { data } from "../modules/services/api-fetch.mjs";
 import { searchPageTemplate } from "../modules/components/templates/search-page-template.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
 import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
+import { setFilterLinks } from "../modules/components/filter-by-platform.mjs";
 
 export async function renderSearchPage() {
   try {
+    // Get product ID from URL
     const urlString = window.location.search;
     const searchPlatform = new URLSearchParams(urlString).get("platform");
     const headline = document.querySelector(".headline-search-span");
-    headline.textContent = `${searchPlatform ? searchPlatform : ""}`;
     const gamesArray = await data();
 
+    // Update headline
+    headline.textContent = `${searchPlatform ? searchPlatform : ""}`;
+
+    // Filter games by title, genre, or tags
     const filteredGames = gamesArray.filter((game) => {
       return (
         searchPlatform &&
@@ -20,53 +25,24 @@ export async function renderSearchPage() {
           game.tags[0].toLowerCase().includes(searchPlatform.toLowerCase()))
       );
     });
-
-    const renderSearch = filteredGames.map((game) => {
-      const {
-        title,
-        image,
-        genre,
-        description,
-        price,
-        discountedPrice,
-        onSale,
-        id,
-        platforms,
-      } = game;
-      return searchPageTemplate(
-        title,
-        description,
-        image,
-        genre,
-        price,
-        discountedPrice,
-        onSale,
-        id,
-        platforms
-      );
+    
+    // Render search page
+    const renderSearch = filteredGames.forEach((game) => {
+      return searchPageTemplate(game);
     });
-  } catch (error) {
-    console.log(error);
-  }
-}
 
-function filterByPlatform() {
-  const filterPC = document.querySelector(".filter-pc");
-  filterPC.href = "./index.html?platform=steam";
-  const filterPlaystation = document.querySelector(".filter-playstation");
-  filterPlaystation.href = "./index.html?platform=playstation";
-  const filterXbox = document.querySelector(".filter-xbox");
-  filterXbox.href = "./index.html?platform=xbox";
-  const filterNintendo = document.querySelector(".filter-nintendo");
-  filterNintendo.href = "./index.html?platform=nintendo";
-  const filterXboxResponsive = document.querySelector(
-    ".filter-xbox-responsive"
-  );
+  } catch (error) {
+    if (error instanceof RenderError) {
+      console.error(`${error.name}: ${error.message}`);
+    } else {
+      console.error(error);
+    }
+  }
 }
 
 function main() {
   renderSearchPage();
-  filterByPlatform();
+  setFilterLinks("./index.html");
   renderSearchBar();
   updateWishlist();
 }

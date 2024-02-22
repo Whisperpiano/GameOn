@@ -1,15 +1,7 @@
-import {
-  createStarsContainer,
-  createStarsLink,
-  createRandomStars,
-} from "./main-slider-template.mjs";
-import { randomTime } from "../../utils/random-time.mjs";
+import { createStarsContainer, createStarsLink } from "./main-slider-template.mjs";
 
-export const responsiveReviewsSlideContainer = document.querySelector(
-  ".res-reviews__container"
-);
 
-export function responsiveReviewsSliderTemplate(title, image, id, time) {
+export function responsiveReviewsSliderTemplate({ title, image, id, time }) {
   const reviewContainer = createReviewContainer();
   const imageContainer = createImageContainer();
   const imageLink = createImageLink(title, id);
@@ -25,6 +17,7 @@ export function responsiveReviewsSliderTemplate(title, image, id, time) {
   starsContainer.appendChild(starsLink);
   reviewInfoContainer.append(starsContainer, comment, timeSpan);
   reviewContainer.append(imageContainer, reviewInfoContainer);
+
   return reviewContainer;
 }
 
@@ -72,8 +65,6 @@ function createComment() {
   comment.style.overflow = "hidden";
   comment.style.textOverflow = "ellipsis";
   comment.style.whiteSpace = "nowrap";
-  comment.textContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.";
   return comment;
 }
 

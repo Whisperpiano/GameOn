@@ -1,13 +1,9 @@
 import { getPercentage } from "../../utils/calculate-percentage.mjs";
 import { increment } from "../cart-functions.mjs";
 
-export const bestsellerContainer = document.querySelector(
-  ".bestseller__container"
-);
-
 export function gameTemplate(
-  name,
-  imageURL,
+  title,
+  image,
   id,
   price,
   discountedPrice,
@@ -18,22 +14,19 @@ export function gameTemplate(
 
   const gameContainer = createGameContainer();
   const topContainer = createTopContainer();
-  const link = createLink(name, id);
-  const picture = createPicture(imageURL, name);
-  const platformsContainer = createPlatformsContainer(
-    platformsArray,
-    platformsArrayLength
-  );
+  const link = createLink(title, id);
+  const picture = createPicture(image, title);
+  const platformsContainer = createPlatformsContainer(platformsArray,platformsArrayLength);
   const discountContainer = createDiscountContainer(price, discountedPrice);
   const overlayContainer = createOverlayContainer();
   const overlayButtonsContainer = createOverlayButtonsContainer();
   const addToCartLink = createAddToCartLink();
   const addToCartBtn = createAddToCartButton(id);
-  const viewLink = createViewLink(name, id);
+  const viewLink = createViewLink(title, id);
   const viewBtn = createViewButton();
   const bottomContainer = createBottomContainer();
-  const bottomLink = createBottomLink(name, id);
-  const itemTitle = createItemTitle(name);
+  const bottomLink = createBottomLink(title, id);
+  const itemTitle = createItemTitle(title);
   const itemPrice = createItemPrice(discountedPrice);
 
   addToCartLink.appendChild(addToCartBtn);

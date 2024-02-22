@@ -1,13 +1,6 @@
-import { randomTime } from "../../utils/random-time.mjs";
-import {
-  createStarsContainer,
-  createStarsLink,
-  createRandomStars,
-} from "./main-slider-template.mjs";
+import { createStarsContainer, createStarsLink } from "./main-slider-template.mjs";
 
-export const reviewsSliderContainer = document.querySelector("#reviews-slider");
-
-export function reviewsSliderTemplate(title, image, id, time) {
+export function reviewsSliderTemplate({ title, image, id, time }) {
   const reviewsSlider = reviewsArticle(id);
   const imageLink = createLinkAndImage(title, id);
   const reviewImg = createImg(title, image, id);
@@ -83,7 +76,6 @@ function createNameLink(title, id) {
 function createComment() {
   const paragraph = document.createElement("p");
   paragraph.classList.add("review-comment");
-
   return paragraph;
 }
 

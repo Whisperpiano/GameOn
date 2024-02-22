@@ -89,3 +89,4 @@ OPTIONAL
 - [x] Product page: next and prev buttons
 - [x] Product page : like dislike buttons
 - [x] Product page/ Home page: add to wishlist
+- [ ] search bar in about and contact page

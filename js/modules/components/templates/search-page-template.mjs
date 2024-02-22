@@ -1,26 +1,6 @@
-import {
-  createPlatformsContainer,
-  createDiscountContainer,
-  createOverlayContainer,
-  createOverlayButtonsContainer,
-  createAddToCartLink,
-  createAddToCartButton,
-  createViewButton,
-  createItemTitle,
-  createItemPrice,
-} from "./bestseller-template.mjs";
+import { createPlatformsContainer, createDiscountContainer, createOverlayContainer, createOverlayButtonsContainer, createAddToCartLink, createAddToCartButton, createViewButton, createItemTitle, createItemPrice } from "./bestseller-template.mjs";
 
-export function searchPageTemplate(
-  title,
-  description,
-  image,
-  genre,
-  price,
-  discountedPrice,
-  onSale,
-  id,
-  platforms
-) {
+export function searchPageTemplate({ title, image, price, discountedPrice, id, platforms }) {
   const platformsArray = Object.entries(platforms);
   const platformsArrayLength = platformsArray.length;
 
@@ -30,10 +10,7 @@ export function searchPageTemplate(
   const topLink = createTopLink(title, id);
   const pictureContainer = createPictureContainer();
   const img = createImg(title, image);
-  const platformsContainer = createPlatformsContainer(
-    platformsArray,
-    platformsArrayLength
-  );
+  const platformsContainer = createPlatformsContainer(platformsArray,platformsArrayLength);
   const discountContainer = createDiscountContainer(price, discountedPrice);
   const overlayContainer = createOverlayContainer();
   const overlayButtonsContainer = createOverlayButtonsContainer();
@@ -47,25 +24,15 @@ export function searchPageTemplate(
   const itemPrice = createItemPrice(discountedPrice);
 
   pictureContainer.append(img);
-
   overlayContainer.append(overlayButtonsContainer);
   overlayButtonsContainer.append(addToCartLink, viewLink);
   addToCartLink.append(addToCartBtn);
   viewLink.append(viewBtn);
-  topLink.append(
-    pictureContainer,
-    platformsContainer,
-    discountContainer,
-    overlayContainer
-  );
-
+  topLink.append(pictureContainer,platformsContainer,discountContainer,overlayContainer);
   bottomContainer.append(bottomLink, itemPrice);
   bottomLink.append(itemTitle);
-
   topContainer.append(topLink);
-
   itemContainer.append(topContainer, bottomContainer);
-
   searchContainer.append(itemContainer);
 }
 

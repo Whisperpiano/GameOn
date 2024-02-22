@@ -3,21 +3,20 @@ import { RenderError } from "../modules/utils/errorHandling.mjs";
 import { productPanelTemplate } from "../modules/components/templates/product-banner-template.mjs";
 import { productBannerResponsiveTemplate } from "../modules/components/templates/product-banner-responsive-template.mjs";
 import { users } from "../modules/services/users-fetch.mjs";
-import { oneReviewTemplate } from "../modules/components/templates/product-page-reviews-template.mjs";
 import { informationDropDown } from "../modules/components/templates/product-info-dropdown.mjs";
 import { calculateTotal } from "../modules/components/cart-functions.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
-import { randomTime } from "../modules/utils/random-time.mjs";
-import {
-  createStarsContainer,
-  createStarsLink,
-  createRandomStars,
-} from "../modules/components/templates/main-slider-template.mjs";
 import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
 import { likeDislikeBtns } from "../modules/components/like-dislike-btns.mjs";
+import { productSliderFunctions } from "../modules/components/product-slider-functions.mjs";
+import { setFilterLinks } from "../modules/components/filter-by-platform.mjs";
+import { updateUserReviews } from "../modules/components/product-page-reviews.mjs";
 
+
+//* Renders the product banner with the selected game from the API.
 async function renderProductBannerTemplate() {
   try {
+    // Get product ID from URL
     const urlString = window.location.search;
     const productID = new URLSearchParams(urlString).get("id");
     const gamesArray = await data();
@@ -29,44 +28,18 @@ async function renderProductBannerTemplate() {
       );
     }
 
-    const {
-      id,
-      title,
-      description,
-      genre,
-      released,
-      ageRating,
-      price,
-      discountedPrice,
-      onSale,
-      image,
-      platforms,
-    } = gameById;
-
-    const renderGame = productPanelTemplate(
-      id,
-      title,
-      description,
-      genre,
-      released,
-      ageRating,
-      price,
-      discountedPrice,
-      onSale,
-      image,
-      platforms
-    );
-
-    return renderGame;
+    productPanelTemplate(gameById);
+   
   } catch (error) {
     if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error("An unknown error occurred rendering product panel.");
+      console.error(error);
     }
   }
 }
 
+//* Renders the responsive product banner with the selected game from the API.
 async function renderProductBannerResponsiveTemplate() {
   try {
     const urlString = window.location.search;
@@ -80,53 +53,21 @@ async function renderProductBannerResponsiveTemplate() {
       );
     }
 
-    const {
-      id,
-      title,
-      description,
-      genre,
-      released,
-      ageRating,
-      price,
-      discountedPrice,
-      onSale,
-      image,
-      platforms,
-    } = gameById;
+    productBannerResponsiveTemplate(gameById);
 
-    const renderGame = productBannerResponsiveTemplate(
-      id,
-      title,
-      description,
-      genre,
-      released,
-      ageRating,
-      price,
-      discountedPrice,
-      onSale,
-      image,
-      platforms
-    );
-
-    return renderGame;
   } catch (error) {
     if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error(
-        "An unknown error occurred rendering responsive product panel."
-      );
+      console.error(error);
     }
   }
 }
 
+//* Renders the product reviews.
 async function renderProductReviews() {
   try {
-    const userReviewContainer = document.querySelectorAll(".user-review");
     const usersArray = await users();
-    const randomUser = () => {
-      return usersArray[Math.floor(Math.random() * usersArray.length)];
-    };
 
     if (!usersArray) {
       throw new RenderError(
@@ -134,72 +75,23 @@ async function renderProductReviews() {
       );
     }
 
-    const usersAvatars = document.querySelectorAll(".avatar");
-    usersAvatars.forEach((avatar, index) => {
-      avatar.src = usersArray[index].avatar;
-    });
+    updateUserReviews(usersArray);
 
-    const userNicknames = document.querySelectorAll(".user-nickname");
-    userNicknames.forEach((nickname, index) => {
-      nickname.textContent = usersArray[index].username;
-    });
-
-    const userTimeReviews = document.querySelectorAll(".user-time");
-    const randomTimes = [...userTimeReviews].map(() => randomTime());
-    const orderedTimes = randomTimes.sort((a, b) => a - b);
-    userTimeReviews.forEach((userTime, index) => {
-      userTime.textContent = `${orderedTimes[index]} minutes ago`;
-    });
-
-    const userReviews = document.querySelectorAll(".user-quantity");
-    userReviews.forEach((review) => {
-      review.textContent = `Reviews: ${randomTime()}`;
-    });
-
-    const userReviewsTitle = document.querySelectorAll(".review-title");
-    userReviewsTitle.forEach((title, index) => {
-      title.textContent = usersArray[index].comment_title;
-    });
-
-    const userReviewsComment = document.querySelectorAll(".review-comment");
-    userReviewsComment.forEach((comment, index) => {
-      comment.textContent = usersArray[index].video_game_comment;
-    });
-
-    const starsContainer = document.querySelectorAll(".stars-container");
-    starsContainer.forEach((container, index) => {
-      const randomNumber1to5 = Math.floor(Math.random() * 4) + 2;
-      const stars = createRandomStars();
-      for (let i = 0; i < randomNumber1to5; i++) {
-        const star = createRandomStars();
-        container.appendChild(star);
-      }
-    });
   } catch (error) {
     if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error("An unknown error occurred rendering product reviews.");
+      console.error(error);
     }
   }
 }
 
-function filterByPlatform() {
-  const filterPC = document.querySelector(".filter-pc");
-  filterPC.href = "../search/index.html?platform=steam";
-  const filterPlaystation = document.querySelector(".filter-playstation");
-  filterPlaystation.href = "../search/index.html?platform=playstation";
-  const filterXbox = document.querySelector(".filter-xbox");
-  filterXbox.href = "../search/index.html?platform=xbox";
-  const filterNintendo = document.querySelector(".filter-nintendo");
-  filterNintendo.href = "../search/index.html?platform=nintendo";
-}
-
 function main() {
   renderProductBannerTemplate();
+  productSliderFunctions();
+  setFilterLinks("../search/index.html");
   renderProductBannerResponsiveTemplate();
   informationDropDown();
-  filterByPlatform();
   calculateTotal();
   renderSearchBar();
   renderProductReviews();

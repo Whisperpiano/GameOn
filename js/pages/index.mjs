@@ -1,31 +1,19 @@
+// prettier-ignore
 import { data } from "../modules/services/api-fetch.mjs";
-import {
-  gameTemplate,
-  bestsellerContainer,
-} from "../modules/components/templates/bestseller-template.mjs";
-import {
-  mainSliderTemplate,
-  mainSliderContainer,
-} from "../modules/components/templates/main-slider-template.mjs";
-import {
-  reviewsSliderTemplate,
-  reviewsSliderContainer,
-} from "../modules/components/templates/reviews-template.mjs";
-import { RenderError } from "../modules/utils/errorHandling.mjs";
+import { gameTemplate } from "../modules/components/templates/bestseller-template.mjs";
+import { mainSliderTemplate } from "../modules/components/templates/main-slider-template.mjs";
+import { reviewsSliderTemplate } from "../modules/components/templates/reviews-template.mjs";
+import { FetchError, RenderError } from "../modules/utils/errorHandling.mjs";
 import { users } from "../modules/services/users-fetch.mjs";
 import { randomTime } from "../modules/utils/random-time.mjs";
-import {
-  mainSliderResponsiveTemplate,
-  responsiveMainSliderContainer,
-} from "../modules/components/templates/main-slider-responsive-template.mjs";
-import {
-  responsiveReviewsSlideContainer,
-  responsiveReviewsSliderTemplate,
-} from "../modules/components/templates/reviews-responsive-template.mjs";
+import { mainSliderResponsiveTemplate } from "../modules/components/templates/main-slider-responsive-template.mjs";
+import { responsiveReviewsSliderTemplate } from "../modules/components/templates/reviews-responsive-template.mjs";
 import { compareValues } from "../modules/utils/compare-values.mjs";
 import { renderSearchBar } from "../modules/components/searchbar.mjs";
 import { updateWishlist } from "../modules/components/wishlist-functions.mjs";
+import { setFilterLinks, setResponsiveFilterLinks, showMoreAllButtons } from "../modules/components/filter-by-platform.mjs";
 
+//* Renders the main slider with the favorite games from the API.
 async function renderMainSlider() {
   try {
     const gamesArray = await data();
@@ -38,78 +26,47 @@ async function renderMainSlider() {
 
     const favoriteGames = gamesArray.filter((game) => game.favorite === true);
 
-    favoriteGames.map((game) => {
-      const {
-        title,
-        image,
-        genre,
-        description,
-        price,
-        discountedPrice,
-        onSale,
-        id,
-        platforms,
-      } = game;
-      const favoriteGameElement = mainSliderTemplate(
-        title,
-        description,
-        image,
-        genre,
-        price,
-        discountedPrice,
-        onSale,
-        id,
-        platforms
-      );
+    for (const game of favoriteGames) {
+      const mainSliderContainer = document.querySelector(".slider-header");
+      const favoriteGameElement = mainSliderTemplate(game);
       mainSliderContainer.appendChild(favoriteGameElement);
-    });
+    }
+    
   } catch (error) {
-    if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+    if (error instanceof RenderError || error instanceof FetchError || error instanceof DataError) {
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error("An unknown error occurred rendering main slider..");
+      console.error(error);
     }
   }
 }
+
+//* Renders the bestseller section with the first 6 games from the API.
 async function renderBestseller() {
   try {
-    const gamesArray = await data();
+    const games = await data();
+    const bestsellers = games.slice(0, 6);
+    const bestsellerContainer = document.querySelector(".bestseller__container");
 
-    if (!gamesArray) {
-      throw new RenderError(
-        "Can not render bestseller section. Data received from API is empty or invalid."
-      );
-    }
-
-    const bestsellerArray = gamesArray.slice(0, 6);
-
-    bestsellerArray.map((game) => {
-      const { title, image, id, price, discountedPrice, platforms } = game;
-      const gameElement = gameTemplate(
-        title,
-        image,
-        id,
-        price,
-        discountedPrice,
-        platforms
-      );
+    bestsellers.forEach(({ title, image, id, price, discountedPrice, platforms }) => {
+      const gameElement = gameTemplate(title, image, id, price, discountedPrice, platforms);
       bestsellerContainer.appendChild(gameElement);
     });
   } catch (error) {
     if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error("An unknown error occurred rendering bestseller section.");
+      console.error(error);
     }
   }
 }
 
+//* Renders the new releases section with the next 4 games from the API.
 async function renderNewReleases() {
-  const newReleasesContainer = document.querySelector(
-    ".newreleases__container"
-  );
   try {
     const gamesArray = await data();
+    const newReleasesArray = gamesArray.slice(4, 10);
+    const newReleasesContainer = document.querySelector(".newreleases__container");
 
     if (!gamesArray) {
       throw new RenderError(
@@ -117,43 +74,34 @@ async function renderNewReleases() {
       );
     }
 
-    const newReleasesArray = gamesArray.slice(4, 10);
-
-    newReleasesArray.map((game) => {
+    newReleasesArray.forEach((game) => {
       const { title, image, id, price, discountedPrice, platforms } = game;
-      const gameElement = gameTemplate(
-        title,
-        image,
-        id,
-        price,
-        discountedPrice,
-        platforms
-      );
+      const gameElement = gameTemplate(title, image, id, price, discountedPrice, platforms);
       newReleasesContainer.appendChild(gameElement);
     });
+
   } catch (error) {
     if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error(
-        "An unknown error occurred rendering new releases section."
-      );
+      console.error("An unknown error occurred rendering new releases section.");
     }
   }
 }
 
+//* Renders the reviews section.
 async function renderReviews() {
   try {
+    // Fetches the games from the Noroff API.
     const gamesArray = await data();
+    const reviewsArray = gamesArray.slice(6, 9);
 
     if (!gamesArray) {
       throw new RenderError(
         "Can not render reviews section. Data received from API is empty or invalid."
       );
     }
-
-    const reviewsArray = gamesArray.slice(6, 9);
-
+    // Fetches the users from the users.json file.
     const usersArray = await users();
 
     if (!usersArray) {
@@ -162,46 +110,51 @@ async function renderReviews() {
       );
     }
 
+    // Adds a random time to each game, and sorts the games by time.
     const newObjectKey = "time";
     reviewsArray.map((game) => {
       game[newObjectKey] = randomTime();
     });
-
     let sortedArray = reviewsArray.sort(compareValues("time"));
 
     // Renders the reviews section.
-    sortedArray.map((game) => {
-      const { title, image, id, time } = game;
-      const reviewElement = reviewsSliderTemplate(title, image, id, time);
+    sortedArray.forEach((game) => {
+      const reviewsSliderContainer = document.querySelector("#reviews-slider");
+      const reviewElement = reviewsSliderTemplate(game);
       reviewsSliderContainer.appendChild(reviewElement);
     });
     // Patches to add user names
-    const name = document.querySelectorAll(".user-name");
-    const reviewComment = document.querySelectorAll(".review-comment");
-    for (let i = 0; i < name.length; i++) {
-      name[i].textContent = usersArray[i].username;
-      reviewComment[i].textContent = usersArray[i].video_game_comment;
-    }
+    const nameElements = document.querySelectorAll(".user-name");
+    const reviewCommentElements = document.querySelectorAll(".review-comment");
+    const reviewCommentResponsiveElements = document.querySelectorAll(".res-reviews__comment");
 
-    // Patches to add user names in responsive view
-    const reviewCommentResponsive = document.querySelectorAll(
-      ".res-reviews__comment"
-    );
-    for (let i = 0; i < reviewCommentResponsive.length; i++) {
-      reviewCommentResponsive[i].textContent = usersArray[i].video_game_comment;
-    }
+    usersArray.forEach((user, index) => {
+      // In normal mode
+      if (nameElements[index] && reviewCommentElements[index]) {
+        nameElements[index].textContent = user.username;
+        reviewCommentElements[index].textContent = user.video_game_comment;
+      }
+      // In responsive mode
+      if (reviewCommentResponsiveElements[index]) {
+        reviewCommentResponsiveElements[index].textContent = user.video_game_comment;
+      }
+    });
+
   } catch (error) {
     if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error("An unknown error occurred rendering reviews section.");
+      console.error(error);
     }
   }
 }
 
+//* Renders the responsive main slider with the favorite games from the API.
 async function renderMainSliderResponsive() {
   try {
     const gamesArray = await data();
+    const responsiveMainSliderContainer = document.querySelector('.res-slider__container');
+    const favoriteGames = gamesArray.filter((game) => game.favorite === true);
 
     if (!gamesArray) {
       throw new RenderError(
@@ -209,102 +162,57 @@ async function renderMainSliderResponsive() {
       );
     }
 
-    const favoriteGames = gamesArray.filter((game) => game.favorite === true);
-
-    favoriteGames.map((game) => {
-      const { title, image, id } = game;
-      const favoriteGameElement = mainSliderResponsiveTemplate(
-        title,
-        image,
-        id
-      );
+    favoriteGames.forEach((game) => {
+      const favoriteGameElement = mainSliderResponsiveTemplate(game);
       responsiveMainSliderContainer.appendChild(favoriteGameElement);
     });
+
   } catch (error) {
     if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error(
-        "An unknown error occurred rendering responsive main slider."
-      );
+      console.error(error);
     }
   }
 }
 
+//* Renders the responsive reviews.
 async function renderReviewsSliderResponsive() {
   try {
     const gamesArray = await data();
+    const reviewsArray = gamesArray.slice(4, 9);
+    const responsiveReviewsSlideContainer = document.querySelector(".res-reviews__container")
 
     if (!gamesArray) {
       throw new RenderError(
         "Can not render responsive reviews section. Data received from API is empty or invalid."
       );
     }
-
-    const reviewsArray = gamesArray.slice(4, 9);
-
+    // Adds a random time to each game, and sorts the games by time.
     const newObjectKey = "time";
     reviewsArray.map((game) => {
       game[newObjectKey] = randomTime();
     });
-
     let sortedArray = reviewsArray.sort(compareValues("time"));
 
-    sortedArray.map((game) => {
-      const { title, image, id, time } = game;
-      const reviewElement = responsiveReviewsSliderTemplate(
-        title,
-        image,
-        id,
-        time
-      );
+    // Renders the reviews section.
+    sortedArray.forEach((game) => {
+      const reviewElement = responsiveReviewsSliderTemplate(game);
       responsiveReviewsSlideContainer.appendChild(reviewElement);
     });
+
   } catch (error) {
     if (error instanceof RenderError) {
-      console.error(`RenderError: ${error.message}`);
+      console.error(`${error.name}: ${error.message}`);
     } else {
-      console.error(
-        "An unknown error occurred rendering responsive reviews section."
-      );
+      console.error(error);
     }
   }
 }
 
-function filterByPlatform() {
-  const filterPC = document.querySelector(".filter-pc");
-  filterPC.href = "./search/index.html?platform=steam";
-  const filterPlaystation = document.querySelector(".filter-playstation");
-  filterPlaystation.href = "./search/index.html?platform=playstation";
-  const filterXbox = document.querySelector(".filter-xbox");
-  filterXbox.href = "./search/index.html?platform=xbox";
-  const filterNintendo = document.querySelector(".filter-nintendo");
-  filterNintendo.href = "./search/index.html?platform=nintendo";
-  const filterXboxResponsive = document.querySelector(
-    ".filter-xbox-responsive"
-  );
-  filterXboxResponsive.href = "./search/index.html?platform=xbox";
-  const filterPlaystationResponsive = document.querySelector(
-    ".filter-playstation-responsive"
-  );
-  filterPlaystationResponsive.href = "./search/index.html?platform=playstation";
-  const filterPCResponsive = document.querySelector(".filter-pc-responsive");
-  filterPCResponsive.href = "./search/index.html?platform=steam";
-  const filterNintendoResponsive = document.querySelector(
-    ".filter-nintendo-responsive"
-  );
-  filterNintendoResponsive.href = "./search/index.html?platform=nintendo";
 
-  const showMoreBestseller = document.querySelector(".show-more-bestseller");
-  showMoreBestseller.href = "./search/index.html?platform=gamehub";
-  const showMoreReleases = document.querySelector(".show-more-new-releases");
-  showMoreReleases.href = "./search/index.html?platform=gamehub";
-  const showAllBest = document.querySelector(".show-all-best");
-  showAllBest.href = "./search/index.html?platform=gamehub";
-  const showAllNew = document.querySelector(".show-all-releases");
-  showAllNew.href = "./search/index.html?platform=gamehub";
-}
 
+//* Renders the main page.
 function main() {
   renderMainSlider();
   renderBestseller();
@@ -312,7 +220,9 @@ function main() {
   renderReviews();
   renderMainSliderResponsive();
   renderReviewsSliderResponsive();
-  filterByPlatform();
+  setFilterLinks("./search/index.html");
+  setResponsiveFilterLinks("./search/index.html");
+  showMoreAllButtons("./search/index.html");
   renderSearchBar();
   updateWishlist();
 }
