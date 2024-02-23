@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="About Game On: Your Gaming Journey Starts Here. Learn more about the team behind your favorite gaming platform. Discover our passion for games and our commitment to providing the best experience for gamers like you. Join us on this exciting adventure.">
-    <title>About Us │ Game On</title>
-    <link rel="stylesheet" href="./css/styles.css"/>
+    <meta name="description" content="Payment Successful: Your Gaming Adventure Begins. Congratulations on a successful payment! Get ready to embark on an exciting gaming journey with your newly acquired treasures. Enjoy the game!">
+
+    <title>Successful payment │ Game On</title>
+
+    <link rel="stylesheet" href="../../../css/styles.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,29 +15,30 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="../../../js/pages/confirmation.mjs"></script>
   </head>
   <body>
-         
+          
     <header class="grey-section border-bottom pd-20">
         
       <section class="mw-1340 flex justify-sb align-items-center">
 
-          <a class="logo" href="index.html"><img src="images/logo.png" alt="Logo - Game On" class="pd-40-0"/></a>
+          <a class="logo" href="../../index.html"><img src="../../../images/logo.png" alt="Logo - Game On" class="pd-40-0"/></a>
 
           <div class="menu h5">
-            <nav>
+            <nav class="filter-platform-nav">
               <ul class="flex">
-                <li class="pd-30"><a href="search.html">PC</a></li>
-                <li class="pd-30"><a href="search.html"> Playstation</a></li>
-                <li class="pd-30"><a href="search.html">Xbox</a></li>
-                <li class="pd-30"><a href="search.html">Nintendo</a></li>
+                <li class="pd-30"><a class="filter-pc" href="../../search/index.html">PC</a></li>
+                <li class="pd-30"><a class="filter-playstation" href="../../search/index.html"> Playstation</a></li>
+                <li class="pd-30"><a class="filter-xbox" href="../../search/index.html">Xbox</a></li>
+                <li class="pd-30"><a class="filter-nintendo" href="../../search/index.html">Nintendo</a></li>
               </ul>
             </nav>
 
             <search>
-              <form action="#" class="search-bar">
-                <input type="search" placeholder="Minecraft, RPG, multiplayer..."/>
-                <button class="search-icon" type="submit"></button>
+              <form name="searchbar" action="#" class="search-bar">
+                <input id="searchbar-input" type="search" placeholder="Minecraft, RPG, multiplayer..."/>
+                <button id="searchbar-btn" class="search-icon" type="submit"></button>
               </form>
             </search>
           </div>
@@ -48,13 +51,13 @@
                 </li>
 
                 <li class="btn btn-2 relative">
-                  <a href="cart.html" class="cart"></a>
+                  <a href="../../cart/index.html" class="cart"></a>
                   <span class="cantidad">0</span>
                 </li>
 
                 <li class="btn btn-2 relative">
                   <a href="#" class="fav"></a>
-                  <span class="cantidad">0</span>
+                  <span class="cantidad" id="wishlist-span"></span>
                 </li>
               </ul>
             </nav>
@@ -167,13 +170,11 @@
       </section>
 
     </header>
-    
-      <main class="about-us">
 
-        <section class="pageheader relative border-bottom">
-          <div class="about-us__text main flex column align-content-center text-center gap-40">
-            <h1 class="btn btn-4 pd-10-20">We play game on</h1>
-            <h3>Affordable prices and wide selection of games.</h3>
+      <main class="main-success success text-center">
+        <section class="preloader__container">
+          <div id="preloader">
+            <span class="loader"></span>
           </div>
         </section>
 
@@ -183,11 +184,11 @@
 
             <ul class="flex justify-sa">
               
-              <li><a href="index.html" class="app-menu-home"></a></li>
+              <li><a href="../../index.html" class="app-menu-home"></a></li>
               
-              <li><a href="search.html" class="app-menu-search"></a></li>
+              <li><a href="../../search/index.html" class="app-menu-search"></a></li>
               
-              <li><a href="cart.html" class="app-menu-cart"></a></li>
+              <li><a href="../../cart/index.html" class="app-menu-cart relative"><span id="responsive-cart-span"></span></a></li>
               
               <li><a href="#dialog" class="app-menu-user"></a></li>
 
@@ -197,104 +198,24 @@
 
         </section>
 
-        <section class="about mw-1340 text-center pd-90-0 ">
-           
-                    <h3> We are Game On</h3>
-                    <p class="h5 pd-top-50">Lorem ipsum dolor sit amet consectetur. Lorem fusce tincidunt quam amet tellus. Laoreet augue elementum gravida ac. Posuere volutpat nulla consectetur nisi. Risus hendrerit nunc mi etiam auctor. Nunc proin quisque iaculis diam proin tortor cras. Euismod vestibulum facilisis in ornare risus ac lectus.
-                    At sed sed sapien cras at. Tincidunt varius at consectetur egestas. Ligula interdum fringilla cursus euismod duis velit. Lectus mattis sociis montes mauris. Bibendum nunc dictumst integer nec id mi gravida auctor neque. Aliquet id maecenas fames aliquam massa turpis libero. Nisi egestas porttitor ultrices fermentum ultrices. Sit velit integer dolor massa urna pharetra. Nibh donec in fusce praesent pellentesque arcu.
-                    Nulla sodales a vestibulum quis. Erat netus nisi metus at sit nibh ultrices vitae. Turpis vitae nisl sit sit morbi et ipsum lobortis augue. Pharetra venenatis duis iaculis senectus. At auctor integer in hendrerit urna ultricies. Risus consectetur cursus lacus morbi augue id facilisis ut. Urna tortor tempor ut facilisis tincidunt vitae eu. Cursus magna porttitor posuere massa aliquam lorem nulla. Tempus penatibus sed neque faucibus tellus elementum. Sit aliquam arcu non tellus egestas quis elit morbi. Eleifend pulvinar cursus urna gravida pretium non.
-                    Malesuada pharetra bibendum eget aliquet eu pellentesque bibendum. Vulputate quis pulvinar et lorem et condimentum urna amet. Aenean iaculis in pharetra tortor blandit nec commodo. Potenti ut nec fringilla augue aliquam congue. Enim ut quisque turpis mauris nulla enim odio hac. Varius lacinia sed sed ullamcorper..</p>
+        <div class="icon flex center pd-20-0">
+            <img src="../../../images/success-icon.svg" alt="">
+        </div>
+        
 
-        </section>
+        <h3 class="pd-20-0">Thank you for your purchase!</h3>
 
-        <section class="our-team">
+        <p>Your order number is: <span class="order-number">00000000012</span></p>
 
-            <article class="flex border-top-bottom">
+        <p class="pd-top-10">We will send you an order confirmation with details  to your email</p>
 
-                <div class="col-6 background "><img src="" alt="">
+        <a href="../../index.html" class="continue-shopping width-100">
 
-                </div>
-                <div class="col-4 pd-30 grey-section">
-
-                  <h3>Our team</h3>
-
-                  <div class="person border-bottom pd-30-0">
-                    <h4>Software engineer (PHP)</h4>
-                    <div class="flex justify-sb h5">
-                      <p>Diego Garcia Mendoza</p>
-                      <p>Argentina - Buenos Aires</p>
-                    </div>
-                  </div>
-
-                  <div class="person border-bottom pd-30-0">
-                    <h4>Technology</h4>
-                    <div class="flex justify-sb h5">
-                      <p>Emiy Chen-Lin</p>
-                      <p>United States - Washington D.C</p>
-                    </div>
-                  </div>
-
-                  <div class="person border-bottom pd-30-0">
-                    <h4>Marketing & communications</h4>
-                    <div class="flex justify-sb h5">
-                      <p>Agnieszka Jankowska</p>
-                      <p>Poland - Krakow</p>
-                    </div>
-                  </div>
-
-                  <div class="person border-bottom pd-30-0">
-                    <h4>UX/UI Designer</h4>
-                    <div class="flex justify-sb h5">
-                      <p>Jesus Alberola Herrero</p>
-                      <p>Valencia - Spain</p>
-                    </div>
-                  </div>
-
-                  <div class="person pd-30-0">
-                    <h4>Senior software engineer</h4>
-                    <div class="flex justify-sb h5">
-                      <p>Sarah Kim</p>
-                      <p>UK - London</p>
-                    </div>
-                  </div>
-
-                </div>
+          <button type="button" class="btn btn-1 width-100">Continue shopping<button>
             
-                  
-            </article>
+        </a>
+  
 
-        </section>
-
-        <section class="values text-center pd-90-0">
-
-          <h2>What we stand for?</h2>
-          <p class="mw-992 pd-50">Lorem ipsum dolor sit amet consectetur. Mattis ante orci est id. Felis aliquet aliquam sed ac. Malesuada tincidunt in ac mattis integer. Purus interdum adipiscing nec accumsan nam.</p>
-
-          <article class="flex center gap-70 pd">
-
-            <div class="value flex column grey-section gap-30 pd-30">
-              <img src="images/value-1.svg" alt="User satisfaction icon">
-              <h3>User satisfaction</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-            </div>
-            
-            <div class="value flex column grey-section gap-30 pd-30">
-              <img src="images/value-2.svg" alt="User satisfaction icon">
-              <h3>Wide selection of games</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-            </div>
-
-            <div class="value flex column grey-section gap-30 pd-30">
-              <img src="images/value-3.svg" alt="User satisfaction icon">
-              <h3>Best prices</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-            </div>
-
-          </article>
-                    
-
-        </section>
-       
       </main>
 
       <footer class="grey-section border-top">
@@ -304,7 +225,7 @@
             <div>
               <h4>About Game On</h4>
               <ul class="pd-top-10">
-                <li><a class="pd-5-0" href="about.html">About us</a></li>
+                <li><a class="pd-5-0" href="../../about/index.html">About us</a></li>
                 <li><a class="pd-5-0" href="#">Privacy policy</a></li>
                 <li><a class="pd-5-0" href="#">Termns & conditions</a></li>
               </ul>
@@ -319,14 +240,14 @@
             <div>
               <h4>Costumer service</h4>
               <ul class="pd-top-10">
-                <li><a class="pd-5-0" href="contact.html">Support request</a></li>
+                <li><a class="pd-5-0" href="../../contact/index.html">Support request</a></li>
                 <li><a class="pd-5-0" href="#">FAQ</a></li>
               </ul>
             </div>
             <div>
               <h4>Contact us</h4>
               <ul class="pd-top-10">
-                <li><a class="pd-5-0" href="contact.html">Contact us</a></li>
+                <li><a class="pd-5-0" href="../../contact/index.html">Contact us</a></li>
                 <li><a class="pd-5-0" href="#">support@gameon.com</a></li>
                 <li><a class="pd-5-0" href="#">+1 (234) 567 890</a></li>
               </ul>
@@ -343,7 +264,7 @@
 
                 <div class="footer-accordion__content">
                   <ul>
-                    <li><a class="pd-5-0" href="about.html">About us</a></li>
+                    <li><a class="pd-5-0" href="../../about/index.html">About us</a></li>
                     <li><a class="pd-5-0" href="#">Privacy policy</a></li>
                     <li><a class="pd-5-0" href="#">Termns & conditions</a></li>
                   </ul>
@@ -365,7 +286,7 @@
                 <input type="radio" name="footer-accordion" id="costumer-service">
                 <div class="footer-accordion__content">
                   <ul>
-                    <li><a class="pd-5-0" href="#">Support request</a></li>
+                    <li><a class="pd-5-0" href="../../contact/index.html">Support request</a></li>
                     <li><a class="pd-5-0" href="#">FAQ</a></li>
                   </ul>
                 </div>
@@ -375,7 +296,7 @@
                 <input type="radio" name="footer-accordion" id="contact-us">
                 <div class="footer-accordion__content">
                   <ul>
-                    <li><a class="pd-5-0" href="#">Contact us</a></li>
+                    <li><a class="pd-5-0" href="../../contact/index.html">Contact us</a></li>
                     <li><a class="pd-5-0" href="#">support@gameon.com</a></li>
                     <li><a class="pd-5-0" href="#">+1 (234) 567 890</a></li>
                   </ul>
@@ -387,7 +308,7 @@
 
         <section class="media border-bottom pd-10">
           <div class="hola mw-1340 flex justify-sb align-items-center">
-              <a href="#" class="footer-logo logo-a"><img src="images/logo-white.svg" alt="Logo" class="logo-img pd-40-0"/></a>
+              <a href="../../index.html" class="footer-logo logo-a"><img src="../../../images/logo-white.svg" alt="Logo" class="logo-img pd-40-0"/></a>
               <div class="media-center flex column gap-15">
                 <div class="flex center gap-30">
                   <a href="#" class="name-hover"><span class="icon-twitter"></span></a>

@@ -1,0 +1,59 @@
+[
+    {
+      "username": "GamerPro97",
+      "comment_title": "Id labore ex et quam laborum",
+      "video_game_comment": "Laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium.",
+      "verified_purchase": true,
+      "avatar": "../../images/user-4.svg"
+    },
+    {
+      "username": "JoystickMaster",
+      "comment_title": "Quo vero reiciendis velit",
+      "video_game_comment": "Est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et.",
+      "verified_purchase": true,
+      "avatar": "../../images/user-2.svg"
+    },
+    {
+      "username": "PixelWarrior",
+      "comment_title": "Odio adipisci rerum",
+      "video_game_comment": "Quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores.",
+      "verified_purchase": true,
+      "avatar": "../../images/user-3.svg"
+    },
+    { 
+      "username": "GameAddict89",
+      "comment_title": "Vero eaque aliquid",
+      "video_game_comment": "Non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati.",
+      "verified_purchase": false,
+      "avatar": "../../images/user-1.svg"
+    },
+    {
+      "username": "RetroGamer2000",
+      "comment_title": "Et fugit eligendi deleni",
+      "video_game_comment": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et",
+      "verified_purchase": true,
+      "avatar": "../../images/user-5.svg"
+    },
+    {
+      "username": "VRGamerGal",
+      "comment_title": "Repellat consequatur pra",
+      "video_game_comment": "doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in",
+      "verified_purchase": true,
+      "avatar": "../../images/user-6.svg"
+    },
+    {
+      "username": "ConsoleKing",
+      "comment_title": "Et omnis dolorem",
+      "video_game_comment": "maiores sed dolores similique labore et inventore et\nquasi temporibus esse sunt id et\neos voluptatem aliquam\naliquid ratione corporis molestiae mollitia quia et magnam dolor",
+      "verified_purchase": true,
+      "avatar": "../../images/user-7.svg"
+    },
+    {
+      "username": "GameGirl101",
+      "comment_title": "Provident id voluptas",
+      "video_game_comment": "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      "verified_purchase": false,
+      "avatar": "../../images/user-8.svg"
+    }
+  ]
+  

@@ -5,7 +5,7 @@
 	/* HEADER */
 
 	/* FOOTER */
-
+	
 	/*HOME PAGE*/
 
 	.search-bar-responsive,
@@ -17,7 +17,6 @@
 	.res-slider,
 	.responsive-reviews,
 	.res-payment-methods,
-	.links,
 	.responsive-links {
         display: none;
     }
@@ -459,6 +458,7 @@
 	/* HEADER */
 	header .logo img.pd-40-0 {
 	padding: 0px;
+	margin: auto;
 	}
 	header .logo img {
 	margin-left: 0px;
@@ -503,7 +503,6 @@
 
 	/*HOME PAGE*/
 
-	.menu,
 	.header-right,
 	.main-slider,
 	.slider-nav,
@@ -517,13 +516,14 @@
 	.rev-slide-info h3,
 	.rev-slide-info .user-name,
 	.rev-slide-info .read-review,
-	.links {
+	.links,
+	.search-bar-responsive,
+	.filter-platform-nav,
+	.header-right-responsive {
 		display: none;
 	}
 
 	.menu-responsive,
-	.header-right-responsive,
-	.search-bar-responsive,
 	.platforms-responsive,
 	.show-all,
 	.res-slider,
@@ -531,6 +531,17 @@
 	.subscribe-responsive,
 	.responsive-links  {
 		display: block;
+	}
+	.logo {
+		margin: auto;
+		& img {
+			margin: auto;
+		}
+	}
+
+	.menu {
+		width: 100%;
+		margin-top: 30px;
 	}
 
 	.platforms-responsive__container {
@@ -633,6 +644,7 @@
 	.main-home .res-reviews__card,
 	.main-home .res-slider__card div {
 		min-width: 280px;
+		
 	}
 
 	.main-home .pd-30,
@@ -674,6 +686,7 @@
 	.main__search-page .search-bar-responsive {
 		padding-top: 30px;
 	}
+	
 
 	.search-page__container {
 		display: grid; 

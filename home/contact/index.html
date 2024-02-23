@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Connect with Game On. Reach out to our team for any inquiries, assistance, or support. We're here to help you on your gaming journey. Send us a ticket, and let's make your gaming experience even better!">
+
     <title>Contact Us │ Game On</title>
-    <link rel="stylesheet" href="./css/styles.css"/>
+
+    <link rel="stylesheet" href="../../css/styles.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +15,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="../../js/modules/components/cart-functions.mjs"></script>
+    <script type="module" src="../../js/modules/components/wishlist-functions.mjs"></script>
+    <script type="module" src="../../js/pages/contact.mjs"></script>
   </head>
   <body>
           
@@ -20,22 +25,22 @@
         
       <section class="mw-1340 flex justify-sb align-items-center">
 
-          <a class="logo" href="index.html"><img src="images/logo.png" alt="Logo - Game On" class="pd-40-0"/></a>
+          <a class="logo" href="../index.html"><img src="../../images/logo.png" alt="Logo - Game On" class="pd-40-0"/></a>
 
           <div class="menu h5">
-            <nav>
+            <nav class="filter-platform-nav">
               <ul class="flex">
-                <li class="pd-30"><a href="search.html">PC</a></li>
-                <li class="pd-30"><a href="search.html"> Playstation</a></li>
-                <li class="pd-30"><a href="search.html">Xbox</a></li>
-                <li class="pd-30"><a href="search.html">Nintendo</a></li>
+                <li class="pd-30"><a class="filter-pc" href="./search/index.html">PC</a></li>
+                <li class="pd-30"><a class="filter-playstation" href="./search/index.html"> Playstation</a></li>
+                <li class="pd-30"><a class="filter-xbox" href="./search/index.html">Xbox</a></li>
+                <li class="pd-30"><a class="filter-nintendo" href="./search/index.html">Nintendo</a></li>
               </ul>
             </nav>
 
             <search>
-              <form action="#" class="search-bar">
-                <input type="search" placeholder="Minecraft, RPG, multiplayer..."/>
-                <button class="search-icon" type="submit"></button>
+              <form name="searchbar" action="#" class="search-bar">
+                <input id="searchbar-input" type="search" placeholder="Minecraft, RPG, multiplayer..."/>
+                <button id="searchbar-btn" class="search-icon" type="submit"></button>
               </form>
             </search>
           </div>
@@ -48,13 +53,13 @@
                 </li>
 
                 <li class="btn btn-2 relative">
-                  <a href="cart.html" class="cart"></a>
-                  <span class="cantidad">0</span>
+                  <a href="../cart/index.html" class="cart"></a>
+                  <span class="cantidad" id="cart-span"></span>
                 </li>
 
                 <li class="btn btn-2 relative">
                   <a href="#" class="fav"></a>
-                  <span class="cantidad">0</span>
+                  <span class="cantidad" id="wishlist-span"></span>
                 </li>
               </ul>
             </nav>
@@ -169,6 +174,12 @@
     </header>
 
       <main class="main-contact">
+        
+        <section class="preloader__container">
+          <div id="preloader">
+            <span class="loader"></span>
+          </div>
+        </section>
 
         <section class="request mw-992">
 
@@ -212,11 +223,11 @@
 
             <ul class="flex justify-sa">
               
-              <li><a href="index.html" class="app-menu-home"></a></li>
+              <li><a href="../index.html" class="app-menu-home"></a></li>
               
-              <li><a href="search.html" class="app-menu-search"></a></li>
+              <li><a href="../search/index.html" class="app-menu-search"></a></li>
               
-              <li><a href="cart.html" class="app-menu-cart"></a></li>
+              <li><a href="../cart/index.html" class="app-menu-cart relative"><span id="responsive-cart-span"></span></a></li>
               
               <li><a href="#dialog" class="app-menu-user"></a></li>
 
@@ -235,7 +246,7 @@
             <div>
               <h4>About Game On</h4>
               <ul class="pd-top-10">
-                <li><a class="pd-5-0" href="about.html">About us</a></li>
+                <li><a class="pd-5-0" href="../about/index.html">About us</a></li>
                 <li><a class="pd-5-0" href="#">Privacy policy</a></li>
                 <li><a class="pd-5-0" href="#">Termns & conditions</a></li>
               </ul>
@@ -250,14 +261,14 @@
             <div>
               <h4>Costumer service</h4>
               <ul class="pd-top-10">
-                <li><a class="pd-5-0" href="contact.html">Support request</a></li>
+                <li><a class="pd-5-0" href="../contact/index.html">Support request</a></li>
                 <li><a class="pd-5-0" href="#">FAQ</a></li>
               </ul>
             </div>
             <div>
               <h4>Contact us</h4>
               <ul class="pd-top-10">
-                <li><a class="pd-5-0" href="contact.html">Contact us</a></li>
+                <li><a class="pd-5-0" href="../contact/index.html">Contact us</a></li>
                 <li><a class="pd-5-0" href="#">support@gameon.com</a></li>
                 <li><a class="pd-5-0" href="#">+1 (234) 567 890</a></li>
               </ul>
@@ -274,7 +285,7 @@
 
                 <div class="footer-accordion__content">
                   <ul>
-                    <li><a class="pd-5-0" href="about.html">About us</a></li>
+                    <li><a class="pd-5-0" href="../about/index.html">About us</a></li>
                     <li><a class="pd-5-0" href="#">Privacy policy</a></li>
                     <li><a class="pd-5-0" href="#">Termns & conditions</a></li>
                   </ul>
@@ -318,7 +329,7 @@
 
         <section class="media border-bottom pd-10">
           <div class="hola mw-1340 flex justify-sb align-items-center">
-              <a href="#" class="footer-logo logo-a"><img src="images/logo-white.svg" alt="Logo" class="logo-img pd-40-0"/></a>
+              <a href="../index.html" class="footer-logo logo-a"><img src="../../images/logo-white.svg" alt="Logo" class="logo-img pd-40-0"/></a>
               <div class="media-center flex column gap-15">
                 <div class="flex center gap-30">
                   <a href="#" class="name-hover"><span class="icon-twitter"></span></a>

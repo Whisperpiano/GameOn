@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your Gaming Cart: Load it up with treasures. Review and confirm your gaming selections in your cart. Ready to level up your gaming experience? Proceed to checkout.">
+
+    <title>Cart │ Game On</title>
+
+    <link rel="stylesheet" href="../../css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="../../js/pages/cart.mjs"></script>
+  </head>
+  <body>
+          
+    <header class="grey-section border-bottom pd-20">
+        
+      <section class="mw-1340 flex justify-sb align-items-center">
+
+          <a class="logo" href="../index.html"><img src="../../images/logo.png" alt="Logo - Game On" class="pd-40-0"/></a>
+
+          <div class="menu h5">
+            <nav class="filter-platform-nav">
+              <ul class="flex">
+                <li class="pd-30"><a class="filter-pc" href="../search/index.html">PC</a></li>
+                <li class="pd-30"><a class="filter-playstation" href="../search/index.html"> Playstation</a></li>
+                <li class="pd-30"><a class="filter-xbox" href="../search/index.html">Xbox</a></li>
+                <li class="pd-30"><a class="filter-nintendo" href="../search/index.html">Nintendo</a></li>
+              </ul>
+            </nav>
+
+            <search>
+              <form name="searchbar" action="#" class="search-bar">
+                <input id="searchbar-input" type="search" placeholder="Minecraft, RPG, multiplayer..."/>
+                <button id="searchbar-btn" class="search-icon" type="submit"></button>
+              </form>
+            </search>
+          </div>
+
+          <div class="header-right flex right">
+            <nav>
+              <ul class="flex gap-20">
+                <li class="btn btn-2">
+                  <a href="#dialog" class="sign-in">Sign in</i></a>
+                </li>
+
+                <li class="btn btn-2 relative">
+                  <a href="../cart/index.html" class="cart"></a>
+                  <span class="cantidad" id="cart-span"></span>
+                </li>
+
+                <li class="btn btn-2 relative">
+                  <a href="#" class="fav"></a>
+                  <span class="cantidad" id="wishlist-span"></span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="header-right-responsive">
+            <nav>
+              <li><a href="#" class="alert-icon"></a></li>
+            </nav>
+          </div>
+
+          <div id="dialog" class="log-in-container overlay">
+            <div class="dialog-body pd-40">
+
+              <div class="flex align-items-center center relative">
+                <h3>Log in</h3>
+                <a class="close x-mark right" href="#"></a>
+              </div>
+
+              <form class="flex column gap-20 pd-top-30" action="">
+                <input class="" type="email" placeholder="Email" required>
+                <input class="" type="password" placeholder="Password" required>
+                <button class="btn btn-1 width-100" type="submit">Log in</button>
+              </form>
+
+              <div class="border-bottom pd-20-0"></div>
+
+              <div class="flex column gap-20 pd-40-0">
+                <div class="google-login width-100">
+                  <a class="btn btn-2 width-100 google-icon"  href="#">Log in with Google</a>
+                </div>
+
+                <div class="facebook-login width-100">
+                  <a class="btn btn-2 width-100 facebook-icon"  href="#">Log in with Facebook</a>
+                </div>
+
+                <div class="apple-login width-100">
+                  <a class="btn btn-2 width-100 apple-icon"  href="#">Log in with Apple</a>
+                </div>
+              </div>
+
+              <div class="flex column align-content-center text-center gap-15">
+                <a href="#forgot-password"><span class="text-orange">Forgot your password?</span></a>
+
+                <div class="flex gap-10">
+                  <span>Don't have an account?</span>
+                <a href="#sign-in"><span class="text-orange">Sign in</span></a>   
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div id="sign-in" class="sign-in-container overlay">
+
+            <div class="dialog-body pd-30">
+              <div class="flex align-items-center center relative">
+                <h3>Sign in</h3>
+                <a class="close x-mark right" href="#"></a>
+              </div>
+
+              <form class="flex column gap-15 pd-top-30" action="">
+                <input class="" type="email" placeholder="Email" required>
+                <input class="" type="password" placeholder="Password" required>
+                <button class="btn btn-1 width-100" type="submit">Sign in</button>
+              </form>
+
+              <div class="border-bottom pd-10-0"></div>
+
+              <div class="flex column gap-15 pd-20-0">
+                <div class="google-login width-100">
+                  <a class="btn btn-2 width-100 google-icon"  href="#">Sign in with Google</a>
+                </div>
+
+                <div class="facebook-login width-100">
+                  <a class="btn btn-2 width-100 facebook-icon"  href="#">Sign in with Facebook</a>
+                </div>
+
+                <div class="apple-login width-100">
+                  <a class="btn btn-2 width-100 apple-icon"  href="#">Sign in with Apple</a>
+                </div>
+              </div>
+
+              <div class="flex column align-content-center text-center gap-15">
+                <a href="#forgot-password"><span class="text-orange">Forgot your password?</span></a>
+                <span>Don't have account? <a href="#dialog"><span class="text-orange">Log in</span></a></span>
+              </div>   
+            </div>
+
+          </div>
+
+          <div id="forgot-password" class="forgot-password-container overlay">
+
+            <div class="dialog-body pd-30">
+              <div class="flex align-items-center center relative">
+                <h3>Reset password</h3>
+                <a class="close x-mark right" href="#"></a>
+              </div>
+
+              <p>Please enter the address which you used to register. We will send you an email with your new password. Check your spam box if you do not receive it. In case of any complications, please contact us at this address: support@gameon.com</p>
+
+              <form class="flex column gap-15 pd-top-30" action="">
+                <input class="" type="email" placeholder="Your email" required>
+                <button class="btn btn-1 width-100" type="submit">Submit</button>
+            </div>
+
+          </div>
+
+      </section>
+
+    </header>
+
+      <main class="main-cart mw-1340">
+
+        <section class="preloader__container">
+          <div id="preloader">
+            <span class="loader"></span>
+          </div>
+        </section>
+
+        <section class="empty-cart text-center">
+          <div>
+            <img class="empty-cart-icon" src="../../images/empty-sopping-cart.svg" alt="">
+          </div>
+          <h1 class="headline-empty-cart pd-top-30">Uh oh!</h1>
+          <p class="pd-top-30"> Looks like your cart's feeling a bit lonely, like a single-player game without any NPCs!</p>
+          <p class="last-p pd-top-10">Why not add some games to your cart?</p>
+
+          <div class="continue-cart-btn pd-top-30">
+            <a href="../index.html" class="btn btn-1 width-100">Continue shopping</a>
+          </div>
+
+        </section>
+
+        <h2 class="headline">Your cart <span id="items-span" class="h4">(0 items)</span></h2>
+
+        <section class="menu-responsive pd-30">
+
+          <nav>
+
+            <ul class="flex justify-sa">
+              
+              <li><a href="../index.html" class="app-menu-home"></a></li>
+              
+              <li><a href="../search/index.html" class="app-menu-search"></a></li>
+              
+              <li><a href="../cart/index.html" class="app-menu-cart relative"><span id="responsive-cart-span"></span></a></li>
+              
+              <li><a href="#dialog" class="app-menu-user"></a></li>
+
+            </ul>
+
+          </nav>
+
+        </section>
+
+        <section class="cart-page">
+
+            <div class="cart-items">
+
+                <!-- <article class="item-cart item-cart-1 relative">
+
+                    <div class="flex justify-sb align-items-center pd-15 grey-section gap-20">
+                        
+
+                        <div class="item-cart__left flex align-items-center gap-20">
+
+                            <div class="item-cart__image">
+
+                              <a href="../product/index.html" class="name-hover"><img src="../../images/game5.png" alt=""></a>
+                              
+
+                            </div>
+
+                            <div class="item-cart__info-res">
+
+                                  <div class="item-cart__info flex column gap-20">
+                                  
+                                    <a href="../product/index.html" class="name-hover"><h6>Project cars 4</h6></a>
+                                    <span>Playstation - Standard version</span>
+                                    <span>Europe & UK</span>
+      
+                                  </div>
+
+                                  <div class="item-cart__quantity-res flex align-items-center text-center gap-10">
+
+                                    <div class="wrap-icon">
+                                        <a class="circle minus" href="#"></a>
+                                    </div>
+        
+                                    <div class="">
+                                        <span class="qty-number border">1</span>
+                                    </div>
+        
+                                    <div class="wrap-icon">
+                                        <a class="circle plus" href="#"></a>
+                                    </div>
+        
+                                  </div>
+
+                            </div>
+
+                        </div>
+                      
+
+                        <div class="item-cart__quantity flex align-items-center text-center gap-10">
+
+                            <div class="wrap-icon">
+                                <a class="circle minus" href="#"></a>
+                            </div>
+
+                            <div class="">
+                                <span class="qty-number border">1</span>
+                            </div>
+
+                            <div class="wrap-icon">
+                                <a class="circle plus" href="#"></a>
+                            </div>
+
+                        </div>
+
+                        <div class="item-cart__price flex column text-center gap-20">
+
+                            <span class="price-before">€ 29.95</span>
+                            <span class="discount">-12%</span>
+                            <span class="actual-price">€ 19.95</span>
+
+
+                        </div>
+
+                        <a href="#" class="btn-remove trash"></a>
+   
+
+                    </div>
+
+                </article>
+
+                <article class="item-cart item-cart-2 relative">
+
+                  <div class="flex justify-sb align-items-center pd-15 grey-section gap-20">
+                      
+
+                      <div class="item-cart__left flex align-items-center gap-20">
+
+                            <div class="item-cart__image">
+
+                              <a href="../product/index.html" class="name-hover"><img src="../../images/game6.png" alt=""></a>
+                              
+
+                            </div>
+
+                            <div class="item-cart__info-res">
+
+                                  <div class="item-cart__info flex column gap-20">
+                                  
+                                    <a href="../product/index.html" class="name-hover"><h6>Boiling bolt</h6></a>
+                                    <span>Playstation - Standard version</span>
+                                    <span>Europe & UK</span>
+      
+                                  </div>
+
+                                  <div class="item-cart__quantity-res flex align-items-center text-center gap-10">
+
+                                    <div class="wrap-icon">
+                                        <a class="circle minus" href="#"></a>
+                                    </div>
+        
+                                    <div class="">
+                                        <span class="qty-number border">1</span>
+                                    </div>
+        
+                                    <div class="wrap-icon">
+                                        <a class="circle plus" href="#"></a>
+                                    </div>
+        
+                                  </div>
+
+                            </div>
+                            
+                        </div>
+                    
+
+                      <div class="item-cart__quantity flex align-items-center text-center gap-10">
+
+                          <div class="wrap-icon">
+                              <a class="circle minus" href="#"></a>
+                          </div>
+
+                          <div class="">
+                              <span class="qty-number border">1</span>
+                          </div>
+
+                          <div class="wrap-icon">
+                              <a class="circle plus" href="#"></a>
+                          </div>
+
+                      </div>
+
+                      <div class="item-cart__price flex column text-center gap-20">
+
+                          <span class="price-before">€ 19.95</span>
+                          <span class="discount">-28%</span>
+                          <span class="actual-price">€ 12.95</span>
+
+
+                      </div>
+
+                      <a href="#" class="btn-remove trash"></a>
+ 
+
+                  </div>
+
+                </article>
+
+                <article class="item-cart item-cart-3 relative">
+
+                <div class="flex justify-sb align-items-center pd-15 grey-section gap-20">
+                    
+
+                  <div class="item-cart__left flex align-items-center gap-20">
+
+                    <div class="item-cart__image">
+
+                      <a href="../product/index.html" class="name-hover"><img src="../../images/game3.png" alt=""></a>
+                      
+
+                    </div>
+
+                    <div class="item-cart__info-res">
+
+                          <div class="item-cart__info flex column gap-20">
+                          
+                            <a href="../product/index.html" class="name-hover"><h6>Saints Row: Gat of the hell</h6></a>
+                            <span>Steam - Legendary version</span>
+                            <span>Europe & UK</span>
+
+                          </div>
+
+                          <div class="item-cart__quantity-res flex align-items-center text-center gap-10">
+
+                            <div class="wrap-icon">
+                                <a class="circle minus" href="#"></a>
+                            </div>
+
+                            <div class="">
+                                <span class="qty-number border">1</span>
+                            </div>
+
+                            <div class="wrap-icon">
+                                <a class="circle plus" href="#"></a>
+                            </div>
+
+                          </div>
+
+                    </div>
+                    
+                </div>
+                  
+
+                    <div class="item-cart__quantity flex align-items-center text-center gap-10">
+
+                        <div class="wrap-icon">
+                            <a class="circle minus" href="#"></a>
+                        </div>
+
+                        <div class="">
+                            <span class="qty-number border">1</span>
+                        </div>
+
+                        <div class="wrap-icon">
+                            <a class="circle plus" href="#"></a>
+                        </div>
+
+                    </div>
+
+                    <div class="item-cart__price flex column text-center gap-20">
+
+                        <span class="price-before">€ 69.95</span>
+                        <span class="discount">-40%</span>
+                        <span class="actual-price">€ 24.95</span>
+
+
+                    </div>
+
+                    <a href="#" class="btn-remove trash"></a>
+
+
+                </div>
+
+                </article> -->
+
+            </div>
+
+            <aside class="summary">
+
+                <div class="cart-summary border ">
+
+                    <div class="cart-summary__top grey-section pd-20">
+
+                      <h5>Cart summary</h5>
+
+                        <div class="price-data flex gap-10 pd-20-0">
+
+                            <div class="full-price flex justify-sb">
+                                <span>Full price:</span>
+                                <span class="summary-price-before text-line-through">€111.95</span>
+                            </div>
+        
+                            <div class="flex justify-sb">
+                                <span>Your saving:</span>
+                                <span class="summary-discount color-6">-€42.95</span>
+                            </div>
+
+                        </div>
+
+                        <div class="border-bottom"></div>
+
+                        <div class="total-price flex justify-sb pd-top-30">
+                            <h6>Total price:</h6>
+                            <span class="summary-price-after h4 color-6">€69.95</span>
+                        </div>
+
+                    </div>
+                        
+
+                        <div class="cart-summary__bottom flex column gap-20 grey-section pd-20">
+                            <a href="./checkout/index.html" class="btn btn-1 width-100 shield">Proceed to checkout</a>
+                            <a href="../index.html" class="btn btn-2 width-100">Continue shopping</a>
+                        </div>
+
+                </div>
+
+                <div class="coupons grey-section border">
+
+                  <div class="accordion">
+
+                      <input class="coupon-no-display" type="checkbox" id="coupon-check1">
+
+                      <label class="h5 flex justify-sb pd-20" for="coupon-check1">Coupons<span><i class="fa-solid fa-angle-down"></i></span></label>
+
+                      <div class="accordion-content">
+                          <div class="pd-0-20">
+                              <p>Do you have any coupon?</p>
+                          
+                              <div class="subscribe-form flex pd pd-20-0">
+
+                                  <input type="text" placeholder="Enter your coupon code" class="coupon-input pd-5-10 border">
+                                  <button class="btn btn-1 coupon-btn" type="submit">Apply</button>
+                                  
+                              </div>
+
+                          </div>
+
+                      </div>
+
+                  </div>
+                  
+                </div>
+ 
+            </aside>
+
+        </section>
+
+      </main>
+
+      <footer class="grey-section border-top">
+
+        <section class="links border-bottom">
+          <nav class="mw-1340 footer-nav flex justify-sa pd-50">
+            <div>
+              <h4>About Game On</h4>
+              <ul class="pd-top-10">
+                <li><a class="pd-5-0" href="../about/index.html">About us</a></li>
+                <li><a class="pd-5-0" href="#">Privacy policy</a></li>
+                <li><a class="pd-5-0" href="#">Termns & conditions</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>My account</h4>
+              <ul class="pd-top-10">
+                <li><a class="pd-5-0" href="#">My account</a></li>
+                <li><a class="pd-5-0" href="#">My orders</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Costumer service</h4>
+              <ul class="pd-top-10">
+                <li><a class="pd-5-0" href="../contact/index.html">Support request</a></li>
+                <li><a class="pd-5-0" href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Contact us</h4>
+              <ul class="pd-top-10">
+                <li><a class="pd-5-0" href="../contact/index.html">Contact us</a></li>
+                <li><a class="pd-5-0" href="#">support@gameon.com</a></li>
+                <li><a class="pd-5-0" href="#">+1 (234) 567 890</a></li>
+              </ul>
+            </div>
+          </nav>
+        </section>
+
+        <section class="responsive-links border-bottom">
+          <nav>
+            <ul id="footer-accordion">
+              <li>
+                <label for="about">About Game On <span><i class="fa-solid fa-angle-down"></i></span></label>
+                <input type="radio" name="footer-accordion" id="about">
+
+                <div class="footer-accordion__content">
+                  <ul>
+                    <li><a class="pd-5-0" href="../about/index.html">About us</a></li>
+                    <li><a class="pd-5-0" href="#">Privacy policy</a></li>
+                    <li><a class="pd-5-0" href="#">Termns & conditions</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="border-top">
+                <label for="my-account">My account<span><i class="fa-solid fa-angle-down"></i></span></label>
+                <input type="radio" name="footer-accordion" id="my-account">
+
+                <div class="footer-accordion__content">
+                  <ul>
+                    <li><a class="pd-5-0" href="#">My account</a></li>
+                    <li><a class="pd-5-0" href="#">My orders</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="border-top">
+                <label for="costumer-service">Costumer service<span><i class="fa-solid fa-angle-down"></i></span></label>
+                <input type="radio" name="footer-accordion" id="costumer-service">
+                <div class="footer-accordion__content">
+                  <ul>
+                    <li><a class="pd-5-0" href="../contact/index.html">Support request</a></li>
+                    <li><a class="pd-5-0" href="#">FAQ</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="border-top">
+                <label for="contact-us">Contact us<span><i class="fa-solid fa-angle-down"></i></span></label>
+                <input type="radio" name="footer-accordion" id="contact-us">
+                <div class="footer-accordion__content">
+                  <ul>
+                    <li><a class="pd-5-0" href="../contact/index.html">Contact us</a></li>
+                    <li><a class="pd-5-0" href="#">support@gameon.com</a></li>
+                    <li><a class="pd-5-0" href="#">+1 (234) 567 890</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="media border-bottom pd-10">
+          <div class="hola mw-1340 flex justify-sb align-items-center">
+              <a href="../index.html" class="footer-logo logo-a"><img src="../../images/logo-white.svg" alt="Logo" class="logo-img pd-40-0"/></a>
+              <div class="media-center flex column gap-15">
+                <div class="flex center gap-30">
+                  <a href="#" class="name-hover"><span class="icon-twitter"></span></a>
+                  <a href="#" class="name-hover"><span class="icon-instagram"></span></a>
+                  <a href="#" class="name-hover"><span class="icon-youtube"></span></a>
+                  <a href="#" class="name-hover"><span class="icon-discord"></span></a>
+                </div>
+                <div class="app-download flex">
+                  <a href="#" class="name-hover"><span class="icon-appstore pd-10"></span></a>
+                  <a href="#" class="name-hover"><span class="icon-googleplay pd-10"></span></a>
+                </div>
+              </div>
+              <div class="footer-trust trust-pilot">
+                <a href="#" class="name-hover"><span class="icon-trustpilot"></span></a>
+              </div>
+          </div>
+        </section>
+
+        <section class="copyright text-center pd-30">
+          <span>&copy; 2023 Game on - All rights reserved</span>
+          </div>
+        </section>
+      </footer>
+
+  </body>
+
+</html>
