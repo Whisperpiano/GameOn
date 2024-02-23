@@ -90,4 +90,4 @@ OPTIONAL
 - [x] Product page : like dislike buttons
 - [x] Product page/ Home page: add to wishlist
 - [x] search bar in about and contact page
-- [ ] add comments to understand better the code
+- [x] add comments to understand better the code
