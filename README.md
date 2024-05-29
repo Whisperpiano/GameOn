@@ -1,93 +1,163 @@
-# Instructions
 
-## Brief
+<a name="readme-top"></a>
 
-Using your new skills writing JavaScript, create an interactive online store to display product from an API endpoint. Use one of the three provided API urls to display products in HTML and allow users to create a basket of items.
+<div align="center">
+  
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/jes%C3%BAs-alberola-herrero-896b61189/)
 
-You may use your existing cross course project code as a starting point, or start a fresh project if this is not available. We recommend using an existing project as styling will not be graded, but is nice to have in the final submission.
+  
+</div>
 
-## User Stories
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://whisperpiano.github.io/GameOn/home/index.html">
+    <img src="images/logo.png" alt="Logo" width="180" height="80">
+  </a>
 
-- [x] As a user, I want to view a list of products on the homepage.
-- [x] As a user, I want to filter products by category, gender or genre.
-- [x] As a user, I want to view a single product page with more detail.
-- [x] As a user, I want to add a product to my basket.
-- [x] As a user, I want to remove a product from my basket.
-- [x] As a user, I want to view a summary of my cart on the checkout page.
-- [x] As a user, I want to view an order-confirmation screen after checking out.
+  <h3 align="center">GameOn</h3>
+  GameOn is a website where users can purchase video games at affordable prices.
+  <p align="center">
+    <br />
+    <br />
+    <a href="https://www.figma.com/design/tCeazNkKedScOUFf9Zc1Nx/Course-Assignment?node-id=0-1&t=jEblI6bpQsV3DuqY-1">Figma file</a>
+    ·
+    <a href="https://github.com/Whisperpiano/GameOn/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Whisperpiano/GameOn/issues">Request Feature</a>
+  </p>
+</div>
 
-## Required Pages
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#screenshots-of-gameon">Screenshots of GameOn</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#open-the-project">Open the project</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-The following pages are required to complete this assignment.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-- Home Page containing product list `/index.html`
-- Product Page showing all details of a specific product `/product/index.html`
-- Checkout Page showing all items in the basket `/checkout/index.html`
-- Confirmation Page showing a thank you message `/checkout/confirmation/index.html`
+This was my first project where I applied what I learned about HTML, CSS, and vanilla JavaScript during the first semester of my Front-end Development studies at Noroff School. Once I created a responsive and functional webpage, I needed to build an online store to display products from an API endpoint and allow users to create a basket of items.
 
-## Optional Pages
 
-The following pages are not required to complete this assignment, but help to improve the realism for those with extra time.
+### Built With
 
-- Category Pages (e.g. Male/Female Clothing, Movie Genres)
-- Terms and Conditions page (this may be AI generated)
-- Privacy Policy (this may be AI generated)
-- My Profile
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-## Process
+### Screenshots of GameOn
 
-Decide if you will use your existing project, or a fresh project.
-Open your project in GitHub Desktop and VS Code.
-Select one of the three provided endpoints from the list below.
-Checkout the API documentation for your chosen endpoint.
-Work through the requirements in JavaScript one by one.
-Test your work thoroughly and ask for peer review.
-Offer to review two other student's work.
-Make any final changes, and submit for delivery.
+![Desktop screenshot](https://github.com/Whisperpiano/GameOn/blob/main/images/gameon_desktop_small.jpg)
+![Mobile schreenshots](https://github.com/Whisperpiano/GameOn/blob/main/images/gameon_mobile_small.jpg)
 
-## Resources
 
-- [GameHub API](https://docs.noroff.dev/ecom-endpoints/gamehub) ⬅️
-- [Rainy Days API](https://docs.noroff.dev/ecom-endpoints/rainy-days)
-- [Square Eyes API](https://docs.noroff.dev/ecom-endpoints/square-eyes)
+<!-- GETTING STARTED -->
+## Getting Started
 
-## Important Features
+### Prerequisites
 
-This list is a non-exhaustive list of important things to keep in mind before delivery:
-Errors should be handled for the user, such that they are alerted when something goes wrong like an API call.
-A loading indicator should be shown to the user whenever they are waiting for an asynchronous action to finish.
-There should be no hardcoded product data in your final submission.
-Although the focus on marking is on JavaScript, the site still needs to be accessible and usable for the user. If we cannot access functionality that has been coded, it will be marked as if the coding was not done.
-Use `async` instead of `then` syntax for asynchronous actions.
-Remove all console.log statements before delivery.
+Make sure you have Git installed on your local machine. You can download it from [here](https://git-scm.com/downloads)
 
-## Delivery
+### Installation
 
-GitHub repository with JavaScript code in the default (main/master) branch
-Written reflection on the CA process
+Clone the repo:
+   ```sh
+   git clone https://github.com/Whisperpiano/GameOn.git
+   ```
+### Open the project
 
-> [!TIP] > [Noroff course](https://mollify.noroff.dev/content/feu1/javascript-1/module-1?nav=course)
+Navigate to the project directory:
+   ```sh
+   cd GameOn
+   ```
 
-## Ideas
+Open the project with VSCode:
+   ```sh
+   code .
+   ```
 
-DONE
 
-- [x] Home page: FIX read review
-- [x] Product page: about game section
-- [x] Loader: FIX loaders
-- [x] Product page: addtocart btn
-- [x] Product page: cartspan
-- [x] SEARCHBAR
-- [x] Checkout: forms
-- [x] add span cart in responsive
-- [x] Home page: show more buttons
+<!-- CONTRIBUTING -->
+## Contributing
 
-OPTIONAL
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-- [x] Product page: make dynamic stars
-- [x] Product page: random reviews
-- [x] Product page: next and prev buttons
-- [x] Product page : like dislike buttons
-- [x] Product page/ Home page: add to wishlist
-- [x] search bar in about and contact page
-- [x] add comments to understand better the code
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. [Fork](https://github.com/Whisperpiano/GameOn/fork) the Project.
+2. Clone your fork ( `git clone <URL of your fork>` )
+3. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+4. Make your changes to the codebase.
+5. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+6. Push to the Branch (`git push origin feature/AmazingFeature`)
+7. Open a Pull Request to the `main` branch of the original reposityory. Provice a clear description of the changes you made and why they are necessary.
+
+<!-- LICENSE -->
+## License
+
+This project is licensed under the MIT License. This means you are free to use, modify, and distribute this software as long as the original license is included with any distributions or derivative works.
+
+<!-- CONTACT -->
+## Contact
+
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jes%C3%BAs-alberola-herrero-896b61189/) 
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jesusalberola90@gmail.com) 
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/jesus.alberolaherrero/) 
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/whispers_piano/)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[Svelte-url]: https://svelte.dev/
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com 
