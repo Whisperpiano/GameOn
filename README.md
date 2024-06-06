@@ -16,12 +16,17 @@
   </a>
 
   <h3 align="center">GameOn</h3>
-  <h3><a href="https://whisperpiano.github.io/GameOn/home/index.html" target="_blank">Preview</a></h3>
-  
   GameOn is a website where users can purchase video games at affordable prices.
+
+  <div align="center"> 
+  <br /> 
+    
+  [![Preview](https://img.shields.io/badge/Preview-blue?style=for-the-badge)](https://whisperpiano.github.io/GameOn/home/index.html)
+   
+
+  </div>
+ 
   <p align="center">
-    <br />
-    <br /> 
     ·
     <a href="https://www.figma.com/design/tCeazNkKedScOUFf9Zc1Nx/Course-Assignment?node-id=0-1&t=jEblI6bpQsV3DuqY-1">Figma file</a>
     ·
